@@ -1,25 +1,11 @@
 {
   "hero": {
-    "title": "COPYMAX",
-    "subtitle": "ESTONIA'S HUB FOR GLOBAL PRINT BRANDS",
-    "location": "TALLINN, ESTONIA"
+    "logo_img": "photo_2026-01-17_22-49-20.jpg",
+    "slogan_img": "photo_2026-01-17_22-49-28.jpg",
+    "printer_img": "photo_2026-01-17_22-49-24.jpg"
   },
-  "globalBrands": {
-    "title": "GLOBAL PRINT BRANDS",
-    "brands": ["HP", "Canon", "Xerox", "Brother", "Konica Minolta"]
-  },
-  "products": {
-    "title": "OUR PRODUCTS",
-    "items": [
-      {"id": "p1", "name": "LASER PRINTERS"},
-      {"id": "p2", "name": "INKJET DEVICES"},
-      {"id": "p3", "name": "CARTRIDGES & TONER"},
-      {"id": "p4", "name": "INDUSTRIAL SOLUTIONS"}
-    ]
-  },
-  "contacts": {
-    "address": "Tallinn, Estonia",
-    "email": "info@copymax.ee",
-    "phone": "+372 ..."
+  "site_settings": {
+    "title": "COPYMAX | Estonia's Hub",
+    "nav_brand": "COPYMAX"
   }
 }
