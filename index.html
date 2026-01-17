@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copymax - Estonia's Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="grid-bg">
+
+    <section class="hero-section">
+        <h1 id="hero-title" class="hero-title">LOADING...</h1>
+        <div id="hero-subtitle" class="hero-subtitle"></div>
+    </section>
+
+    <section class="brands-section">
+        <h2 id="brands-title" class="section-title"></h2>
+        <div id="brands-container"></div>
+    </section>
+
+    <section class="products-section">
+        <h2 id="products-title" style="text-align: center;"></h2>
+        <div class="products-grid" id="products-list">
+            </div>
+    </section>
+
+    <script>
+        async function loadContent() {
+            // Проверка LocalStorage для админки
+            const savedData = localStorage.getItem('copymax_data');
+            let data;
+
+            if (savedData) {
+                data = JSON.parse(savedData);
+            } else {
+                const response = await fetch('content.json');
+                data = await response.json();
+            }
+
+            // Рендеринг данных
+            document.getElementById('hero-title').innerText = data.hero.title;
+            document.getElementById('hero-subtitle').innerText = data.hero.subtitle;
+            document.getElementById('brands-title').innerText = data.globalBrands.title;
+            document.getElementById('products-title').innerText = data.products.title;
+
+            const productsList = document.getElementById('products-list');
+            productsList.innerHTML = data.products.items.map(item => `
+                <div class="product-card">
+                    <span>${item.name}</span>
+                    <span>+</span>
+                </div>
+            `).join('');
+        }
+
+        window.onload = loadContent;
+    </script>
+</body>
+</html>
