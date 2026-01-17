@@ -3,57 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COPYMAX</title>
+    <title>COPYMAX | Estonia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="blueprint">
 
-    <div class="marker" style="top: 120px; left: 120px;">+</div>
-    <div class="marker" style="bottom: 300px; right: 200px;">+</div>
+    <div class="marker" style="top: 10%; left: 10%;">+</div>
+    <div class="marker" style="bottom: 20%; right: 15%;">+</div>
 
     <header>
-        <div id="nav-brand" class="nav-box">COPYMAX</div>
+        <div class="nav-box">COPYMAX</div>
         <div style="font-size: 28px; cursor: pointer; color: #333;">☰</div>
     </header>
 
     <main class="hero">
         <div class="hero-logo-container">
-            <img id="img-logo" src="" alt="[Ошибка: Файл логотипа не найден]" class="logo-main">
+            <img id="img-logo" src="photo_2026-01-17_22-49-20.png" alt="Logo PNG Error" class="logo-main">
         </div>
 
         <div class="hero-slogan-container">
-            <img id="img-slogan" src="" alt="[Ошибка: Файл слогана не найден]" class="slogan-vertical">
+            <img id="img-slogan" src="photo_2026-01-17_22-49-28.png" alt="Slogan PNG Error" class="slogan-vertical">
         </div>
     </main>
 
     <div class="printer-dock">
-        <img id="img-printer" src="" alt="[Ошибка: Файл принтера не найден]" class="printer-img">
+        <img id="img-printer" src="photo_2026-01-17_22-49-24.png" alt="Printer PNG Error" class="printer-img">
     </div>
 
     <script>
-        async function loadConfig() {
-            try {
-                // Добавляем случайное число к запросу, чтобы браузер не кэшировал старый JSON
-                const response = await fetch('content.json?v=' + Math.random());
-                const data = await response.json();
-
-                console.log("Данные из JSON загружены:", data);
-
-                document.title = data.site_settings.title;
-                document.getElementById('nav-brand').innerText = data.site_settings.nav_brand;
-
-                // Устанавливаем пути
-                document.getElementById('img-logo').src = data.hero.logo_img;
-                document.getElementById('img-slogan').src = data.hero.slogan_img;
-                document.getElementById('img-printer').src = data.hero.printer_img;
-
-            } catch (err) {
-                console.error("Критическая ошибка:", err);
-                alert("Не удалось загрузить content.json. Проверьте, есть ли этот файл в GitHub.");
-            }
-        }
-
-        window.onload = loadConfig;
+        // Скрипт проверки: если PNG не найден, пробуем другие варианты
+        window.addEventListener('load', () => {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.onerror = function() {
+                    console.error("Файл не найден: " + this.src);
+                    // Если вдруг файлы называются просто 1.png, 2.png и т.д., 
+                    // тут можно добавить логику замены, но пока просто сигналим об ошибке
+                };
+            });
+        });
     </script>
 </body>
 </html>
