@@ -12,41 +12,44 @@
     <div class="marker" style="bottom: 300px; right: 200px;">+</div>
 
     <header>
-        <div id="nav-brand" class="nav-box"></div>
-        <div style="font-size: 28px; cursor: pointer;">☰</div>
+        <div id="nav-brand" class="nav-box">COPYMAX</div>
+        <div style="font-size: 28px; cursor: pointer; color: #333;">☰</div>
     </header>
 
     <main class="hero">
         <div class="hero-logo-container">
-            <img id="img-logo" src="" alt="COPYMAX" class="logo-main">
+            <img id="img-logo" src="" alt="[Ошибка: Файл логотипа не найден]" class="logo-main">
         </div>
 
         <div class="hero-slogan-container">
-            <img id="img-slogan" src="" alt="ESTONIA HUB" class="slogan-vertical">
+            <img id="img-slogan" src="" alt="[Ошибка: Файл слогана не найден]" class="slogan-vertical">
         </div>
     </main>
 
     <div class="printer-dock">
-        <img id="img-printer" src="" alt="Printer System" class="printer-img">
+        <img id="img-printer" src="" alt="[Ошибка: Файл принтера не найден]" class="printer-img">
     </div>
 
     <script>
         async function loadConfig() {
             try {
-                const response = await fetch('content.json');
+                // Добавляем случайное число к запросу, чтобы браузер не кэшировал старый JSON
+                const response = await fetch('content.json?v=' + Math.random());
                 const data = await response.json();
 
-                // Установка текстов
+                console.log("Данные из JSON загружены:", data);
+
                 document.title = data.site_settings.title;
                 document.getElementById('nav-brand').innerText = data.site_settings.nav_brand;
 
-                // Установка изображений из твоих файлов
+                // Устанавливаем пути
                 document.getElementById('img-logo').src = data.hero.logo_img;
                 document.getElementById('img-slogan').src = data.hero.slogan_img;
                 document.getElementById('img-printer').src = data.hero.printer_img;
 
             } catch (err) {
-                console.error("Ошибка при сборке сайта:", err);
+                console.error("Критическая ошибка:", err);
+                alert("Не удалось загрузить content.json. Проверьте, есть ли этот файл в GitHub.");
             }
         }
 
