@@ -1,0 +1,84 @@
+:root {
+    --primary-red: #e30613;
+    --bg-white: #ffffff;
+    --text-black: #1a1a1a;
+    --grid-color: rgba(0, 0, 0, 0.05);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    background-color: var(--bg-white);
+    color: var(--text-black);
+    scroll-behavior: smooth;
+}
+
+/* Фоновая сетка как на референсе */
+.grid-bg {
+    background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* Секция 1: Hero (Image 3) */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 5px solid var(--primary-red);
+}
+
+.hero-title {
+    font-size: 15vw;
+    line-height: 0.8;
+    margin: 0;
+    color: var(--text-black);
+    letter-spacing: -5px;
+}
+
+.hero-subtitle {
+    font-size: 1.5vw;
+    background: var(--primary-red);
+    color: white;
+    padding: 5px 20px;
+    margin-top: 20px;
+}
+
+/* Секция 2: Brands (Image 1) */
+.brands-section {
+    padding: 100px 50px;
+    border-bottom: 2px solid var(--grid-color);
+}
+
+.section-title {
+    font-size: 5vw;
+    color: var(--primary-red);
+}
+
+/* Секция 3: Products (Image 2) */
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 50px;
+    align-items: center;
+}
+
+.product-card {
+    border: 2px solid var(--text-black);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    background: var(--primary-red);
+    color: white;
+}
