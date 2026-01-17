@@ -3,52 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COPYMAX</title>
+    <title>COPYMAX | Estonia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="blueprint">
 
+    <div class="marker" style="top: 15%; left: 10%;">+</div>
+    <div class="marker" style="bottom: 25%; right: 15%;">+</div>
+
     <header>
         <div class="nav-box">COPYMAX</div>
-        <div style="font-size: 28px; cursor: pointer; color: #333;">☰</div>
+        <div class="menu-icon">☰</div>
     </header>
 
     <main class="hero">
         <div class="hero-logo-container">
-            <img id="img-logo" data-src="photo_2026-01-17_22-49-20" class="logo-main" alt="Loading...">
+            <img id="img-logo" 
+                 src="photo_2026-01-17_22-49-20.png" 
+                 data-basename="photo_2026-01-17_22-49-20"
+                 alt="COPYMAX LOGO" 
+                 class="logo-main">
         </div>
+
         <div class="hero-slogan-container">
-            <img id="img-slogan" data-src="photo_2026-01-17_22-49-28" class="slogan-vertical" alt="Loading...">
+            <img id="img-slogan" 
+                 src="photo_2026-01-17_22-49-28.png" 
+                 data-basename="photo_2026-01-17_22-49-28"
+                 alt="ESTONIA HUB" 
+                 class="slogan-vertical">
         </div>
     </main>
 
     <div class="printer-dock">
-        <img id="img-printer" data-src="photo_2026-01-17_22-49-24" class="printer-img" alt="Loading...">
+        <img id="img-printer" 
+             src="photo_2026-01-17_22-49-24.png" 
+             data-basename="photo_2026-01-17_22-49-24"
+             alt="PRINTER SYSTEM" 
+             class="printer-img">
     </div>
 
     <script>
-        const extensions = ['.png', '.PNG', '.jpg', '.JPG', '.jpeg'];
+        // Функция авто-исправления расширений (png/PNG/jpg/JPG)
+        function fixImagePaths() {
+            const extensions = ['.png', '.PNG', '.jpg', '.JPG', '.jpeg'];
+            const images = document.querySelectorAll('img[data-basename]');
 
-        async function tryLoadImage(imgElement) {
-            const baseName = imgElement.getAttribute('data-src');
-            
-            for (let ext of extensions) {
-                const testPath = baseName + ext;
-                try {
-                    const res = await fetch(testPath, { method: 'HEAD' });
-                    if (res.ok) {
-                        imgElement.src = testPath;
-                        console.log("Успешно найдено:", testPath);
-                        return;
+            images.forEach(img => {
+                img.onerror = async function() {
+                    const base = this.getAttribute('data-basename');
+                    console.log("Поиск файла для: " + base);
+                    
+                    for (let ext of extensions) {
+                        let testPath = base + ext;
+                        try {
+                            let response = await fetch(testPath, { method: 'HEAD' });
+                            if (response.ok) {
+                                this.src = testPath;
+                                this.onerror = null; // Выходим из цикла при успехе
+                                return;
+                            }
+                        } catch (e) {}
                     }
-                } catch (e) {}
-            }
-            imgElement.alt = "Ошибка: файл " + baseName + " не найден в GitHub";
+                    this.alt = "Ошибка: Файл не найден в GitHub";
+                };
+            });
         }
 
-        window.onload = () => {
-            document.querySelectorAll('img[data-src]').forEach(tryLoadImage);
-        };
+        window.onload = fixImagePaths;
     </script>
 </body>
 </html>
