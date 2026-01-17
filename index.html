@@ -1,58 +1,56 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="et">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copymax - Estonia's Hub</title>
+    <title>COPYMAX</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="grid-bg">
+<body class="blueprint">
 
-    <section class="hero-section">
-        <h1 id="hero-title" class="hero-title">LOADING...</h1>
-        <div id="hero-subtitle" class="hero-subtitle"></div>
-    </section>
+    <div class="marker" style="top: 120px; left: 120px;">+</div>
+    <div class="marker" style="bottom: 300px; right: 200px;">+</div>
 
-    <section class="brands-section">
-        <h2 id="brands-title" class="section-title"></h2>
-        <div id="brands-container"></div>
-    </section>
+    <header>
+        <div id="nav-brand" class="nav-box"></div>
+        <div style="font-size: 28px; cursor: pointer;">☰</div>
+    </header>
 
-    <section class="products-section">
-        <h2 id="products-title" style="text-align: center;"></h2>
-        <div class="products-grid" id="products-list">
-            </div>
-    </section>
+    <main class="hero">
+        <div class="hero-logo-container">
+            <img id="img-logo" src="" alt="COPYMAX" class="logo-main">
+        </div>
+
+        <div class="hero-slogan-container">
+            <img id="img-slogan" src="" alt="ESTONIA HUB" class="slogan-vertical">
+        </div>
+    </main>
+
+    <div class="printer-dock">
+        <img id="img-printer" src="" alt="Printer System" class="printer-img">
+    </div>
 
     <script>
-        async function loadContent() {
-            // Проверка LocalStorage для админки
-            const savedData = localStorage.getItem('copymax_data');
-            let data;
-
-            if (savedData) {
-                data = JSON.parse(savedData);
-            } else {
+        async function loadConfig() {
+            try {
                 const response = await fetch('content.json');
-                data = await response.json();
+                const data = await response.json();
+
+                // Установка текстов
+                document.title = data.site_settings.title;
+                document.getElementById('nav-brand').innerText = data.site_settings.nav_brand;
+
+                // Установка изображений из твоих файлов
+                document.getElementById('img-logo').src = data.hero.logo_img;
+                document.getElementById('img-slogan').src = data.hero.slogan_img;
+                document.getElementById('img-printer').src = data.hero.printer_img;
+
+            } catch (err) {
+                console.error("Ошибка при сборке сайта:", err);
             }
-
-            // Рендеринг данных
-            document.getElementById('hero-title').innerText = data.hero.title;
-            document.getElementById('hero-subtitle').innerText = data.hero.subtitle;
-            document.getElementById('brands-title').innerText = data.globalBrands.title;
-            document.getElementById('products-title').innerText = data.products.title;
-
-            const productsList = document.getElementById('products-list');
-            productsList.innerHTML = data.products.items.map(item => `
-                <div class="product-card">
-                    <span>${item.name}</span>
-                    <span>+</span>
-                </div>
-            `).join('');
         }
 
-        window.onload = loadContent;
+        window.onload = loadConfig;
     </script>
 </body>
 </html>
