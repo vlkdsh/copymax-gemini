@@ -4,7 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COPYMAX | Estonia</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --red: #f03c2e;
+            --grid-line: rgba(0, 0, 0, 0.06);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            font-family: 'Arial Black', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Инженерная сетка */
+        .blueprint {
+            background-image: 
+                linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+            background-size: 70px 70px;
+            height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+
+        header {
+            width: 100%;
+            padding: 30px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            z-index: 20;
+        }
+
+        .nav-box {
+            background: var(--red);
+            color: #fff;
+            padding: 6px 15px;
+            font-weight: bold;
+        }
+
+        /* Сетка контента */
+        .hero {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            align-items: center;
+            padding: 0 10%;
+        }
+
+        .logo-main {
+            width: 100%;
+            max-width: 900px;
+            mix-blend-mode: multiply; /* Убирает белый фон */
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
+        }
+
+        .slogan-vertical {
+            height: 80vh;
+            mix-blend-mode: multiply;
+        }
+
+        .printer-dock {
+            position: absolute;
+            bottom: -5%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 55%;
+            z-index: 10;
+        }
+
+        .printer-img {
+            width: 100%;
+            mix-blend-mode: multiply;
+        }
+
+        .marker {
+            position: absolute;
+            color: var(--red);
+            font-size: 30px;
+            font-weight: bold;
+            opacity: 0.6;
+        }
+    </style>
 </head>
 <body class="blueprint">
 
@@ -13,63 +100,21 @@
 
     <header>
         <div class="nav-box">COPYMAX</div>
-        <div class="menu-icon">☰</div>
+        <div style="font-size: 30px;">☰</div>
     </header>
 
     <main class="hero">
-        <div class="hero-logo-container">
-            <img id="img-logo" 
-                 src="photo_2026-01-17_22-49-20.png" 
-                 data-basename="photo_2026-01-17_22-49-20"
-                 alt="COPYMAX LOGO" 
-                 class="logo-main">
+        <div>
+            <img src="logo.png" alt="COPYMAX LOGO" class="logo-main">
         </div>
-
-        <div class="hero-slogan-container">
-            <img id="img-slogan" 
-                 src="photo_2026-01-17_22-49-28.png" 
-                 data-basename="photo_2026-01-17_22-49-28"
-                 alt="ESTONIA HUB" 
-                 class="slogan-vertical">
+        <div style="display: flex; justify-content: center;">
+            <img src="slogan.png" alt="SLOGAN" class="slogan-vertical">
         </div>
     </main>
 
     <div class="printer-dock">
-        <img id="img-printer" 
-             src="photo_2026-01-17_22-49-24.png" 
-             data-basename="photo_2026-01-17_22-49-24"
-             alt="PRINTER SYSTEM" 
-             class="printer-img">
+        <img src="printer.png" alt="PRINTER" class="printer-img">
     </div>
 
-    <script>
-        // Функция авто-исправления расширений (png/PNG/jpg/JPG)
-        function fixImagePaths() {
-            const extensions = ['.png', '.PNG', '.jpg', '.JPG', '.jpeg'];
-            const images = document.querySelectorAll('img[data-basename]');
-
-            images.forEach(img => {
-                img.onerror = async function() {
-                    const base = this.getAttribute('data-basename');
-                    console.log("Поиск файла для: " + base);
-                    
-                    for (let ext of extensions) {
-                        let testPath = base + ext;
-                        try {
-                            let response = await fetch(testPath, { method: 'HEAD' });
-                            if (response.ok) {
-                                this.src = testPath;
-                                this.onerror = null; // Выходим из цикла при успехе
-                                return;
-                            }
-                        } catch (e) {}
-                    }
-                    this.alt = "Ошибка: Файл не найден в GitHub";
-                };
-            });
-        }
-
-        window.onload = fixImagePaths;
-    </script>
 </body>
 </html>
