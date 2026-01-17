@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COPYMAX | Estonia</title>
+    <title>COPYMAX</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="blueprint">
-
-    <div class="marker" style="top: 10%; left: 10%;">+</div>
-    <div class="marker" style="bottom: 20%; right: 15%;">+</div>
 
     <header>
         <div class="nav-box">COPYMAX</div>
@@ -18,30 +15,40 @@
 
     <main class="hero">
         <div class="hero-logo-container">
-            <img id="img-logo" src="photo_2026-01-17_22-49-20.png" alt="Logo PNG Error" class="logo-main">
+            <img id="img-logo" data-src="photo_2026-01-17_22-49-20" class="logo-main" alt="Loading...">
         </div>
-
         <div class="hero-slogan-container">
-            <img id="img-slogan" src="photo_2026-01-17_22-49-28.png" alt="Slogan PNG Error" class="slogan-vertical">
+            <img id="img-slogan" data-src="photo_2026-01-17_22-49-28" class="slogan-vertical" alt="Loading...">
         </div>
     </main>
 
     <div class="printer-dock">
-        <img id="img-printer" src="photo_2026-01-17_22-49-24.png" alt="Printer PNG Error" class="printer-img">
+        <img id="img-printer" data-src="photo_2026-01-17_22-49-24" class="printer-img" alt="Loading...">
     </div>
 
     <script>
-        // Скрипт проверки: если PNG не найден, пробуем другие варианты
-        window.addEventListener('load', () => {
-            const images = document.querySelectorAll('img');
-            images.forEach(img => {
-                img.onerror = function() {
-                    console.error("Файл не найден: " + this.src);
-                    // Если вдруг файлы называются просто 1.png, 2.png и т.д., 
-                    // тут можно добавить логику замены, но пока просто сигналим об ошибке
-                };
-            });
-        });
+        const extensions = ['.png', '.PNG', '.jpg', '.JPG', '.jpeg'];
+
+        async function tryLoadImage(imgElement) {
+            const baseName = imgElement.getAttribute('data-src');
+            
+            for (let ext of extensions) {
+                const testPath = baseName + ext;
+                try {
+                    const res = await fetch(testPath, { method: 'HEAD' });
+                    if (res.ok) {
+                        imgElement.src = testPath;
+                        console.log("Успешно найдено:", testPath);
+                        return;
+                    }
+                } catch (e) {}
+            }
+            imgElement.alt = "Ошибка: файл " + baseName + " не найден в GitHub";
+        }
+
+        window.onload = () => {
+            document.querySelectorAll('img[data-src]').forEach(tryLoadImage);
+        };
     </script>
 </body>
 </html>
