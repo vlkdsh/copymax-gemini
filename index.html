@@ -13,7 +13,6 @@
             width: 100%; height: 100%; 
             background-color: #f2f2f2; 
             overflow: hidden; 
-            font-family: sans-serif;
         }
 
         .main-container {
@@ -21,30 +20,30 @@
             width: 100%; height: 100vh;
         }
 
-        /* ЛИНИИ */
+        /* КОНКРЕТНЫЕ ЛИНИИ КАК НА ФОТО */
         .blueprint-lines {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            z-index: 1; 
-            pointer-events: none;
+            z-index: 1; pointer-events: none;
         }
 
         .line {
             position: absolute;
             background-color: var(--red);
-            opacity: 0.2;
+            opacity: 0.3; /* Прозрачность как на чертеже */
         }
 
-        /* 7 Горизонтальных */
-        .h { width: 100%; height: 1px; }
-        .h-1 { top: 10%; } .h-2 { top: 22%; } .h-3 { top: 38%; height: 2px; }
-        .h-4 { top: 52%; } .h-5 { top: 68%; height: 2px; } .h-6 { top: 82%; } .h-7 { top: 94%; }
+        /* Горизонтальные линии (настраиваем высоту по фото) */
+        .h-1 { width: 100%; height: 2px; top: 12%; } /* Верхняя под логотипом */
+        .h-2 { width: 100%; height: 1px; top: 38%; } /* Центральная */
+        .h-3 { width: 100%; height: 2px; top: 65%; } /* Над принтером */
+        .h-4 { width: 100%; height: 1px; top: 85%; } /* Нижняя */
 
-        /* 8 Вертикальных */
-        .v { height: 100%; width: 1px; }
-        .v-1 { left: 7%; width: 2px; } .v-2 { left: 18%; } .v-3 { left: 32%; }
-        .v-4 { left: 48%; width: 2px; } .v-5 { left: 62%; } .v-6 { left: 78%; }
-        .v-7 { left: 89%; width: 2px; } .v-8 { left: 96%; }
+        /* Вертикальные линии (настраиваем положение слева направо) */
+        .v-1 { height: 100%; width: 2px; left: 10%; }
+        .v-2 { height: 100%; width: 1px; left: 35%; }
+        .v-3 { height: 100%; width: 1px; left: 65%; }
+        .v-4 { height: 100%; width: 2px; left: 88%; }
 
         /* ШАПКА */
         header {
@@ -53,35 +52,44 @@
             justify-content: space-between; align-items: center; 
             z-index: 100;
         }
-        .header-logo-img { height: 30px; width: auto; }
-        .menu-icon span { display: block; width: 35px; height: 3px; background-color: var(--red); margin-bottom: 5px; }
 
-        /* ОБЪЕКТЫ */
-        .layer { position: absolute; z-index: 10; }
-        .layer-logo { width: 85%; top: 30%; left: 30%; transform: translate(-50%, -50%); }
-        .layer-slogan { width: 26%; top: 55%; right: -2%; transform: translateY(-50%); }
-        .layer-printer { width: 81%; bottom: -35%; left: 50%; transform: translateX(-50%); }
+        .header-logo-img { height: 30px; width: auto; }
+
+        .menu-icon { display: flex; flex-direction: column; gap: 5px; cursor: pointer; }
+        .menu-icon span { display: block; width: 35px; height: 3px; background-color: var(--red); }
+
+        /* ТВОИ СЛОИ */
+        .layer-logo, .layer-slogan, .layer-printer {
+            position: absolute; mix-blend-mode: multiply; 
+        }
+
+        .layer-logo { width: 85%; top: 30%; left: 30%; transform: translate(-50%, -50%); z-index: 5; }
+        .layer-slogan { width: 26%; height: auto; top: 55%; right: -2%; transform: translateY(-50%); z-index: 4; }
+        .layer-printer { width: 81%; bottom: -35%; left: 50%; transform: translateX(-50%); z-index: 6; }
     </style>
 </head>
 <body>
 
     <div class="main-container">
         <div class="blueprint-lines">
-            <div class="line h h-1"></div><div class="line h h-2"></div><div class="line h h-3"></div>
-            <div class="line h h-4"></div><div class="line h h-5"></div><div class="line h h-6"></div><div class="line h h-7"></div>
-            <div class="line v v-1"></div><div class="line v v-2"></div><div class="line v v-3"></div>
-            <div class="line v v-4"></div><div class="line v v-5"></div><div class="line v v-6"></div>
-            <div class="line v v-7"></div><div class="line v v-8"></div>
+            <div class="line h-1"></div>
+            <div class="line h-2"></div>
+            <div class="line h-3"></div>
+            <div class="line h-4"></div>
+            <div class="line v-1"></div>
+            <div class="line v-2"></div>
+            <div class="line v-3"></div>
+            <div class="line v-4"></div>
         </div>
 
         <header>
-            <img src="header-logo.png" class="header-logo-img">
+            <img src="header-logo.png" alt="COPYMAX" class="header-logo-img">
             <div class="menu-icon"><span></span><span></span><span></span></div>
         </header>
 
-        <img src="logo.png" class="layer layer-logo">
-        <img src="slogan.png" class="layer layer-slogan">
-        <img src="printer.png" class="layer layer-printer">
+        <img src="logo.png" class="layer-logo" alt="Main Logo">
+        <img src="slogan.png" class="layer-slogan" alt="Slogan">
+        <img src="printer.png" class="layer-printer" alt="Printer">
     </div>
 
 </body>
