@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COPYMAX | Layered Design</title>
+    <title>COPYMAX | Premium Printing Solutions</title>
     <style>
         :root { 
             --red: #f03c2e; 
-            --grid: rgba(0, 0, 0, 0.07); 
+            --grid: rgba(0, 0, 0, 0.08); 
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body, html { width: 100%; height: 100%; background: #fff; overflow: hidden; font-family: sans-serif; }
+        
+        body, html { 
+            width: 100%; 
+            height: 100%; 
+            background: #ffffff; 
+            font-family: 'Arial Black', sans-serif;
+            overflow: hidden; /* Пока работаем только над первым экраном */
+        }
 
-        /* Фон с чертежной сеткой */
+        /* Контейнер чертежа */
         .blueprint {
             position: relative;
             width: 100%;
@@ -21,69 +28,125 @@
             background-image: 
                 linear-gradient(var(--grid) 1px, transparent 1px), 
                 linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-            background-size: 70px 70px; /* Размер клетки. Можно сделать 50px для более мелкой сетки */
+            background-size: 80px 80px;
+            background-position: center center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* --- ПАНЕЛЬ УПРАВЛЕНИЯ СЛОЯМИ --- */
-
-        /* 1. ЛОГОТИП (COPYMAX) */
-        .layer-logo {
+        /* Декоративные плюсики по углам */
+        .blueprint::before, .blueprint::after {
+            content: "+";
             position: absolute;
-            width: 85%;           /* ШИРИНА: сделай 70%, если хочешь гигантские буквы */
-            top: 30%;             /* ВЕРТИКАЛЬ: 0% - верх, 100% - низ */
-            left: 30%;            /* ГОРИЗОНТАЛЬ: 0% - лево, 100% - право */
-            transform: translate(-50%, -50%); 
-            mix-blend-mode: multiply; /* Убирает белый фон вокруг букв */
-            z-index: 5;
-            transition: 0.3s;     /* Плавность при изменениях */
+            color: var(--red);
+            font-size: 24px;
+            font-weight: bold;
+            opacity: 0.6;
         }
+        .blueprint::before { top: 40px; left: 40px; }
+        .blueprint::after { bottom: 40px; right: 40px; }
 
-       /* 2. СЛОГАН (ВЕРТИКАЛЬНЫЙ ТЕКСТ) */
-.layer-slogan {
-    position: absolute;
-    /* Управляем через ширину, чтобы пропорции были как у оригинала */
-    width: 26%;           /* Изначальный ровный размер. Увеличивай до 12-15%, если нужно крупнее */
-    height: auto;        /* Высота подстроится сама, чтобы не было искажений */
-    
-    top: 55%;            /* Центровка по вертикали */
-   right: -2%;           /* Отступ от правого края */
-    transform: translateY(-50%);
-    
-    mix-blend-mode: multiply;
-    z-index: 4;
-        }
+        /* --- СЛОИ С ТВОИМИ НАСТРОЙКАМИ --- */
 
-        /* 3. ПРИНТЕР (ВАЛИК) */
-        .layer-printer {
+        .layer {
             position: absolute;
-            width: 81%;           /* ШИРИНА ПРИНТЕРА */
-            bottom: -35%;          /* ОТСТУП СНИЗУ: -10% утопит его глубже, 0% поставит на край */
-            left: 50%;            
-            transform: translateX(-50%);
             mix-blend-mode: multiply;
+            transition: transform 0.1s ease-out; /* Для параллакса */
+            will-change: transform;
+        }
+
+        /* 1. ЛОГОТИП (Твои размеры: 85%, 30%/30%) */
+        .layer-logo {
+            width: 85%;
+            top: 30%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            animation: fadeInLogo 1.2s ease-out;
+        }
+
+        /* 2. СЛОГАН (Твои размеры: 26%, 55%, -2%) */
+        .layer-slogan {
+            width: 26%;
+            height: auto;
+            top: 55%;
+            right: -2%;
+            transform: translateY(-50%);
+            z-index: 4;
+            animation: fadeInSlogan 1.5s ease-out;
+        }
+
+        /* 3. ПРИНТЕР (Твои размеры: 81%, -35%) */
+        .layer-printer {
+            width: 81%;
+            bottom: -35%;
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 6;
+            animation: slideUpPrinter 1s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
-        /* ---------------------------------- */
+        /* АНИМАЦИИ */
+        @keyframes fadeInLogo {
+            from { opacity: 0; transform: translate(-50%, -55%) scale(0.95); }
+            to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+        }
+        @keyframes fadeInSlogan {
+            from { opacity: 0; right: -10%; }
+            to { opacity: 1; right: -2%; }
+        }
+        @keyframes slideUpPrinter {
+            from { transform: translate(-50%, 20%); opacity: 0; }
+            to { transform: translate(-50%, 0); opacity: 1; }
+        }
 
+        /* Навигация */
         header {
-            position: absolute; top: 0; width: 100%; padding: 30px 60px;
-            display: flex; justify-content: space-between; align-items: center; z-index: 10;
+            position: absolute; top: 0; width: 100%; padding: 40px 60px;
+            display: flex; justify-content: space-between; align-items: center; z-index: 100;
         }
-        .nav-box { background: var(--red); color: #fff; padding: 6px 15px; font-weight: bold; text-transform: uppercase; }
+        .nav-box { 
+            background: var(--red); color: #fff; padding: 8px 20px; 
+            font-weight: bold; font-size: 14px; letter-spacing: 1px;
+        }
         .menu-btn { font-size: 30px; cursor: pointer; color: #333; }
+
     </style>
 </head>
-<body class="blueprint">
+<body>
 
     <header>
         <div class="nav-box">COPYMAX</div>
         <div class="menu-btn">☰</div>
     </header>
 
-    <img src="logo.png" class="layer-logo" alt="COPYMAX">
-    <img src="slogan.png" class="layer-slogan" alt="Estonia Hub">
-    <img src="printer.png" class="layer-printer" alt="Printer System">
+    <div class="blueprint" id="scene">
+        <img src="logo.png" class="layer layer-logo" alt="Logo" id="logo">
+        
+        <img src="slogan.png" class="layer layer-slogan" alt="Slogan" id="slogan">
+        
+        <img src="printer.png" class="layer layer-printer" alt="Printer" id="printer">
+    </div>
 
+    <script>
+        // Небольшой эффект параллакса при движении мышки
+        const scene = document.getElementById('scene');
+        const logo = document.getElementById('logo');
+        const slogan = document.getElementById('slogan');
+        const printer = document.getElementById('printer');
+
+        document.addEventListener('mousemove', (e) => {
+            const x = (window.innerWidth / 2 - e.pageX) / 50;
+            const y = (window.innerHeight / 2 - e.pageY) / 50;
+
+            // Буквы двигаются чуть активнее
+            logo.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
+            // Слоган чуть меньше
+            slogan.style.transform = `translate(${x/2}px, calc(-50% + ${y/2}px))`;
+            // Принтер почти стоит на месте
+            printer.style.transform = `translate(calc(-50% + ${x/3}px), ${y/4}px)`;
+        });
+    </script>
 </body>
 </html>
