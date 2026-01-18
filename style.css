@@ -1,45 +1,91 @@
+:root { 
+    --red: #f03c2e; 
+}
+
+/* Общие настройки */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
 body, html { 
-            width: 100%; 
-            height: 100%; 
-            /* Светло-серый оттенок, как на референсе */
-            background-color: #f2f2f2; 
-            overflow: hidden; 
-        }
+    width: 100%; 
+    height: 100%; 
+    background-color: #f2f2f2; /* Светло-серый фон */
+    overflow: hidden; 
+    font-family: sans-serif;
+}
 
-        .main-container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-        }
+.main-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
 
-        /* Чтобы картинки (лого, слоган, принтер) не имели белых рамок на сером фоне */
-        .layer-logo, .layer-slogan, .layer-printer {
-            position: absolute;
-            mix-blend-mode: multiply; 
-        }
+/* КРАСНЫЕ ПОЛОСЫ НА ЗАДНЕМ ПЛАНЕ */
+.background-lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
 
-        /* Твои настройки размеров остаются прежними */
-        .layer-logo {
-            width: 85%;
-            top: 30%;
-            left: 30%;
-            transform: translate(-50%, -50%); 
-            z-index: 5;
-        }
+.line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--red);
+    opacity: 0.6;
+}
 
-        .layer-slogan {
-            width: 26%;
-            height: auto;
-            top: 55%;
-            right: -2%;
-            transform: translateY(-50%);
-            z-index: 4;
-        }
+.line-1 { top: 38%; }
+.line-2 { bottom: 28%; }
 
-        .layer-printer {
-            width: 81%;
-            bottom: -35%;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 6;
-        }
+/* ШАПКА САЙТА */
+header {
+    position: absolute; 
+    top: 20px; 
+    width: 100%; 
+    padding: 0 60px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    z-index: 100;
+}
+
+/* Логотип в шапке */
+.header-logo-img {
+    height: 30px; 
+    width: auto;
+    display: block;
+}
+
+/* Красное меню */
+.menu-icon { 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    width: 35px;
+    height: 3px;
+    background-color: var(--red);
+}
+
+/* СЛОИ ИЗОБРАЖЕНИЙ */
+.layer-logo, .layer-slogan, .layer-printer {
+    position: absolute;
+    mix-blend-mode: multiply; 
+}
+
+.layer-logo {
+    width: 85%;
+    top: 30%;
+    left: 30%;
