@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COPYMAX | Estonia</title>
     <style>
-        :root { --red: #f03c2e; }
+        :root { 
+            --red: #f03c2e; 
+            --line-opacity: 0.25; /* Прозрачность линий */
+        }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -20,7 +23,7 @@
             width: 100%; height: 100vh;
         }
 
-        /* КОНКРЕТНЫЕ ЛИНИИ КАК НА ФОТО */
+        /* СЛОЙ ЛИНИЙ (7 горизонтальных, 8 вертикальных) */
         .blueprint-lines {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -30,20 +33,33 @@
         .line {
             position: absolute;
             background-color: var(--red);
-            opacity: 0.3; /* Прозрачность как на чертеже */
+            opacity: var(--line-opacity);
         }
 
-        /* Горизонтальные линии (настраиваем высоту по фото) */
-        .h-1 { width: 100%; height: 2px; top: 12%; } /* Верхняя под логотипом */
-        .h-2 { width: 100%; height: 1px; top: 38%; } /* Центральная */
-        .h-3 { width: 100%; height: 2px; top: 65%; } /* Над принтером */
-        .h-4 { width: 100%; height: 1px; top: 85%; } /* Нижняя */
+        /* ГОРИЗОНТАЛЬНЫЕ (7 штук) */
+        .h { width: 100%; height: 1px; }
+        .h.bold { height: 2px; } /* Некоторые линии толще, как на референсе */
 
-        /* Вертикальные линии (настраиваем положение слева направо) */
-        .v-1 { height: 100%; width: 2px; left: 10%; }
-        .v-2 { height: 100%; width: 1px; left: 35%; }
-        .v-3 { height: 100%; width: 1px; left: 65%; }
-        .v-4 { height: 100%; width: 2px; left: 88%; }
+        .h-1 { top: 5%; }
+        .h-2 { top: 15%; }
+        .h-3 { top: 35%; }  /* Под логотипом */
+        .h-4 { top: 50%; }  /* Центр */
+        .h-5 { top: 65%; }  /* Над принтером */
+        .h-6 { top: 80%; }
+        .h-7 { top: 92%; }
+
+        /* ВЕРТИКАЛЬНЫЕ (8 штук) */
+        .v { height: 100%; width: 1px; }
+        .v.bold { width: 2px; }
+
+        .v-1 { left: 5%; }
+        .v-2 { left: 15%; }
+        .v-3 { left: 30%; }
+        .v-4 { left: 45%; }
+        .v-5 { left: 60%; }
+        .v-6 { left: 75%; }
+        .v-7 { left: 88%; }
+        .v-8 { left: 96%; }
 
         /* ШАПКА */
         header {
@@ -58,39 +74,5 @@
         .menu-icon { display: flex; flex-direction: column; gap: 5px; cursor: pointer; }
         .menu-icon span { display: block; width: 35px; height: 3px; background-color: var(--red); }
 
-        /* ТВОИ СЛОИ */
+        /* ТВОИ ОБЪЕКТЫ */
         .layer-logo, .layer-slogan, .layer-printer {
-            position: absolute; mix-blend-mode: multiply; 
-        }
-
-        .layer-logo { width: 85%; top: 30%; left: 30%; transform: translate(-50%, -50%); z-index: 5; }
-        .layer-slogan { width: 26%; height: auto; top: 55%; right: -2%; transform: translateY(-50%); z-index: 4; }
-        .layer-printer { width: 81%; bottom: -35%; left: 50%; transform: translateX(-50%); z-index: 6; }
-    </style>
-</head>
-<body>
-
-    <div class="main-container">
-        <div class="blueprint-lines">
-            <div class="line h-1"></div>
-            <div class="line h-2"></div>
-            <div class="line h-3"></div>
-            <div class="line h-4"></div>
-            <div class="line v-1"></div>
-            <div class="line v-2"></div>
-            <div class="line v-3"></div>
-            <div class="line v-4"></div>
-        </div>
-
-        <header>
-            <img src="header-logo.png" alt="COPYMAX" class="header-logo-img">
-            <div class="menu-icon"><span></span><span></span><span></span></div>
-        </header>
-
-        <img src="logo.png" class="layer-logo" alt="Main Logo">
-        <img src="slogan.png" class="layer-slogan" alt="Slogan">
-        <img src="printer.png" class="layer-printer" alt="Printer">
-    </div>
-
-</body>
-</html>
