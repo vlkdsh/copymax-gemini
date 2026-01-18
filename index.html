@@ -10,18 +10,15 @@
             --grid: rgba(0, 0, 0, 0.07); 
         }
 
-        /* Убираем все лишние отступы */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body, html { 
             width: 100%; 
             height: 100%; 
             background: #ffffff; 
-            font-family: sans-serif;
             overflow: hidden; 
         }
 
-        /* Фон-чертеж (статичный) */
         .blueprint {
             position: relative;
             width: 100%;
@@ -32,9 +29,41 @@
             background-size: 70px 70px;
         }
 
-        /* --- ТВОИ ПРОВЕРЕННЫЕ НАСТРОЙКИ --- */
+        /* ШАПКА: Подняли выше (top: 20px) */
+        header {
+            position: absolute; 
+            top: 20px; 
+            width: 100%; 
+            padding: 0 60px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            z-index: 100;
+        }
 
-        /* 1. ЛОГОТИП (COPYMAX) */
+        /* Твое оригинальное лого (загрузи файл header-logo.png) */
+        .header-logo-img {
+            height: 50px; /* Отрегулируй высоту под свой файл */
+            width: auto;
+            display: block;
+        }
+
+        /* МЕНЮ: Красные полоски */
+        .menu-icon { 
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-icon span {
+            display: block;
+            width: 35px;
+            height: 3px;
+            background-color: var(--red); /* Сделали красными */
+        }
+
+        /* ТВОИ ПРОВЕРЕННЫЕ СЛОИ */
         .layer-logo {
             position: absolute;
             width: 85%;
@@ -45,7 +74,6 @@
             z-index: 5;
         }
 
-        /* 2. СЛОГАН (ВЕРТИКАЛЬНЫЙ ТЕКСТ) */
         .layer-slogan {
             position: absolute;
             width: 26%;
@@ -57,7 +85,6 @@
             z-index: 4;
         }
 
-        /* 3. ПРИНТЕР (ВАЛИК) */
         .layer-printer {
             position: absolute;
             width: 81%;
@@ -67,24 +94,21 @@
             mix-blend-mode: multiply;
             z-index: 6;
         }
-
-        /* Шапка сайта */
-        header {
-            position: absolute; top: 0; width: 100%; padding: 30px 60px;
-            display: flex; justify-content: space-between; align-items: center; z-index: 10;
-        }
-        .nav-box { background: var(--red); color: #fff; padding: 6px 15px; font-weight: bold; font-size: 14px; }
-        .menu-icon { font-size: 30px; color: #333; }
     </style>
 </head>
 <body class="blueprint">
 
     <header>
-        <div class="nav-box">COPYMAX</div>
-        <div class="menu-icon">☰</div>
+        <img src="header-logo.png" alt="COPYMAX" class="header-logo-img">
+        
+        <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
-    <img src="logo.png" class="layer-logo" alt="Logo">
+    <img src="logo.png" class="layer-logo" alt="Main Logo">
     <img src="slogan.png" class="layer-slogan" alt="Slogan">
     <img src="printer.png" class="layer-printer" alt="Printer">
 
