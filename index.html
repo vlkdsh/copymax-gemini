@@ -7,7 +7,6 @@
     <style>
         :root { 
             --red: #f03c2e; 
-            --grid: rgba(0, 0, 0, 0.07); 
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -15,21 +14,17 @@
         body, html { 
             width: 100%; 
             height: 100%; 
-            background: #ffffff; 
+            background: #ffffff; /* Теперь просто чистый белый фон */
             overflow: hidden; 
         }
 
-        .blueprint {
+        .main-container {
             position: relative;
             width: 100%;
             height: 100vh;
-            background-image: 
-                linear-gradient(var(--grid) 1px, transparent 1px), 
-                linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-            background-size: 70px 70px;
         }
 
-       /* ШАПКА: Подняли выше */
+        /* ШАПКА */
         header {
             position: absolute; 
             top: 20px; 
@@ -41,14 +36,12 @@
             z-index: 100;
         }
 
-        /* Твое оригинальное лого (сделали меньше) */
         .header-logo-img {
-            height: 30px; /* Уменьшили с 50px до 35px */
+            height: 30px; 
             width: auto;
             display: block;
         }
 
-        /* МЕНЮ: Красные полоски */
         .menu-icon { 
             display: flex;
             flex-direction: column;
@@ -63,15 +56,15 @@
             background-color: var(--red);
         }
 
-        /* ТВОИ ПРОВЕРЕННЫЕ СЛОИ */
+        /* ТВОИ СЛОИ (БЕЗ СЕТКИ) */
         .layer-logo {
             position: absolute;
             width: 85%;
             top: 30%;
             left: 30%;
             transform: translate(-50%, -50%); 
-            mix-blend-mode: multiply;
             z-index: 5;
+            /* Убрали mix-blend-mode для чистоты */
         }
 
         .layer-slogan {
@@ -81,7 +74,6 @@
             top: 55%;
             right: -2%;
             transform: translateY(-50%);
-            mix-blend-mode: multiply;
             z-index: 4;
         }
 
@@ -91,16 +83,14 @@
             bottom: -35%;
             left: 50%;
             transform: translateX(-50%);
-            mix-blend-mode: multiply;
             z-index: 6;
         }
     </style>
 </head>
-<body class="blueprint">
+<body class="main-container">
 
     <header>
         <img src="header-logo.png" alt="COPYMAX" class="header-logo-img">
-        
         <div class="menu-icon">
             <span></span>
             <span></span>
