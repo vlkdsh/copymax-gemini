@@ -14,7 +14,7 @@
         body, html { 
             width: 100%; 
             height: 100%; 
-            background: #ffffff; /* Теперь просто чистый белый фон */
+            background-color: #f2f2f2; /* Тот самый серый фон */
             overflow: hidden; 
         }
 
@@ -23,6 +23,29 @@
             width: 100%;
             height: 100vh;
         }
+
+        /* КРАСНЫЕ ПОЛОСЫ НА ФОНЕ */
+        .background-lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1; /* Самый нижний слой */
+            pointer-events: none;
+        }
+
+        .line {
+            position: absolute;
+            width: 100%;
+            height: 2px; /* Толщина полосок */
+            background-color: var(--red);
+            opacity: 0.8; /* Можно сделать чуть прозрачнее или ярче */
+        }
+
+        /* Позиции полосок (подстраивай под логотип и принтер) */
+        .line-1 { top: 35%; }
+        .line-2 { bottom: 25%; }
 
         /* ШАПКА */
         header {
@@ -39,7 +62,6 @@
         .header-logo-img {
             height: 30px; 
             width: auto;
-            display: block;
         }
 
         .menu-icon { 
@@ -56,51 +78,18 @@
             background-color: var(--red);
         }
 
-        /* ТВОИ СЛОИ (БЕЗ СЕТКИ) */
-        .layer-logo {
+        /* ТВОИ СЛОИ */
+        .layer-logo, .layer-slogan, .layer-printer {
             position: absolute;
+            mix-blend-mode: multiply; 
+        }
+
+        .layer-logo {
             width: 85%;
             top: 30%;
             left: 30%;
             transform: translate(-50%, -50%); 
             z-index: 5;
-            /* Убрали mix-blend-mode для чистоты */
         }
 
         .layer-slogan {
-            position: absolute;
-            width: 26%;
-            height: auto;
-            top: 55%;
-            right: -2%;
-            transform: translateY(-50%);
-            z-index: 4;
-        }
-
-        .layer-printer {
-            position: absolute;
-            width: 81%;
-            bottom: -35%;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 6;
-        }
-    </style>
-</head>
-<body class="main-container">
-
-    <header>
-        <img src="header-logo.png" alt="COPYMAX" class="header-logo-img">
-        <div class="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </header>
-
-    <img src="logo.png" class="layer-logo" alt="Main Logo">
-    <img src="slogan.png" class="layer-slogan" alt="Slogan">
-    <img src="printer.png" class="layer-printer" alt="Printer">
-
-</body>
-</html>
