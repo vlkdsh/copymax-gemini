@@ -7,8 +7,10 @@
     <style>
         :root { 
             --red: #f03c2e; 
-            /* Цвет линий сетки (красный с небольшой прозрачностью) */
-            --grid-color: rgba(240, 60, 46, 0.2); 
+            /* Основные оси — чуть ярче */
+            --grid-main: rgba(240, 60, 46, 0.25); 
+            /* Вспомогательная сетка — очень тонкая */
+            --grid-sub: rgba(240, 60, 46, 0.12); 
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -18,21 +20,25 @@
             height: 100%; 
             background-color: #f2f2f2; 
             overflow: hidden; 
-            font-family: sans-serif;
         }
 
-        /* ТА САМАЯ СЕТКА КАК НА ФОТО */
+        /* КОМБИНИРОВАННАЯ ЧЕРТЕЖНАЯ СЕТКА */
         .main-container {
             position: relative;
             width: 100%;
             height: 100vh;
-            /* Создаем пересечение вертикальных и горизонтальных линий */
             background-image: 
-                linear-gradient(var(--grid-color) 1px, transparent 1px), 
-                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
-            /* Размер клетки сетки */
-            background-size: 60px 60px; 
-            background-position: center center;
+                /* 1. Жирные основные горизонтальные линии */
+                linear-gradient(var(--grid-main) 2px, transparent 2px),
+                /* 2. Жирные основные вертикальные линии */
+                linear-gradient(90deg, var(--grid-main) 2px, transparent 2px),
+                /* 3. Тонкая мелкая сетка */
+                linear-gradient(var(--grid-sub) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-sub) 1px, transparent 1px);
+            
+            /* Размеры: основные оси через каждые 200px, мелкая сетка каждые 40px */
+            background-size: 200px 200px, 200px 200px, 40px 40px, 40px 40px;
+            background-position: -1px -1px;
         }
 
         /* ШАПКА */
@@ -50,7 +56,6 @@
         .header-logo-img {
             height: 30px; 
             width: auto;
-            display: block;
         }
 
         .menu-icon { 
@@ -67,10 +72,9 @@
             background-color: var(--red);
         }
 
-        /* ТВОИ СЛОИ */
+        /* ТВОИ СЛОИ ОБЪЕКТОВ */
         .layer-logo, .layer-slogan, .layer-printer {
             position: absolute;
-            /* multiply позволяет сетке красиво просвечивать сквозь тени объектов */
             mix-blend-mode: multiply; 
         }
 
@@ -103,7 +107,6 @@
 <body>
 
     <div class="main-container">
-        
         <header>
             <img src="header-logo.png" alt="COPYMAX" class="header-logo-img">
             <div class="menu-icon">
@@ -116,7 +119,6 @@
         <img src="logo.png" class="layer-logo" alt="Main Logo">
         <img src="slogan.png" class="layer-slogan" alt="Slogan">
         <img src="printer.png" class="layer-printer" alt="Printer">
-
     </div>
 
 </body>
