@@ -38,15 +38,17 @@
             transition: 0.3s;     /* Плавность при изменениях */
         }
 
-        /* 2. СЛОГАН (ВЕРТИКАЛЬНЫЙ ТЕКСТ) */
-        .layer-slogan {
-            position: absolute;
-            height: 70vh;         /* ВЫСОТА надписи относительно экрана */
-            top: 50%;             
-            right: 6%;            /* ОТСТУП ОТ ПРАВОГО КРАЯ */
-            transform: translateY(-50%);
-            mix-blend-mode: multiply;
-            z-index: 4;
+        /* 2. СЛОГАН (ТЕПЕРЬ С КОДОМ НА УВЕЛИЧЕНИЕ) */
+.layer-slogan {
+    position: absolute;
+    height: 90vh;         /* ВЫСОТА: 90vh — это почти весь экран по вертикали */
+    width: auto;          /* Ширина подстроится пропорционально */
+    max-width: 15%;       /* Увеличь до 25%, если буквы кажутся узкими */
+    top: 50%;
+    right: 5%;            /* Чем меньше число, тем ближе к правому краю */
+    transform: translateY(-50%);
+    mix-blend-mode: multiply;
+    z-index: 4;
         }
 
         /* 3. ПРИНТЕР (ВАЛИК) */
