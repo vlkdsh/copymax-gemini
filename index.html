@@ -7,15 +7,17 @@
     <style>
         :root { 
             --red: #f03c2e; 
-            --line-opacity: 0.25; /* Прозрачность линий */
+            --line-opacity: 0.25; 
         }
 
+        /* Общие настройки */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body, html { 
             width: 100%; height: 100%; 
             background-color: #f2f2f2; 
             overflow: hidden; 
+            font-family: sans-serif;
         }
 
         .main-container {
@@ -27,7 +29,8 @@
         .blueprint-lines {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            z-index: 1; pointer-events: none;
+            z-index: 1; /* Если линии перекрывают буквы, поменяй на -1 */
+            pointer-events: none;
         }
 
         .line {
@@ -36,29 +39,25 @@
             opacity: var(--line-opacity);
         }
 
-        /* ГОРИЗОНТАЛЬНЫЕ (7 штук) */
+        /* НАСТРОЙКА 7 ГОРИЗОНТАЛЬНЫХ ЛИНИЙ */
         .h { width: 100%; height: 1px; }
-        .h.bold { height: 2px; } /* Некоторые линии толще, как на референсе */
+        .h-1 { top: 7%; height: 2px; } /* Жирная верхняя */
+        .h-2 { top: 12%; }
+        .h-3 { top: 38%; height: 2px; } /* Линия под COPYMAX */
+        .h-4 { top: 50%; opacity: 0.1; } 
+        .h-5 { top: 66%; height: 2px; } /* Линия над принтером */
+        .h-6 { top: 82%; }
+        .h-7 { top: 94%; }
 
-        .h-1 { top: 5%; }
-        .h-2 { top: 15%; }
-        .h-3 { top: 35%; }  /* Под логотипом */
-        .h-4 { top: 50%; }  /* Центр */
-        .h-5 { top: 65%; }  /* Над принтером */
-        .h-6 { top: 80%; }
-        .h-7 { top: 92%; }
-
-        /* ВЕРТИКАЛЬНЫЕ (8 штук) */
+        /* НАСТРОЙКА 8 ВЕРТИКАЛЬНЫХ ЛИНИЙ */
         .v { height: 100%; width: 1px; }
-        .v.bold { width: 2px; }
-
-        .v-1 { left: 5%; }
-        .v-2 { left: 15%; }
-        .v-3 { left: 30%; }
-        .v-4 { left: 45%; }
-        .v-5 { left: 60%; }
-        .v-6 { left: 75%; }
-        .v-7 { left: 88%; }
+        .v-1 { left: 4%; width: 2px; }
+        .v-2 { left: 12%; }
+        .v-3 { left: 28%; }
+        .v-4 { left: 45%; width: 2px; } /* Центральная ось */
+        .v-5 { left: 62%; }
+        .v-6 { left: 78%; width: 2px; } /* Линия у края слогана */
+        .v-7 { left: 89%; }
         .v-8 { left: 96%; }
 
         /* ШАПКА */
@@ -74,41 +73,57 @@
         .menu-icon { display: flex; flex-direction: column; gap: 5px; cursor: pointer; }
         .menu-icon span { display: block; width: 35px; height: 3px; background-color: var(--red); }
 
-        /* ТВОИ ОБЪЕКТЫ */
+        /* ОБЪЕКТЫ (Лого, Слоган, Принтер) */
         .layer-logo, .layer-slogan, .layer-printer {
-            position: absolute; mix-blend-mode: multiply; 
+            position: absolute; 
+            mix-blend-mode: multiply; 
         }
 
-        .layer-logo { width: 85%; top: 30%; left: 30%; transform: translate(-50%, -50%); z-index: 5; }
-        .layer-slogan { width: 26%; height: auto; top: 55%; right: -2%; transform: translateY(-50%); z-index: 4; }
-        .layer-printer { width: 81%; bottom: -35%; left: 50%; transform: translateX(-50%); z-index: 6; }
+        .layer-logo { 
+            width: 85%; top: 30%; left: 30%; 
+            transform: translate(-50%, -50%); z-index: 10; 
+        }
+        
+        .layer-slogan { 
+            width: 26%; height: auto; top: 55%; right: -2%; 
+            transform: translateY(-50%); z-index: 5; 
+        }
+
+        .layer-printer { 
+            width: 81%; bottom: -35%; left: 50%; 
+            transform: translateX(-50%); z-index: 15; 
+        }
     </style>
 </head>
 <body>
 
     <div class="main-container">
         <div class="blueprint-lines">
-            <div class="line h h-1 bold"></div>
+            <div class="line h h-1"></div>
             <div class="line h h-2"></div>
-            <div class="line h h-3 bold"></div>
+            <div class="line h h-3"></div>
             <div class="line h h-4"></div>
-            <div class="line h h-5 bold"></div>
+            <div class="line h h-5"></div>
             <div class="line h h-6"></div>
             <div class="line h h-7"></div>
 
-            <div class="line v v-1 bold"></div>
+            <div class="line v v-1"></div>
             <div class="line v v-2"></div>
             <div class="line v v-3"></div>
-            <div class="line v v-4 bold"></div>
+            <div class="line v v-4"></div>
             <div class="line v v-5"></div>
             <div class="line v v-6"></div>
-            <div class="line v v-7 bold"></div>
+            <div class="line v v-7"></div>
             <div class="line v v-8"></div>
         </div>
 
         <header>
             <img src="header-logo.png" alt="COPYMAX" class="header-logo-img">
-            <div class="menu-icon"><span></span><span></span><span></span></div>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </header>
 
         <img src="logo.png" class="layer-logo" alt="Main Logo">
