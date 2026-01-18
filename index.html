@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COPYMAX | Estonia</title>
+    <title>COPYMAX | Layered Design</title>
     <style>
         :root { 
             --red: #f03c2e; 
@@ -11,108 +11,75 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html { width: 100%; height: 100%; background: #fff; overflow: hidden; font-family: sans-serif; }
 
-        body, html { 
-            width: 100%; 
-            height: 100%; 
-            background: #fff; 
-            font-family: 'Arial Black', sans-serif;
-        }
-
-        /* Главная секция с сеткой */
-        .hero-section {
+        /* Фон с чертежной сеткой */
+        .blueprint {
             position: relative;
             width: 100%;
             height: 100vh;
-            display: flex;
-            justify-content: center; /* Центр по горизонтали */
-            align-items: center;     /* Центр по вертикали */
             background-image: 
                 linear-gradient(var(--grid) 1px, transparent 1px), 
                 linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-            background-size: 70px 70px;
-            background-position: center center; /* Чтобы сетка тоже была ровной */
-            overflow: hidden;
+            background-size: 70px 70px; /* Размер клетки. Можно сделать 50px для более мелкой сетки */
         }
 
-        /* Контейнер для картинки, чтобы она не "гуляла" */
-        .image-container {
-            width: 100%;
-            max-width: 1600px; /* Ограничиваем на огромных мониторах */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0 40px;
+        /* --- ПАНЕЛЬ УПРАВЛЕНИЯ СЛОЯМИ --- */
+
+        /* 1. ЛОГОТИП (COPYMAX) */
+        .layer-logo {
+            position: absolute;
+            width: 55%;           /* ШИРИНА: сделай 70%, если хочешь гигантские буквы */
+            top: 42%;             /* ВЕРТИКАЛЬ: 0% - верх, 100% - низ */
+            left: 45%;            /* ГОРИЗОНТАЛЬ: 0% - лево, 100% - право */
+            transform: translate(-50%, -50%); 
+            mix-blend-mode: multiply; /* Убирает белый фон вокруг букв */
+            z-index: 5;
+            transition: 0.3s;     /* Плавность при изменениях */
         }
 
-        .main-composite {
-            width: 100%;
-            height: auto;
-            max-height: 90vh; /* Чтобы принтер снизу не обрезался */
-            object-fit: contain; /* Сохраняет пропорции внутри блока */
+        /* 2. СЛОГАН (ВЕРТИКАЛЬНЫЙ ТЕКСТ) */
+        .layer-slogan {
+            position: absolute;
+            height: 70vh;         /* ВЫСОТА надписи относительно экрана */
+            top: 50%;             
+            right: 6%;            /* ОТСТУП ОТ ПРАВОГО КРАЯ */
+            transform: translateY(-50%);
             mix-blend-mode: multiply;
-            display: block;
-            z-index: 1;
+            z-index: 4;
         }
+
+        /* 3. ПРИНТЕР (ВАЛИК) */
+        .layer-printer {
+            position: absolute;
+            width: 48%;           /* ШИРИНА ПРИНТЕРА */
+            bottom: -6%;          /* ОТСТУП СНИЗУ: -10% утопит его глубже, 0% поставит на край */
+            left: 50%;            
+            transform: translateX(-50%);
+            mix-blend-mode: multiply;
+            z-index: 6;
+        }
+
+        /* ---------------------------------- */
 
         header {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            padding: 30px 60px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 10;
+            position: absolute; top: 0; width: 100%; padding: 30px 60px;
+            display: flex; justify-content: space-between; align-items: center; z-index: 10;
         }
-
-        .nav-box {
-            background: var(--red);
-            color: #fff;
-            padding: 8px 18px;
-            font-weight: bold;
-            font-size: 14px;
-            text-transform: uppercase;
-        }
-
-        .menu-icon {
-            font-size: 30px;
-            cursor: pointer;
-            color: #333;
-        }
-
-        /* Плюсики */
-        .marker {
-            position: absolute;
-            color: var(--red);
-            font-size: 32px;
-            font-weight: bold;
-            opacity: 0.5;
-            z-index: 2;
-        }
+        .nav-box { background: var(--red); color: #fff; padding: 6px 15px; font-weight: bold; text-transform: uppercase; }
+        .menu-btn { font-size: 30px; cursor: pointer; color: #333; }
     </style>
 </head>
-<body>
+<body class="blueprint">
 
-    <div class="hero-section">
-        <div class="marker" style="top: 100px; left: 100px;">+</div>
-        <div class="marker" style="bottom: 100px; right: 100px;">+</div>
+    <header>
+        <div class="nav-box">COPYMAX</div>
+        <div class="menu-btn">☰</div>
+    </header>
 
-        <header>
-            <div class="nav-box">COPYMAX</div>
-            <div class="menu-icon">☰</div>
-        </header>
+    <img src="logo.png" class="layer-logo" alt="COPYMAX">
+    <img src="slogan.png" class="layer-slogan" alt="Estonia Hub">
+    <img src="printer.png" class="layer-printer" alt="Printer System">
 
-        <div class="image-container">
-            <img src="hero-main.png" alt="COPYMAX Composite" id="hero-img" class="main-composite">
-        </div>
-    </div>
-
-    <script>
-        const img = document.getElementById('hero-img');
-        img.onerror = function() {
-            if (!this.src.includes('.jpg')) this.src = 'hero-main.jpg';
-        };
-    </script>
 </body>
 </html>
