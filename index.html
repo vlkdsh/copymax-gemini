@@ -15,92 +15,152 @@
             width: 100%; height: 100%; 
             background-color: #f2f2f2; 
             overflow: hidden; 
+            font-family: sans-serif;
         }
 
         .main-container {
             position: relative;
             width: 100%; height: 100vh;
+            z-index: 1;
         }
 
-        /* ЛИНИИ: z-index -1 чтобы они были ПОД картинками */
+        /* ФОНОВЫЕ ЛИНИИ (7 горизонтальных, 8 вертикальных) */
         .blueprint-lines {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            z-index: -1; 
+            z-index: -1; /* Уходим за основной контент */
             pointer-events: none;
         }
 
         .line {
             position: absolute;
             background-color: var(--red);
-            opacity: 0.2; /* Делаем их бледными как на чертеже */
+            opacity: 0.2; /* Прозрачность как на чертеже */
         }
 
         /* 7 ГОРИЗОНТАЛЬНЫХ */
         .h { width: 100%; height: 1px; }
         .h-1 { top: 10%; }
         .h-2 { top: 25%; }
-        .h-3 { top: 40%; height: 2px; } /* Жирная */
+        .h-3 { top: 40%; height: 2px; } /* Жирная ось */
         .h-4 { top: 55%; }
-        .h-5 { top: 70%; height: 2px; } /* Жирная */
+        .h-5 { top: 70%; height: 2px; } /* Жирная ось */
         .h-6 { top: 85%; }
         .h-7 { top: 95%; }
 
         /* 8 ВЕРТИКАЛЬНЫХ */
         .v { height: 100%; width: 1px; }
-        .v-1 { left: 8%; width: 2px; } /* Жирная */
+        .v-1 { left: 8%; width: 2px; } /* Жирная ось */
         .v-2 { left: 20%; }
         .v-3 { left: 35%; }
-        .v-4 { left: 50%; width: 2px; } /* Жирная */
+        .v-4 { left: 50%; width: 2px; } /* Жирная ось */
         .v-5 { left: 65%; }
         .v-6 { left: 80%; }
-        .v-7 { left: 90%; width: 2px; } /* Жирная */
+        .v-7 { left: 90%; width: 2px; } /* Жирная ось */
         .v-8 { left: 97%; }
 
-        /* ШАПКА */
+        /* ШАПКА: Логотип и Меню */
         header {
-            position: absolute; top: 20px; width: 100%; 
-            padding: 0 60px; display: flex; 
-            justify-content: space-between; align-items: center; 
-            z-index: 100;
+            position: absolute; 
+            top: 20px; 
+            width: 100%; 
+            padding: 0 60px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            z-index: 100; /* Самый верхний слой */
         }
 
-        .header-logo-img { height: 30px; width: auto; }
+        .header-logo-img {
+            height: 30px; 
+            width: auto;
+            display: block;
+        }
 
-        .menu-icon { display: flex; flex-direction: column; gap: 5px; cursor: pointer; }
-        .menu-icon span { display: block; width: 35px; height: 3px; background-color: var(--red); }
+        .menu-icon { 
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
 
-        /* ТВОИ ОБЪЕКТЫ: z-index выше 10 */
+        .menu-icon span {
+            display: block;
+            width: 35px;
+            height: 3px;
+            background-color: var(--red);
+        }
+
+        /* ТВОИ ОБЪЕКТЫ */
         .layer-logo, .layer-slogan, .layer-printer {
             position: absolute; 
             mix-blend-mode: multiply; 
         }
 
-        .layer-logo { width: 85%; top: 30%; left: 30%; transform: translate(-50%, -50%); z-index: 20; }
-        .layer-slogan { width: 26%; height: auto; top: 55%; right: -2%; transform: translateY(-50%); z-index: 15; }
-        .layer-printer { width: 81%; bottom: -35%; left: 50%; transform: translateX(-50%); z-index: 25; }
+        /* Основной COPYMAX */
+        .layer-logo { 
+            width: 85%; 
+            top: 30%; 
+            left: 30%; 
+            transform: translate(-50%, -50%); 
+            z-index: 10; 
+        }
+
+        /* Боковой текст */
+        .layer-slogan { 
+            width: 26%; 
+            top: 55%; 
+            right: -2%; 
+            transform: translateY(-50%); 
+            z-index: 5; 
+        }
+
+        /* Принтер внизу */
+        .layer-printer { 
+            width: 81%; 
+            bottom: -35%; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            z-index: 15; 
+        }
     </style>
 </head>
 <body>
 
     <div class="main-container">
+        
         <div class="blueprint-lines">
-            <div class="line h h-1"></div><div class="line h h-2"></div><div class="line h h-3"></div>
-            <div class="line h h-4"></div><div class="line h h-5"></div><div class="line h h-6"></div><div class="line h h-7"></div>
+            <div class="line h h-1"></div>
+            <div class="line h h-2"></div>
+            <div class="line h h-3"></div>
+            <div class="line h h-4"></div>
+            <div class="line h h-5"></div>
+            <div class="line h h-6"></div>
+            <div class="line h h-7"></div>
             
-            <div class="line v v-1"></div><div class="line v v-2"></div><div class="line v v-3"></div>
-            <div class="line v v-4"></div><div class="line v v-5"></div><div class="line v v-6"></div>
-            <div class="line v v-7"></div><div class="line v v-8"></div>
+            <div class="line v v-1"></div>
+            <div class="line v v-2"></div>
+            <div class="line v v-3"></div>
+            <div class="line v v-4"></div>
+            <div class="line v v-5"></div>
+            <div class="line v v-6"></div>
+            <div class="line v v-7"></div>
+            <div class="line v v-8"></div>
         </div>
 
         <header>
             <img src="header-logo.png" alt="COPYMAX" class="header-logo-img">
-            <div class="menu-icon"><span></span><span></span><span></span></div>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </header>
 
         <img src="logo.png" class="layer-logo" alt="Main Logo">
         <img src="slogan.png" class="layer-slogan" alt="Slogan">
         <img src="printer.png" class="layer-printer" alt="Printer">
+
     </div>
 
 </body>
