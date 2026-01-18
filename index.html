@@ -7,7 +7,6 @@
     <style>
         :root { 
             --red: #f03c2e; 
-            --line-opacity: 0.25; /* Прозрачность линий */
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -23,43 +22,40 @@
             width: 100%; height: 100vh;
         }
 
-        /* СЛОЙ ЛИНИЙ (7 горизонтальных, 8 вертикальных) */
+        /* ЛИНИИ: z-index -1 чтобы они были ПОД картинками */
         .blueprint-lines {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            z-index: 1; pointer-events: none;
+            z-index: -1; 
+            pointer-events: none;
         }
 
         .line {
             position: absolute;
             background-color: var(--red);
-            opacity: var(--line-opacity);
+            opacity: 0.2; /* Делаем их бледными как на чертеже */
         }
 
-        /* ГОРИЗОНТАЛЬНЫЕ (7 штук) */
+        /* 7 ГОРИЗОНТАЛЬНЫХ */
         .h { width: 100%; height: 1px; }
-        .h.bold { height: 2px; } /* Некоторые линии толще, как на референсе */
+        .h-1 { top: 10%; }
+        .h-2 { top: 25%; }
+        .h-3 { top: 40%; height: 2px; } /* Жирная */
+        .h-4 { top: 55%; }
+        .h-5 { top: 70%; height: 2px; } /* Жирная */
+        .h-6 { top: 85%; }
+        .h-7 { top: 95%; }
 
-        .h-1 { top: 5%; }
-        .h-2 { top: 15%; }
-        .h-3 { top: 35%; }  /* Под логотипом */
-        .h-4 { top: 50%; }  /* Центр */
-        .h-5 { top: 65%; }  /* Над принтером */
-        .h-6 { top: 80%; }
-        .h-7 { top: 92%; }
-
-        /* ВЕРТИКАЛЬНЫЕ (8 штук) */
+        /* 8 ВЕРТИКАЛЬНЫХ */
         .v { height: 100%; width: 1px; }
-        .v.bold { width: 2px; }
-
-        .v-1 { left: 5%; }
-        .v-2 { left: 15%; }
-        .v-3 { left: 30%; }
-        .v-4 { left: 45%; }
-        .v-5 { left: 60%; }
-        .v-6 { left: 75%; }
-        .v-7 { left: 88%; }
-        .v-8 { left: 96%; }
+        .v-1 { left: 8%; width: 2px; } /* Жирная */
+        .v-2 { left: 20%; }
+        .v-3 { left: 35%; }
+        .v-4 { left: 50%; width: 2px; } /* Жирная */
+        .v-5 { left: 65%; }
+        .v-6 { left: 80%; }
+        .v-7 { left: 90%; width: 2px; } /* Жирная */
+        .v-8 { left: 97%; }
 
         /* ШАПКА */
         header {
@@ -74,5 +70,17 @@
         .menu-icon { display: flex; flex-direction: column; gap: 5px; cursor: pointer; }
         .menu-icon span { display: block; width: 35px; height: 3px; background-color: var(--red); }
 
-        /* ТВОИ ОБЪЕКТЫ */
+        /* ТВОИ ОБЪЕКТЫ: z-index выше 10 */
         .layer-logo, .layer-slogan, .layer-printer {
+            position: absolute; 
+            mix-blend-mode: multiply; 
+        }
+
+        .layer-logo { width: 85%; top: 30%; left: 30%; transform: translate(-50%, -50%); z-index: 20; }
+        .layer-slogan { width: 26%; height: auto; top: 55%; right: -2%; transform: translateY(-50%); z-index: 15; }
+        .layer-printer { width: 81%; bottom: -35%; left: 50%; transform: translateX(-50%); z-index: 25; }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
