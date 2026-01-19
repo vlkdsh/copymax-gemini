@@ -1211,11 +1211,10 @@
             statsObserver.observe(statsContainer);
         }
 
-        // FORM VALIDATION & SUBMIT
+       // FORM VALIDATION & SUBMIT
         function handleSubmit(e) {
             e.preventDefault();
             
-            // Валидация
             let isValid = true;
             const name = document.getElementById('name');
             const email = document.getElementById('email');
@@ -1223,12 +1222,8 @@
             const message = document.getElementById('message');
 
             // Сброс ошибок
-            document.querySelectorAll('.error-message').forEach(msg => {
-                msg.classList.remove('show');
-            });
-            document.querySelectorAll('input, textarea').forEach(input => {
-                input.classList.remove('error');
-            });
+            document.querySelectorAll('.error-message').forEach(msg => msg.classList.remove('show'));
+            document.querySelectorAll('input, textarea').forEach(input => input.classList.remove('error'));
 
             // Проверка имени
             if (name.value.trim() === '') {
@@ -1260,19 +1255,11 @@
             }
 
             if (isValid) {
-                // Показываем успешное сообщение
                 document.getElementById('formOverlay').classList.add('show');
                 document.getElementById('formSuccess').classList.add('show');
-                
-                // Сбрасываем форму
                 e.target.reset();
-                
-                // Автозакрытие через 3 секунды
-                setTimeout(() => {
-                    closeSuccessMessage();
-                }, 3000);
+                setTimeout(() => closeSuccessMessage(), 3000);
             }
-
             return false;
         }
 
