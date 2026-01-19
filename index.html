@@ -55,30 +55,30 @@
         .header-logo-img { height: 22px; width: auto; }
         .menu-icon span { display: block; width: 35px; height: 3px; background-color: var(--bright-red); margin-bottom: 5px; opacity: 0.8; }
 
-        /* КАРТИНКИ С ТЕНЯМИ */
+        /* ОБЪЕКТЫ С УСИЛЕННЫМИ ТЕНЯМИ */
         .layer { 
             position: absolute; 
             z-index: 10; 
-            /* drop-shadow(смещение_X смещение_Y размытие цвет) */
-            filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.2));
         }
         
         .layer-logo { 
             width: 85%; top: 30%; left: 30%; 
             transform: translate(-50%, -50%); 
-            filter: drop-shadow(0px 15px 25px rgba(0, 0, 0, 0.25)); 
+            /* Тень гуще (0.5 прозрачности вместо 0.25) и больше разлет */
+            filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.5)); 
         }
         
         .layer-slogan { 
             width: 26%; top: 55%; right: -2%; 
             transform: translateY(-50%); 
-            filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.15));
+            filter: drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.4));
         }
         
         .layer-printer { 
             width: 81%; bottom: -35%; left: 50%; 
             transform: translateX(-50%); 
-            filter: drop-shadow(0px -10px 30px rgba(0, 0, 0, 0.2));
+            /* Тень снизу вверх для эффекта массивности */
+            filter: drop-shadow(0px -15px 40px rgba(0, 0, 0, 0.45));
         }
     </style>
 </head>
