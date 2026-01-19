@@ -31,69 +31,55 @@
         .line {
             position: absolute;
             background-color: var(--bright-red);
-            /* Установил прозрачность 0.3 для максимально мягкого эффекта */
             opacity: 0.3; 
         }
 
-        /* --- ТВОИ КООРДИНАТЫ (Толщина 2px) --- */
+        /* --- ТВОИ КООРДИНАТЫ --- */
         .h { width: 100%; height: 2px; }
-        .h-1 { top: 1%; } 
-        .h-2 { top: 6%; } 
-        .h-3 { top: 8%; } 
-        .h-4 { top: 49%; } 
-        .h-5 { top: 51%; } 
-        .h-6 { top: 82%; } 
-        .h-7 { top: 91%; }
+        .h-1 { top: 1%; } .h-2 { top: 6%; } .h-3 { top: 8%; } 
+        .h-4 { top: 49%; } .h-5 { top: 51%; } 
+        .h-6 { top: 82%; } .h-7 { top: 91%; }
 
         .v { height: 100%; width: 2px; }
-        .v-1 { left: 2%; } 
-        .v-2 { left: 25%; } 
-        .v-3 { left: 26%; } 
-        .v-4 { left: 44.5%; } 
-        .v-5 { left: 62%; } 
-        .v-6 { left: 63%; } 
-        .v-7 { left: 79.5%; } 
-        .v-8 { left: 98.5%; }
+        .v-1 { left: 2%; } .v-2 { left: 25%; } .v-3 { left: 26%; } 
+        .v-4 { left: 44.5%; } .v-5 { left: 62%; } .v-6 { left: 63%; } 
+        .v-7 { left: 79.5%; } .v-8 { left: 98.5%; }
 
-        /* ШАПКА - выравнивание логотипа строго между линиями */
+        /* ШАПКА */
         header {
-            position: absolute; 
-            /* Логотип теперь начинается от первой вертикальной линии */
-            left: 2%; 
-            /* Центрируем между h-1 (1%) и h-2 (6%) */
-            top: 3.5%; 
-            transform: translateY(-50%);
-            width: 96%; /* Чтобы меню не улетало за экран */
-            padding: 0 20px;
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
+            position: absolute; left: 2%; top: 3.5%; 
+            transform: translateY(-50%); width: 96%;
+            display: flex; justify-content: space-between; align-items: center; 
             z-index: 100;
         }
+        .header-logo-img { height: 22px; width: auto; }
+        .menu-icon span { display: block; width: 35px; height: 3px; background-color: var(--bright-red); margin-bottom: 5px; opacity: 0.8; }
 
-        .header-logo-img { 
-            height: 22px; /* Подобрал высоту, чтобы влезло между h-1 и h-2 */
-            width: auto; 
-        }
-
-        .menu-icon span { 
-            display: block; 
-            width: 35px; 
-            height: 3px; 
-            background-color: var(--bright-red); 
-            margin-bottom: 5px; 
-            opacity: 0.8;
-        }
-
-        /* КАРТИНКИ */
+        /* КАРТИНКИ С ТЕНЯМИ */
         .layer { 
             position: absolute; 
             z-index: 10; 
+            /* drop-shadow(смещение_X смещение_Y размытие цвет) */
+            filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.2));
         }
         
-        .layer-logo { width: 85%; top: 30%; left: 30%; transform: translate(-50%, -50%); }
-        .layer-slogan { width: 26%; top: 55%; right: -2%; transform: translateY(-50%); }
-        .layer-printer { width: 81%; bottom: -35%; left: 50%; transform: translateX(-50%); }
+        .layer-logo { 
+            width: 85%; top: 30%; left: 30%; 
+            transform: translate(-50%, -50%); 
+            filter: drop-shadow(0px 15px 25px rgba(0, 0, 0, 0.25)); 
+        }
+        
+        .layer-slogan { 
+            width: 26%; top: 55%; right: -2%; 
+            transform: translateY(-50%); 
+            filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.15));
+        }
+        
+        .layer-printer { 
+            width: 81%; bottom: -35%; left: 50%; 
+            transform: translateX(-50%); 
+            filter: drop-shadow(0px -10px 30px rgba(0, 0, 0, 0.2));
+        }
     </style>
 </head>
 <body>
