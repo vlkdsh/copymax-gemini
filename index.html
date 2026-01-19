@@ -95,6 +95,19 @@
 .menu-icon:hover span {
     box-shadow: 0 2px 12px rgba(255, 0, 0, 0.6);
 }
+        /* АНИМАЦИЯ ПРЕВРАЩЕНИЯ В КРЕСТИК - ДОБАВИТЬ */
+.menu-icon.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-icon.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.menu-icon.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
 
 
         .layer { 
