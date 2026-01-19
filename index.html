@@ -802,6 +802,18 @@
     </style>
 </head>
 <body>
+    <!-- SCROLL PROGRESS BAR -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">↑</button>
+
+    <!-- FORM SUCCESS OVERLAY -->
+    <div class="form-overlay" id="formOverlay" onclick="closeSuccessMessage()"></div>
+    <div class="form-success" id="formSuccess">
+        <h3 data-et="✓ Täname!" data-en="✓ Thank You!" data-ru="✓ Спасибо!">✓ Täname!</h3>
+        <p data-et="Võtame teiega peagi ühendust" data-en="We will contact you soon" data-ru="Мы свяжемся с вами в ближайшее время">Võtame teiega peagi ühendust</p>
+    </div>
 
     <!-- HERO SECTION -->
     <div class="hero-section" id="hero">
