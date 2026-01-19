@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COPYMAX | Estonia</title>
     <style>
-        :root { --red: #f03c2e; }
+        /* Ярко-красный / бордовый цвет */
+        :root { --dark-red: #990000; }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -21,33 +22,32 @@
             width: 100%; height: 100vh;
         }
 
+        /* СЛОЙ ЛИНИЙ - теперь строго на заднем плане (z-index: -1) */
         .blueprint-lines {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            z-index: 1;  /* Вернул как было у тебя */
+            z-index: -1; 
             pointer-events: none;
         }
 
         .line {
             position: absolute;
-            background-color: var(--red);
-            opacity: 0.25;
+            background-color: var(--dark-red);
+            opacity: 1; /* Полная непрозрачность */
         }
 
         /* --- ТВОИ ИДЕАЛЬНЫЕ ГОРIЗОНТАЛЬНЫЕ ЛИНИИ --- */
         .h { width: 100%; }
-        
         .h-1 { top: 1%;   height: 3px; } 
-        .h-2 { top: 6%;  height: 3px; } 
-        .h-3 { top: 8%;  height: 3px; } 
-        .h-4 { top: 49%; height: 3px; } 
-        .h-5 { top: 51%; height: 3px; } 
-        .h-6 { top: 82%; height: 3px; } 
-        .h-7 { top: 91%; height: 3px; }
+        .h-2 { top: 6%;   height: 3px; } 
+        .h-3 { top: 8%;   height: 3px; } 
+        .h-4 { top: 49%;  height: 3px; } 
+        .h-5 { top: 51%;  height: 3px; } 
+        .h-6 { top: 82%;  height: 3px; } 
+        .h-7 { top: 91%;  height: 3px; }
 
         /* --- ТВОИ ИДЕАЛЬНЫЕ ВЕРТИКАЛЬНЫЕ ЛИНИИ --- */
         .v { height: 100%; }
-
         .v-1 { left: 2%;     width: 3px; } 
         .v-2 { left: 25%;    width: 3px; } 
         .v-3 { left: 26%;    width: 3px; } 
@@ -57,7 +57,7 @@
         .v-7 { left: 79.5%;  width: 3px; } 
         .v-8 { left: 98.5%;  width: 3px; }
 
-        /* ОСТАЛЬНЫЕ ЭЛЕМЕНТЫ */
+        /* ШАПКА */
         header {
             position: absolute; top: 20px; width: 100%; 
             padding: 0 60px; display: flex; 
@@ -66,8 +66,9 @@
         }
         .header-logo-img { height: 30px; width: auto; }
         .menu-icon { display: flex; flex-direction: column; gap: 5px; cursor: pointer; }
-        .menu-icon span { display: block; width: 35px; height: 3px; background-color: var(--red); }
+        .menu-icon span { display: block; width: 35px; height: 3px; background-color: var(--dark-red); }
 
+        /* КАРТИНКИ - им задан высокий z-index, чтобы они были ПЕРЕД линиями */
         .layer { position: absolute; mix-blend-mode: multiply; }
         .layer-logo { width: 85%; top: 30%; left: 30%; transform: translate(-50%, -50%); z-index: 10; }
         .layer-slogan { width: 26%; top: 55%; right: -2%; transform: translateY(-50%); z-index: 5; }
