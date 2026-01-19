@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COPYMAX | Estonia</title>
     <style>
-        /* Бордовый цвет */
-        :root { --dark-red: #8B0000; }
+        /* Ярко-красный цвет */
+        :root { --bright-red: #FF0000; }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -22,7 +22,7 @@
             width: 100%; height: 100vh;
         }
 
-        /* Блок линий без отрицательного z-index, чтобы не пропадали */
+        /* Линии теперь СТРОГО под картинками */
         .blueprint-lines {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -32,35 +32,36 @@
 
         .line {
             position: absolute;
-            background-color: var(--dark-red);
-            opacity: 1; /* Яркие, не прозрачные */
+            background-color: var(--bright-red);
+            opacity: 1;
         }
 
-        /* --- ТВОИ КООРДИНАТЫ --- */
-        .h { width: 100%; }
-        .h-1 { top: 1%;   height: 3px; } 
-        .h-2 { top: 6%;   height: 3px; } 
-        .h-3 { top: 8%;   height: 3px; } 
-        .h-4 { top: 49%;  height: 3px; } 
-        .h-5 { top: 51%;  height: 3px; } 
-        .h-6 { top: 82%;  height: 3px; } 
-        .h-7 { top: 91%;  height: 3px; }
+        /* --- ТВОИ КООРДИНАТЫ (Толщина теперь 2px везде) --- */
+        .h { width: 100%; height: 2px; }
+        .h-1 { top: 1%; } 
+        .h-2 { top: 6%; } 
+        .h-3 { top: 8%; } 
+        .h-4 { top: 49%; } 
+        .h-5 { top: 51%; } 
+        .h-6 { top: 82%; } 
+        .h-7 { top: 91%; }
 
-        .v { height: 100%; }
-        .v-1 { left: 2%;     width: 3px; } 
-        .v-2 { left: 25%;    width: 3px; } 
-        .v-3 { left: 26%;    width: 3px; } 
-        .v-4 { left: 44.5%;  width: 3px; } 
-        .v-5 { left: 62%;    width: 3px; } 
-        .v-6 { left: 63%;    width: 3px; } 
-        .v-7 { left: 79.5%;  width: 3px; } 
-        .v-8 { left: 98.5%;  width: 3px; }
+        .v { height: 100%; width: 2px; }
+        .v-1 { left: 2%; } 
+        .v-2 { left: 25%; } 
+        .v-3 { left: 26%; } 
+        .v-4 { left: 44.5%; } 
+        .v-5 { left: 62%; } 
+        .v-6 { left: 63%; } 
+        .v-7 { left: 79.5%; } 
+        .v-8 { left: 98.5%; }
 
-        /* КАРТИНКИ - z-index ВЫШЕ чем у линий (2 вместо 1) */
+        /* КАРТИНКИ - z-index: 10 (выше линий) и убрано смешивание цветов */
         .layer { 
             position: absolute; 
-            mix-blend-mode: multiply; 
-            z-index: 2; 
+            z-index: 10; 
+            /* Если у картинок прозрачный фон, линии могут просвечивать. 
+               Если это происходит, картинки нужно пересохранить с белым фоном. */
         }
         
         header {
@@ -70,8 +71,7 @@
             z-index: 100;
         }
         .header-logo-img { height: 30px; width: auto; }
-        .menu-icon { display: flex; flex-direction: column; gap: 5px; cursor: pointer; }
-        .menu-icon span { display: block; width: 35px; height: 3px; background-color: var(--dark-red); }
+        .menu-icon span { display: block; width: 35px; height: 3px; background-color: var(--bright-red); margin-bottom: 5px; }
 
         .layer-logo { width: 85%; top: 30%; left: 30%; transform: translate(-50%, -50%); }
         .layer-slogan { width: 26%; top: 55%; right: -2%; transform: translateY(-50%); }
