@@ -698,14 +698,15 @@
 
        /* BRAND LOGOS WITH HOVER */
         .brand-logo {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: #999;
     padding: 25px 35px;
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     position: relative;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
 }
 
 .brand-logo::before {
@@ -716,17 +717,19 @@
     transform: translateX(-50%);
     width: 0;
     height: 3px;
-    background: var(--bright-red);
-    transition: width 0.4s ease;
+    background: linear-gradient(90deg, var(--bright-red), #FF3333);
+    transition: width 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border-radius: 2px;
 }
 
 .brand-logo:hover {
     color: var(--bright-red);
-    transform: translateY(-5px) scale(1.05);
+    transform: translateY(-8px) scale(1.08);
+    text-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
 }
 
 .brand-logo:hover::before {
-    width: 80%;
+    width: 90%;
 }
     </style>
 </head>
