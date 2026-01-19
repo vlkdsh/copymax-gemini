@@ -1136,6 +1136,47 @@
             event.target.classList.add('active');
         }
 
+        // SCROLL PROGRESS BAR
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            scrollProgress.style.width = progress + '%';
+        });
+
+        // SCROLL TO TOP BUTTON
+        window.addEventListener('scroll', () => {
+            const scrollBtn = document.getElementById('scrollToTop');
+            if (window.pageYOffset > 300) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // SCROLL ANIMATIONS (FADE IN)
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            fadeInObserver.observe(el);
+        });
+
         // ANIMATED COUNTERS
         function animateCounter(element) {
             const target = parseInt(element.getAttribute('data-target'));
@@ -1152,8 +1193,7 @@
             }, 20);
         }
 
-        // Запускаем счётчики при прокрутке
-        const observer = new IntersectionObserver(entries => {
+        const statsObserver = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const counters = entry.target.querySelectorAll('.stat-number');
@@ -1168,20 +1208,77 @@
 
         const statsContainer = document.querySelector('.stats-container');
         if (statsContainer) {
-            observer.observe(statsContainer);
+            statsObserver.observe(statsContainer);
         }
 
-        // FORM SUBMIT
+        // FORM VALIDATION & SUBMIT
         function handleSubmit(e) {
             e.preventDefault();
-            const lang = currentLang;
-            const messages = {
-                et: 'Täname! Võtame teiega peagi ühendust.',
-                en: 'Thank you! We will contact you soon.',
-                ru: 'Спасибо! Мы свяжемся с вами в ближайшее время.'
-            };
-            alert(messages[lang]);
-            e.target.reset();
+            
+            // Валидация
+            let isValid = true;
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const phone = document.getElementById('phone');
+            const message = document.getElementById('message');
+
+            // Сброс ошибок
+            document.querySelectorAll('.error-message').forEach(msg => {
+                msg.classList.remove('show');
+            });
+            document.querySelectorAll('input, textarea').forEach(input => {
+                input.classList.remove('error');
+            });
+
+            // Проверка имени
+            if (name.value.trim() === '') {
+                name.classList.add('error');
+                name.nextElementSibling.classList.add('show');
+                isValid = false;
+            }
+
+            // Проверка email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                email.classList.add('error');
+                email.nextElementSibling.classList.add('show');
+                isValid = false;
+            }
+
+            // Проверка телефона
+            if (phone.value.trim() === '') {
+                phone.classList.add('error');
+                phone.nextElementSibling.classList.add('show');
+                isValid = false;
+            }
+
+            // Проверка сообщения
+            if (message.value.trim() === '') {
+                message.classList.add('error');
+                message.nextElementSibling.classList.add('show');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Показываем успешное сообщение
+                document.getElementById('formOverlay').classList.add('show');
+                document.getElementById('formSuccess').classList.add('show');
+                
+                // Сбрасываем форму
+                e.target.reset();
+                
+                // Автозакрытие через 3 секунды
+                setTimeout(() => {
+                    closeSuccessMessage();
+                }, 3000);
+            }
+
+            return false;
+        }
+
+        function closeSuccessMessage() {
+            document.getElementById('formOverlay').classList.remove('show');
+            document.getElementById('formSuccess').classList.remove('show');
         }
 
         // Smooth scroll для ссылок
