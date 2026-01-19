@@ -679,23 +679,36 @@
 
        /* BRAND LOGOS WITH HOVER */
         .brand-logo {
-            padding: 20px 30px;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            filter: grayscale(100%) opacity(0.6);
-        }
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #999;
+    padding: 25px 35px;
+    transition: all 0.4s ease;
+    position: relative;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
 
-        .brand-logo:hover {
-            filter: grayscale(0%) opacity(1);
-            transform: scale(1.05);
-        }
+.brand-logo::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: var(--bright-red);
+    transition: width 0.4s ease;
+}
 
-        .brand-logo img {
-            max-height: 40px;
-            width: auto;
-        }
+.brand-logo:hover {
+    color: var(--bright-red);
+    transform: translateY(-5px) scale(1.05);
+}
+
+.brand-logo:hover::before {
+    width: 80%;
+}
     </style>
 </head>
 <body>
