@@ -24,7 +24,7 @@
         .blueprint-lines {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            z-index: 1; 
+            z-index: -1; /* Линии ПОД объектами для сохранения 3D эффекта */
             pointer-events: none;
         }
 
@@ -32,30 +32,39 @@
             position: absolute;
             background-color: var(--red);
             opacity: 0.25;
+            animation: slideIn 1.2s ease-out forwards;
         }
 
-        /* --- ГОРIЗОНТАЛЬНЫЕ ЛИНИИ (Двигаем ВВЕРХ-ВНИЗ через top) --- */
-        .h { width: 100%; }
-        
-        .h-1 { top: 1%;  height: 3px; } 
-        .h-2 { top: 6%; height: 3px; } 
-        .h-3 { top: 8%; height: 3px; } /* Жирная под COPYMAX */
-        .h-4 { top: 49%; height: 3px; } 
-        .h-5 { top: 51%; height: 3px; } /* Жирная над принтером */
-        .h-6 { top: 82%; height: 3px; } 
-        .h-7 { top: 91%; height: 3px; }
+        /* Анимация проявки */
+        @keyframes slideIn {
+            from { opacity: 0; }
+            to { opacity: 0.25; }
+        }
 
-        /* --- ВЕРТИКАЛЬНЫЕ ЛИНИИ (Двигаем ВЛЕВО-ВПРАВО через left) --- */
-        .v { height: 100%; }
+        /* --- ГОРИЗОНТАЛЬНЫЕ ЛИНИИ --- */
+        .h { width: 100%; height: 3px; left: 0; transform: scaleX(0); transform-origin: left; animation: drawH 1s ease-out forwards; }
+        @keyframes drawH { to { transform: scaleX(1); } }
 
-        .v-1 { left: 2%;  width: 3px; } 
-        .v-2 { left: 25%; width: 3px; } 
-        .v-3 { left: 26%; width: 3px; } 
-        .v-4 { left: 44.5%; width: 3px; } 
-        .v-5 { left: 62%; width: 3px; } 
-        .v-6 { left: 63%; width: 3px; } 
-        .v-7 { left: 79.5%; width: 3px; } 
-        .v-8 { left: 98.5%; width: 3px; }
+        .h-1 { top: 1%; } 
+        .h-2 { top: 6%; } 
+        .h-3 { top: 8%; } 
+        .h-4 { top: 49%; } 
+        .h-5 { top: 51%; } 
+        .h-6 { top: 82%; } 
+        .h-7 { top: 91%; }
+
+        /* --- ВЕРТИКАЛЬНЫЕ ЛИНИИ --- */
+        .v { height: 100%; width: 3px; top: 0; transform: scaleY(0); transform-origin: top; animation: drawV 1s ease-out forwards; }
+        @keyframes drawV { to { transform: scaleY(1); } }
+
+        .v-1 { left: 2%; } 
+        .v-2 { left: 25%; } 
+        .v-3 { left: 26%; } 
+        .v-4 { left: 44.5%; } 
+        .v-5 { left: 62%; } 
+        .v-6 { left: 63%; } 
+        .v-7 { left: 79.5%; } 
+        .v-8 { left: 98.5%; }
 
         /* ОСТАЛЬНЫЕ ЭЛЕМЕНТЫ */
         header {
