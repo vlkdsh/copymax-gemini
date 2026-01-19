@@ -480,23 +480,26 @@
         }
 
         .submit-btn {
-            width: 100%;
-            padding: 18px;
-            background: var(--bright-red);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+    width: 100%;
+    padding: 18px;
+    background: var(--bright-red);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+}
 
-        .submit-btn:hover {
-            background: #CC0000;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(255,0,0,0.3);
-        }
+.submit-btn:hover {
+    background: #CC0000;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255,0,0,0.4);
+}
 
         /* CONTACT CARDS */
         .contact-grid {
