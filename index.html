@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COPYMAX | Estonia's Premium Print Solutions</title>
+    <title>COPYMAX | The Leading Wholesaler of Printers in Estonia</title>
     <style>
         :root { --bright-red: #FF0000; }
 
@@ -130,7 +130,6 @@
             position: relative;
         }
 
-        /* АНИМАЦИЯ ПЕЧАТИ БУМАГИ */
         .paper-animation {
             position: absolute;
             bottom: 45%;
@@ -161,7 +160,6 @@
             }
         }
 
-        /* SCROLL INDICATOR */
         .scroll-indicator {
             position: absolute;
             bottom: 30px;
@@ -280,7 +278,7 @@
         }
 
         h2 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             color: #1a1a1a;
             margin-bottom: 20px;
             position: relative;
@@ -297,6 +295,12 @@
             background: var(--bright-red);
         }
 
+        h3 {
+            font-size: 1.8rem;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+
         p {
             font-size: 1.2rem;
             line-height: 1.8;
@@ -304,7 +308,58 @@
             margin-bottom: 20px;
         }
 
-        /* СЧЁТЧИКИ */
+        /* INFO GRID */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-card h3 {
+            color: var(--bright-red);
+            margin-bottom: 20px;
+        }
+
+        /* BRANDS SECTION */
+        .brands-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 60px;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .brand-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #666;
+            padding: 20px 30px;
+            transition: color 0.3s ease;
+        }
+
+        .brand-logo:hover {
+            color: var(--bright-red);
+        }
+
+        /* STATS */
         .stats-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -333,49 +388,45 @@
             margin-top: 10px;
         }
 
-        /* КАРУСЕЛЬ ПРОДУКЦИИ */
-        .carousel-container {
-            position: relative;
-            overflow: hidden;
+        /* TEAM SECTION */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
             margin-top: 60px;
-            padding: 40px 0;
         }
 
-        .carousel-track {
-            display: flex;
-            gap: 30px;
-            animation: carouselScroll 30s linear infinite;
-        }
-
-        @keyframes carouselScroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        .carousel-item {
-            min-width: 300px;
-            height: 400px;
+        .team-card {
             background: white;
+            padding: 40px;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            padding: 30px;
             text-align: center;
+            transition: transform 0.3s ease;
         }
 
-        .carousel-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: contain;
-            margin-bottom: 20px;
+        .team-card:hover {
+            transform: translateY(-5px);
         }
 
-        .carousel-item h3 {
-            font-size: 1.5rem;
-            color: #1a1a1a;
+        .team-card h3 {
+            color: var(--bright-red);
             margin-bottom: 10px;
         }
 
-        /* ФОРМА ЗАЯВКИ */
+        .team-card .position {
+            font-size: 1rem;
+            color: #999;
+            margin-bottom: 20px;
+        }
+
+        .team-card .contact {
+            font-size: 1rem;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        /* FORM */
         .contact-form {
             max-width: 600px;
             margin: 60px auto 0;
@@ -431,7 +482,7 @@
             box-shadow: 0 10px 25px rgba(255,0,0,0.3);
         }
 
-        /* КОНТАКТЫ */
+        /* CONTACT CARDS */
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -452,23 +503,40 @@
             color: var(--bright-red);
         }
 
-        .map-container {
-            width: 100%;
-            height: 400px;
-            background: #e0e0e0;
+        /* VALUES SECTION */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .value-card {
+            background: white;
+            padding: 50px;
             border-radius: 15px;
-            margin-top: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--bright-red);
+        }
+
+        .value-card h3 {
+            color: var(--bright-red);
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .menu-nav a { font-size: 2rem; }
+            h2 { font-size: 2rem; }
+            .layer-logo { width: 90%; left: 50%; }
+            .layer-slogan { width: 40%; }
+            section { padding: 80px 5%; }
         }
     </style>
 </head>
 <body>
 
     <!-- HERO SECTION -->
-    <div class="hero-section">
+    <div class="hero-section" id="hero">
         <div class="blueprint-lines">
             <div class="line h h-1"></div><div class="line h h-2"></div><div class="line h h-3"></div>
             <div class="line h h-4"></div><div class="line h h-5"></div><div class="line h h-6"></div><div class="line h h-7"></div>
@@ -499,11 +567,12 @@
     <!-- FULLSCREEN MENU -->
     <div class="fullscreen-menu" id="fullscreenMenu">
         <ul class="menu-nav">
-            <li><a href="#hero" onclick="toggleMenu()">Avaleht</a></li>
-            <li><a href="#about" onclick="toggleMenu()">Meist</a></li>
-            <li><a href="#products" onclick="toggleMenu()">Tooted</a></li>
-            <li><a href="#request" onclick="toggleMenu()">Küsi pakkumist</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
+            <li><a href="#hero" onclick="toggleMenu()" data-et="Avaleht" data-en="Home" data-ru="Главная">Avaleht</a></li>
+            <li><a href="#about" onclick="toggleMenu()" data-et="Meist" data-en="About Us" data-ru="О нас">Meist</a></li>
+            <li><a href="#values" onclick="toggleMenu()" data-et="Väärtused" data-en="Values" data-ru="Ценности">Väärtused</a></li>
+            <li><a href="#team" onclick="toggleMenu()" data-et="Meeskond" data-en="Team" data-ru="Команда">Meeskond</a></li>
+            <li><a href="#request" onclick="toggleMenu()" data-et="Küsi pakkumist" data-en="Request a Quote" data-ru="Запросить КП">Küsi pakkumist</a></li>
+            <li><a href="#contact" onclick="toggleMenu()" data-et="Kontakt" data-en="Contact" data-ru="Контакты">Kontakt</a></li>
         </ul>
         <div class="language-switcher">
             <button class="active" onclick="switchLanguage('et')">EST</button>
@@ -512,88 +581,74 @@
         </div>
     </div>
 
-    <!-- О КОМПАНИИ -->
+    <!-- ABOUT SECTION -->
     <section id="about">
         <h2 data-et="Meist" data-en="About Us" data-ru="О нас">Meist</h2>
-        <p data-et="COPYMAX on Eesti juhtiv printerite ja trükitarvikute hulgimüüja. Oleme turul üle 15 aasta ja teenindame üle 1000 ettevõtet kogu Eestis." 
-           data-en="COPYMAX is Estonia's leading wholesaler of printers and printing supplies. We have been on the market for over 15 years and serve over 1000 companies across Estonia."
-           data-ru="COPYMAX - ведущий оптовый поставщик принтеров и расходных материалов в Эстонии. Мы на рынке более 15 лет и обслуживаем более 1000 компаний по всей Эстонии.">
-            COPYMAX on Eesti juhtiv printerite ja trükitarvikute hulgimüüja. Oleme turul üle 15 aasta ja teenindame üle 1000 ettevõtet kogu Eestis.
+        <p data-et="Eesti juhtiv printerite ja trükitarvikute hulgimüüja"
+           data-en="The Leading Wholesaler of Printers and Printer Consumables in Estonia"
+           data-ru="Ведущий оптовый поставщик принтеров и расходных материалов в Эстонии">
+            Eesti juhtiv printerite ja trükitarvikute hulgimüüja
         </p>
-        
-        <div class="stats-container">
-            <div class="stat-item">
-                <span class="stat-number" data-target="15">0</span>
-                <span class="stat-label" data-et="aastat turul" data-en="years on market" data-ru="лет на рынке">aastat turul</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" data-target="1000">0</span>
-                <span class="stat-label" data-et="rahuloleva klienti" data-en="satisfied clients" data-ru="довольных клиентов">rahuloleva klienti</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" data-target="50">0</span>
-                <span class="stat-label" data-et="mudelit" data-en="models" data-ru="моделей">mudelit</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" data-target="24">0</span>
-                <span class="stat-label" data-et="tundi toetust" data-en="hour support" data-ru="часовая поддержка">tundi toetust</span>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <h3 data-et="Copymax väärtused" data-en="Copymax Values" data-ru="Ценности Copymax">Copymax väärtused</h3>
+                <p data-et="On kliendikeskne lähenemine, kvaliteet ja usaldusväärsus. Hindame oma klientide usaldust ning püüdleme pikaajaliste partnerlussuhete poole, pakkudes kvaliteetseid teenuseid ja tooteid."
+                   data-en="Are customer focus, quality and reliability. We value the trust of our customers and strive for long-term partnerships by providing quality services and products."
+                   data-ru="Ориентированность на клиента, качество и надежность. Мы ценим доверие наших клиентов и стремимся к долгосрочному партнерству, предоставляя качественные услуги и продукты.">
+                    On kliendikeskne lähenemine, kvaliteet ja usaldusväärsus. Hindame oma klientide usaldust ning püüdleme pikaajaliste partnerlussuhete poole, pakkudes kvaliteetseid teenuseid ja tooteid.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- ПРОДУКЦИЯ КАРУСЕЛЬ -->
-    <section id="products">
-        <h2 data-et="Meie tooted" data-en="Our Products" data-ru="Наша продукция">Meie tooted</h2>
-        <p data-et="Pakume laia valikut printereid ja tarvikuid HP, Canon, Xerox" 
-           data-en="We offer a wide range of printers and supplies from HP, Canon, Xerox"
-           data-ru="Мы предлагаем широкий ассортимент принтеров и расходников HP, Canon, Xerox">
-            Pakume laia valikut printereid ja tarvikuid HP, Canon, Xerox
+    <!-- TEAM -->
+    <section id="team">
+        <h2 data-et="Meie meeskond" data-en="Our Team" data-ru="Наша команда">Meie meeskond</h2>
+        <p data-et="Professionaalne meeskond teie teenistuses"
+           data-en="Professional team at your service"
+           data-ru="Профессиональная команда к вашим услугам">
+            Professionaalne meeskond teie teenistuses
         </p>
-        
-        <div class="carousel-container">
-            <div class="carousel-track">
-                <div class="carousel-item">
-                    <div style="width:100%;height:250px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;color:#999;margin-bottom:20px;">HP Printer</div>
-                    <h3>HP LaserJet Pro</h3>
-                    <p>Professional printing</p>
-                </div>
-                <div class="carousel-item">
-                    <div style="width:100%;height:250px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;color:#999;margin-bottom:20px;">Canon Printer</div>
-                    <h3>Canon PIXMA</h3>
-                    <p>High quality output</p>
-                </div>
-                <div class="carousel-item">
-                    <div style="width:100%;height:250px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;color:#999;margin-bottom:20px;">Xerox Printer</div>
-                    <h3>Xerox VersaLink</h3>
-                    <p>Business solutions</p>
-                </div>
-                <div class="carousel-item">
-                    <div style="width:100%;height:250px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;color:#999;margin-bottom:20px;">Toner Cartridges</div>
-                    <h3>Original Toners</h3>
-                    <p>All brands available</p>
-                </div>
-                <!-- Дублируем для бесконечного эффекта -->
-                <div class="carousel-item">
-                    <div style="width:100%;height:250px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;color:#999;margin-bottom:20px;">HP Printer</div>
-                    <h3>HP LaserJet Pro</h3>
-                    <p>Professional printing</p>
-                </div>
-                <div class="carousel-item">
-                    <div style="width:100%;height:250px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;color:#999;margin-bottom:20px;">Canon Printer</div>
-                    <h3>Canon PIXMA</h3>
-                    <p>High quality output</p>
-                </div>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <h3>Dmitri Pärn</h3>
+                <div class="position" data-et="Müügijuht" data-en="Head of Sales" data-ru="Начальник отдела продаж">Müügijuht</div>
+                <div class="contact">+372 556 88 957</div>
+                <div class="contact">dmitri@copymax.ee</div>
+            </div>
+
+            <div class="team-card">
+                <h3>Vitali Ivahnenko</h3>
+                <div class="position" data-et="Müügijuht" data-en="Head of Sales" data-ru="Начальник отдела продаж">Müügijuht</div>
+                <div class="contact">+372 562 27 567</div>
+                <div class="contact">vi@copymax.ee</div>
+            </div>
+
+            <div class="team-card">
+                <h3>Jevgeni Zurjari</h3>
+                <div class="position" data-et="Müük ja ost" data-en="Sales and Purchasing" data-ru="Продажи и закупки">Müük ja ost</div>
+                <div class="contact">+372 522 86 58</div>
+                <div class="contact">jevgeni@copymax.ee</div>
+            </div>
+
+            <div class="team-card">
+                <h3>Juri Hain</h3>
+                <div class="position" data-et="Müük ja ost" data-en="Sales and Purchasing" data-ru="Продажи и закупки">Müük ja ost</div>
+                <div class="contact">+372 581 11 508</div>
+                <div class="contact">juri@copymax.ee</div>
             </div>
         </div>
     </section>
 
-    <!-- ФОРМА ЗАЯВКИ -->
+    <!-- REQUEST FORM -->
     <section id="request">
         <h2 data-et="Küsi pakkumist" data-en="Request a Quote" data-ru="Запросить КП">Küsi pakkumist</h2>
-        <p data-et="Täitke vorm ja meie spetsialist võtab teiega ühendust 24 tunni jooksul"
-           data-en="Fill out the form and our specialist will contact you within 24 hours"
-           data-ru="Заполните форму и наш специалист свяжется с вами в течение 24 часов">
-            Täitke vorm ja meie spetsialist võtab teiega ühendust 24 tunni jooksul
+        <p data-et="Kui Teil on tekkinud küsimusi, siis kirjutage meile. Vastame Teie kirjale esimesel võimalusel."
+           data-en="If you have any questions, please contact us. We will reply to your letter as soon as possible."
+           data-ru="Если у вас возникли вопросы, пожалуйста, свяжитесь с нами. Мы ответим на ваше письмо при первой возможности.">
+            Kui Teil on tekkinud küsimusi, siis kirjutage meile. Vastame Teie kirjale esimesel võimalusel.
         </p>
         
         <form class="contact-form" onsubmit="handleSubmit(event)">
@@ -621,27 +676,39 @@
         </form>
     </section>
 
-    <!-- КОНТАКТЫ -->
+    <!-- CONTACT -->
     <section id="contact">
         <h2 data-et="Kontakt" data-en="Contact" data-ru="Контакты">Kontakt</h2>
         
         <div class="contact-grid">
             <div class="contact-card">
-                <h3 data-et="Aadress" data-en="Address" data-ru="Адрес">Aadress</h3>
-                <p>Tallinn, Estonia<br>Õismäe tee 115<br>13515 Tallinn</p>
+                <h3 data-et="Peakontor" data-en="Head Office" data-ru="Главный офис">Peakontor</h3>
+                <p><strong>Copymax OÜ</strong><br>
+                Pärnu mnt 31-58<br>
+                10119 Tallinn, Estonia<br><br>
+                <strong data-et="Telefon" data-en="Phone" data-ru="Телефон">Telefon:</strong> +372 681 83 11<br>
+                <strong>Email:</strong> info@copymax.ee</p>
             </div>
-            <div class="contact-card">
-                <h3 data-et="Telefon" data-en="Phone" data-ru="Телефон">Telefon</h3>
-                <p>+372 123 4567<br>info@copymax.ee</p>
-            </div>
-            <div class="contact-card">
-                <h3 data-et="Lahtiolekuajad" data-en="Working Hours" data-ru="Часы работы">Lahtiolekuajad</h3>
-                <p>E-R: 9:00 - 18:00<br>L-P: Suletud</p>
-            </div>
-        </div>
 
-        <div class="map-container">
-            <p data-et="Google Maps siin" data-en="Google Maps here" data-ru="Google Maps здесь">Google Maps siin</p>
+            <div class="contact-card">
+                <h3 data-et="Meie ladu" data-en="Our Warehouse" data-ru="Наш склад">Meie ladu</h3>
+                <p><strong>Miramis AS</strong><br>
+                Lao 25<br>
+                74114 Maardu, Estonia<br><br>
+                <strong data-et="Telefon" data-en="Phone" data-ru="Телефон">Telefon:</strong> +372 658 13 12<br>
+                <strong>Email:</strong> info@miramis.ee<br>
+                <strong data-et="Lahtiolekuajad" data-en="Opening Hours" data-ru="Часы работы">Lahtiolekuajad:</strong> E-R 9:00 – 18:00</p>
+            </div>
+
+            <div class="contact-card">
+                <h3 data-et="Lao aadress" data-en="Warehouse Address" data-ru="Адрес склада">Lao aadress</h3>
+                <p><strong>MIRAMIS OÜ</strong><br>
+                Lao tn 18<br>
+                74114 Maardu<br>
+                Harju maakond, Estonia<br><br>
+                <strong data-et="Registrikood" data-en="Registry Code" data-ru="Регистрационный код">Registrikood:</strong> 10966040<br>
+                <a href="https://www.miramis.ee" target="_blank" style="color: var(--bright-red);">www.miramis.ee</a></p>
+            </div>
         </div>
     </section>
 
@@ -697,12 +764,21 @@
             });
         });
 
-        observer.observe(document.querySelector('.stats-container'));
+        const statsContainer = document.querySelector('.stats-container');
+        if (statsContainer) {
+            observer.observe(statsContainer);
+        }
 
         // FORM SUBMIT
         function handleSubmit(e) {
             e.preventDefault();
-            alert('Täname! Võtame teiega peagi ühendust.');
+            const lang = currentLang;
+            const messages = {
+                et: 'Täname! Võtame teiega peagi ühendust.',
+                en: 'Thank you! We will contact you soon.',
+                ru: 'Спасибо! Мы свяжемся с вами в ближайшее время.'
+            };
+            alert(messages[lang]);
             e.target.reset();
         }
 
@@ -719,4 +795,104 @@
     </script>
 
 </body>
-</html>
+</html>et="100% Eesti kapital" data-en="100% Estonian Capital" data-ru="100% Эстонский капитал">100% Eesti kapital</h3>
+                <p data-et="Copymax on 100% Eesti kapitali baasil tegutsev ettevõte, mis alustas oma tegevust 2003. aastal"
+                   data-en="Copymax is 100% Estonian capital based company and started its activity in 2003"
+                   data-ru="Copymax - компания, основанная на 100% эстонском капитале, начавшая свою деятельность в 2003 году">
+                    Copymax on 100% Eesti kapitali baasil tegutsev ettevõte, mis alustas oma tegevust 2003. aastal
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3 data-et="Euroopa ja ülemaailmne tegevus" data-en="European & Worldwide Operations" data-ru="Европейская и мировая деятельность">Euroopa ja ülemaailmne tegevus</h3>
+                <p data-et="Copymax on printerite ja printeritarvikute hulgimüüja Euroopas ja teistes maailma riikides"
+                   data-en="Copymax is a wholesaler of printers and printer accessories in Europe and other countries around the world"
+                   data-ru="Copymax - оптовый поставщик принтеров и аксессуаров в Европе и других странах мира">
+                    Copymax on printerite ja printeritarvikute hulgimüüja Euroopas ja teistes maailma riikides
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3 data-et="Turuliider" data-en="Market Leader" data-ru="Лидер рынка">Turuliider</h3>
+                <p data-et="Copymax on majandusindikaatorite poolest oma valdkonnas suurim ja mõjukaim ettevõte"
+                   data-en="Copymax is the biggest and most influential company in its area on economic indicators"
+                   data-ru="Copymax - крупнейшая и наиболее влиятельная компания в своей области по экономическим показателям">
+                    Copymax on majandusindikaatorite poolest oma valdkonnas suurim ja mõjukaim ettevõte
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3 data-et="Kiire tarnimine" data-en="Fast Delivery" data-ru="Быстрая доставка">Kiire tarnimine</h3>
+                <p data-et="Tarnime tellimusi klientidele kiiresti ja minimaalse ooteajaga meie laost. Tellimused kohaletoimetatakse professionaalsete transpordifirmade poolt"
+                   data-en="We deliver orders to customers quickly and with minimum waiting time from our warehouse. Orders delivered by professional transport companies"
+                   data-ru="Мы доставляем заказы клиентам быстро и с минимальным временем ожидания со склада. Заказы доставляются профессиональными транспортными компаниями">
+                    Tarnime tellimusi klientidele kiiresti ja minimaalse ooteajaga meie laost
+                </p>
+            </div>
+        </div>
+
+        <!-- BRANDS -->
+        <div style="margin-top: 80px;">
+            <h3 style="text-align: center; font-size: 2rem; margin-bottom: 40px;" 
+                data-et="Meie partnerid" 
+                data-en="Our Partners" 
+                data-ru="Наши партнёры">Meie partnerid</h3>
+            <div class="brands-container">
+                <div class="brand-logo">Canon</div>
+                <div class="brand-logo">HP</div>
+                <div class="brand-logo">Kyocera</div>
+                <div class="brand-logo">Minolta</div>
+                <div class="brand-logo">Ricoh</div>
+                <div class="brand-logo">Xerox</div>
+                <div class="brand-logo">Brother</div>
+                <div class="brand-logo">Logitech</div>
+                <div class="brand-logo">Jabra</div>
+            </div>
+        </div>
+
+        <!-- STATS -->
+        <div class="stats-container" style="margin-top: 80px;">
+            <div class="stat-item">
+                <span class="stat-number" data-target="22">0</span>
+                <span class="stat-label" data-et="aastat turul" data-en="years on market" data-ru="лет на рынке">aastat turul</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="1000">0</span>
+                <span class="stat-label" data-et="rahuloleva klienti" data-en="satisfied clients" data-ru="довольных клиентов">rahuloleva klienti</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="9">0</span>
+                <span class="stat-label" data-et="kaubamärki" data-en="brands" data-ru="брендов">kaubamärki</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="24">0</span>
+                <span class="stat-label" data-et="tundi toetust" data-en="hour support" data-ru="часовая поддержка">tundi toetust</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUES & MISSION -->
+    <section id="values">
+        <h2 data-et="Meie väärtused ja missioon" data-en="Our Values and Mission" data-ru="Наши ценности и миссия">Meie väärtused ja missioon</h2>
+        
+        <div class="values-grid">
+            <div class="value-card">
+                <h3 data-et="Copymax missioon" data-en="Copymax Mission" data-ru="Миссия Copymax">Copymax missioon</h3>
+                <p data-et="On pakkuda klientidele kvaliteetseid kopeerimis- ja trükiteenuseid ning innovaatilisi dokumendihalduse lahendusi. Püüame saada oma klientide jaoks usaldusväärseks partneriks, aidates neil oma tööd optimeerida ja äri efektiivsust suurendada."
+                   data-en="Is to provide customers with high-quality copying and printing services and innovative document management solutions. We strive to become a reliable partner for our customers, helping them optimize their work and increase business efficiency."
+                   data-ru="Предоставлять клиентам высококачественные услуги копирования и печати, а также инновационные решения для управления документами. Мы стремимся стать надежным партнером для наших клиентов, помогая им оптимизировать работу и повысить эффективность бизнеса.">
+                    On pakkuda klientidele kvaliteetseid kopeerimis- ja trükiteenuseid ning innovaatilisi dokumendihalduse lahendusi. Püüame saada oma klientide jaoks usaldusväärseks partneriks, aidates neil oma tööd optimeerida ja äri efektiivsust suurendada.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <h3 data-et="Copymax eesmärk" data-en="Copymax Goal" data-ru="Цель Copymax">Copymax eesmärk</h3>
+                <p data-et="On olla tunnustatud liidriks dokumendihalduses ja tipptasemel digitaalse transformatsiooni lahenduste pakkumisel. Saada innovaatiliseks ettevõtteks, mis kohaneb muutuvate turunõuetega ning pakub tipptasemel tehnoloogiaid ja teenuseid."
+                   data-en="Is to be recognized as a leader in document management and providing cutting-edge digital transformation solutions. To become an innovative company that adapts to changing market needs and offers cutting-edge technologies and services."
+                   data-ru="Быть признанным лидером в управлении документами и предоставлении передовых решений цифровой трансформации. Стать инновационной компанией, адаптирующейся к меняющимся потребностям рынка и предлагающей передовые технологии и услуги.">
+                    On olla tunnustatud liidriks dokumendihalduses ja tipptasemel digitaalse transformatsiooni lahenduste pakkumisel. Saada innovaatiliseks ettevõtteks, mis kohaneb muutuvate turunõuetega ning pakub tipptasemel tehnoloogiaid ja teenuseid.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <h3 data-
