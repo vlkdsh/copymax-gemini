@@ -485,7 +485,7 @@
         /* CONTACT CARDS */
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 40px;
             margin-top: 60px;
         }
@@ -501,6 +501,15 @@
             font-size: 1.8rem;
             margin-bottom: 20px;
             color: var(--bright-red);
+        }
+
+        .contact-card a {
+            color: var(--bright-red);
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
         }
 
         /* VALUES SECTION */
@@ -599,203 +608,9 @@
                     On kliendikeskne lähenemine, kvaliteet ja usaldusväärsus. Hindame oma klientide usaldust ning püüdleme pikaajaliste partnerlussuhete poole, pakkudes kvaliteetseid teenuseid ja tooteid.
                 </p>
             </div>
-        </div>
-    </section>
 
-    <!-- TEAM -->
-    <section id="team">
-        <h2 data-et="Meie meeskond" data-en="Our Team" data-ru="Наша команда">Meie meeskond</h2>
-        <p data-et="Professionaalne meeskond teie teenistuses"
-           data-en="Professional team at your service"
-           data-ru="Профессиональная команда к вашим услугам">
-            Professionaalne meeskond teie teenistuses
-        </p>
-
-        <div class="team-grid">
-            <div class="team-card">
-                <h3>Dmitri Pärn</h3>
-                <div class="position" data-et="Müügijuht" data-en="Head of Sales" data-ru="Начальник отдела продаж">Müügijuht</div>
-                <div class="contact">+372 556 88 957</div>
-                <div class="contact">dmitri@copymax.ee</div>
-            </div>
-
-            <div class="team-card">
-                <h3>Vitali Ivahnenko</h3>
-                <div class="position" data-et="Müügijuht" data-en="Head of Sales" data-ru="Начальник отдела продаж">Müügijuht</div>
-                <div class="contact">+372 562 27 567</div>
-                <div class="contact">vi@copymax.ee</div>
-            </div>
-
-            <div class="team-card">
-                <h3>Jevgeni Zurjari</h3>
-                <div class="position" data-et="Müük ja ost" data-en="Sales and Purchasing" data-ru="Продажи и закупки">Müük ja ost</div>
-                <div class="contact">+372 522 86 58</div>
-                <div class="contact">jevgeni@copymax.ee</div>
-            </div>
-
-            <div class="team-card">
-                <h3>Juri Hain</h3>
-                <div class="position" data-et="Müük ja ost" data-en="Sales and Purchasing" data-ru="Продажи и закупки">Müük ja ost</div>
-                <div class="contact">+372 581 11 508</div>
-                <div class="contact">juri@copymax.ee</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- REQUEST FORM -->
-    <section id="request">
-        <h2 data-et="Küsi pakkumist" data-en="Request a Quote" data-ru="Запросить КП">Küsi pakkumist</h2>
-        <p data-et="Kui Teil on tekkinud küsimusi, siis kirjutage meile. Vastame Teie kirjale esimesel võimalusel."
-           data-en="If you have any questions, please contact us. We will reply to your letter as soon as possible."
-           data-ru="Если у вас возникли вопросы, пожалуйста, свяжитесь с нами. Мы ответим на ваше письмо при первой возможности.">
-            Kui Teil on tekkinud küsimusi, siis kirjutage meile. Vastame Teie kirjale esimesel võimalusel.
-        </p>
-        
-        <form class="contact-form" onsubmit="handleSubmit(event)">
-            <div class="form-group">
-                <label data-et="Nimi" data-en="Name" data-ru="Имя">Nimi</label>
-                <input type="text" required>
-            </div>
-            <div class="form-group">
-                <label data-et="Ettevõte" data-en="Company" data-ru="Компания">Ettevõte</label>
-                <input type="text" required>
-            </div>
-            <div class="form-group">
-                <label data-et="E-post" data-en="Email" data-ru="Email">E-post</label>
-                <input type="email" required>
-            </div>
-            <div class="form-group">
-                <label data-et="Telefon" data-en="Phone" data-ru="Телефон">Telefon</label>
-                <input type="tel" required>
-            </div>
-            <div class="form-group">
-                <label data-et="Sõnum" data-en="Message" data-ru="Сообщение">Sõnum</label>
-                <textarea rows="5" required></textarea>
-            </div>
-            <button type="submit" class="submit-btn" data-et="Saada päring" data-en="Send Request" data-ru="Отправить запрос">Saada päring</button>
-        </form>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-        <h2 data-et="Kontakt" data-en="Contact" data-ru="Контакты">Kontakt</h2>
-        
-        <div class="contact-grid">
-            <div class="contact-card">
-                <h3 data-et="Peakontor" data-en="Head Office" data-ru="Главный офис">Peakontor</h3>
-                <p><strong>Copymax OÜ</strong><br>
-                Pärnu mnt 31-58<br>
-                10119 Tallinn, Estonia<br><br>
-                <strong data-et="Telefon" data-en="Phone" data-ru="Телефон">Telefon:</strong> +372 681 83 11<br>
-                <strong>Email:</strong> info@copymax.ee</p>
-            </div>
-
-            <div class="contact-card">
-                <h3 data-et="Meie ladu" data-en="Our Warehouse" data-ru="Наш склад">Meie ladu</h3>
-                <p><strong>Miramis AS</strong><br>
-                Lao 25<br>
-                74114 Maardu, Estonia<br><br>
-                <strong data-et="Telefon" data-en="Phone" data-ru="Телефон">Telefon:</strong> +372 658 13 12<br>
-                <strong>Email:</strong> info@miramis.ee<br>
-                <strong data-et="Lahtiolekuajad" data-en="Opening Hours" data-ru="Часы работы">Lahtiolekuajad:</strong> E-R 9:00 – 18:00</p>
-            </div>
-
-            <div class="contact-card">
-                <h3 data-et="Lao aadress" data-en="Warehouse Address" data-ru="Адрес склада">Lao aadress</h3>
-                <p><strong>MIRAMIS OÜ</strong><br>
-                Lao tn 18<br>
-                74114 Maardu<br>
-                Harju maakond, Estonia<br><br>
-                <strong data-et="Registrikood" data-en="Registry Code" data-ru="Регистрационный код">Registrikood:</strong> 10966040<br>
-                <a href="https://www.miramis.ee" target="_blank" style="color: var(--bright-red);">www.miramis.ee</a></p>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // MENU TOGGLE
-        function toggleMenu() {
-            const menu = document.getElementById('fullscreenMenu');
-            menu.classList.toggle('active');
-        }
-
-        // LANGUAGE SWITCHER
-        let currentLang = 'et';
-        
-        function switchLanguage(lang) {
-            currentLang = lang;
-            document.querySelectorAll('[data-' + lang + ']').forEach(el => {
-                el.textContent = el.getAttribute('data-' + lang);
-            });
-            
-            document.querySelectorAll('.language-switcher button').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-        }
-
-        // ANIMATED COUNTERS
-        function animateCounter(element) {
-            const target = parseInt(element.getAttribute('data-target'));
-            let current = 0;
-            const increment = target / 100;
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    element.textContent = target + '+';
-                    clearInterval(timer);
-                } else {
-                    element.textContent = Math.floor(current);
-                }
-            }, 20);
-        }
-
-        // Запускаем счётчики при прокрутке
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const counters = entry.target.querySelectorAll('.stat-number');
-                    counters.forEach(counter => {
-                        if (counter.textContent === '0') {
-                            animateCounter(counter);
-                        }
-                    });
-                }
-            });
-        });
-
-        const statsContainer = document.querySelector('.stats-container');
-        if (statsContainer) {
-            observer.observe(statsContainer);
-        }
-
-        // FORM SUBMIT
-        function handleSubmit(e) {
-            e.preventDefault();
-            const lang = currentLang;
-            const messages = {
-                et: 'Täname! Võtame teiega peagi ühendust.',
-                en: 'Thank you! We will contact you soon.',
-                ru: 'Спасибо! Мы свяжемся с вами в ближайшее время.'
-            };
-            alert(messages[lang]);
-            e.target.reset();
-        }
-
-        // Smooth scroll для ссылок
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
-
-</body>
-</html>et="100% Eesti kapital" data-en="100% Estonian Capital" data-ru="100% Эстонский капитал">100% Eesti kapital</h3>
+            <div class="info-card">
+                <h3 data-et="100% Eesti kapital" data-en="100% Estonian Capital" data-ru="100% Эстонский капитал">100% Eesti kapital</h3>
                 <p data-et="Copymax on 100% Eesti kapitali baasil tegutsev ettevõte, mis alustas oma tegevust 2003. aastal"
                    data-en="Copymax is 100% Estonian capital based company and started its activity in 2003"
                    data-ru="Copymax - компания, основанная на 100% эстонском капитале, начавшая свою деятельность в 2003 году">
@@ -889,10 +704,4 @@
                 <h3 data-et="Copymax eesmärk" data-en="Copymax Goal" data-ru="Цель Copymax">Copymax eesmärk</h3>
                 <p data-et="On olla tunnustatud liidriks dokumendihalduses ja tipptasemel digitaalse transformatsiooni lahenduste pakkumisel. Saada innovaatiliseks ettevõtteks, mis kohaneb muutuvate turunõuetega ning pakub tipptasemel tehnoloogiaid ja teenuseid."
                    data-en="Is to be recognized as a leader in document management and providing cutting-edge digital transformation solutions. To become an innovative company that adapts to changing market needs and offers cutting-edge technologies and services."
-                   data-ru="Быть признанным лидером в управлении документами и предоставлении передовых решений цифровой трансформации. Стать инновационной компанией, адаптирующейся к меняющимся потребностям рынка и предлагающей передовые технологии и услуги.">
-                    On olla tunnustatud liidriks dokumendihalduses ja tipptasemel digitaalse transformatsiooni lahenduste pakkumisel. Saada innovaatiliseks ettevõtteks, mis kohaneb muutuvate turunõuetega ning pakub tipptasemel tehnoloogiaid ja teenuseid.
-                </p>
-            </div>
-
-            <div class="value-card">
-                <h3 data-
+                   data-ru="Быть признанным лидером в управлении документами и
