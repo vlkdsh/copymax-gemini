@@ -117,15 +117,62 @@
         }
         
         .layer-logo { 
-            width: 85%; 
-            top: 30%; 
-            left: 30%; 
-            transform: translate(-50%, -50%); 
-            filter: 
-                drop-shadow(-3px 5px 8px rgba(0,0,0,0.25))
-                drop-shadow(-8px 12px 18px rgba(0,0,0,0.15))
-                drop-shadow(-15px 22px 30px rgba(0,0,0,0.1));
-        }
+    top: 30%; 
+    left: 30%; 
+    transform: translate(-50%, -50%); 
+}
+
+.logo-3d {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18vw;
+    font-weight: 900;
+    color: #FF0000;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    
+    /* 3D эффект через множественные тени */
+    text-shadow: 
+        /* Основная глубина */
+        0.01em 0.01em 0 #E60000,
+        0.02em 0.02em 0 #CC0000,
+        0.03em 0.03em 0 #B30000,
+        0.04em 0.04em 0 #990000,
+        0.05em 0.05em 0 #800000,
+        0.06em 0.06em 0 #660000,
+        
+        /* Мягкая тень для объёма */
+        0.07em 0.07em 0.02em rgba(0, 0, 0, 0.15),
+        0.1em 0.1em 0.05em rgba(0, 0, 0, 0.2),
+        0.15em 0.15em 0.1em rgba(0, 0, 0, 0.25),
+        0.2em 0.2em 0.15em rgba(0, 0, 0, 0.3),
+        
+        /* Дополнительные глубокие тени */
+        -0.01em -0.01em 0 rgba(255, 255, 255, 0.1),
+        -0.02em -0.02em 0 rgba(255, 255, 255, 0.05);
+    
+    /* Градиент для объёма */
+    background: linear-gradient(
+        145deg,
+        #FF3333 0%,
+        #FF0000 25%,
+        #CC0000 50%,
+        #FF0000 75%,
+        #FF3333 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+    /* Дополнительный filter для глубины */
+    filter: 
+        drop-shadow(-3px 5px 8px rgba(0,0,0,0.25))
+        drop-shadow(-8px 12px 18px rgba(0,0,0,0.15))
+        drop-shadow(-15px 22px 30px rgba(0,0,0,0.1));
+    
+    position: relative;
+    z-index: 10;
+}
         
         .layer-slogan { 
             width: 26%; 
