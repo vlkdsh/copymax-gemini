@@ -424,63 +424,41 @@
     color: var(--bright-red) !important;
 }
 
-        /* FORM */
-        .contact-form {
-            max-width: 600px;
-            margin: 60px auto 0;
-            background: white;
-            padding: 50px;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #333;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--bright-red);
-        }
-
-        .submit-btn {
-    width: 100%;
-    padding: 18px;
-    background: var(--bright-red);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-family: 'Poppins', sans-serif;
+        /* PREMIUM FORM STYLES */
+.premium-form-group input:focus,
+.premium-form-group textarea:focus {
+    outline: none;
+    border-color: var(--bright-red) !important;
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
 }
 
-.submit-btn:hover {
-    background: #CC0000;
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(255,0,0,0.4);
+.premium-form-group input:focus + svg,
+.premium-form-group textarea:focus + svg {
+    stroke: var(--bright-red);
+}
+
+.premium-submit-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(255, 0, 0, 0.5);
+}
+
+.premium-submit-btn:hover > div {
+    left: 100% !important;
+}
+
+.premium-submit-btn:active {
+    transform: translateY(-2px);
+}
+
+/* FORM VALIDATION ERRORS */
+.premium-form-group input.error,
+.premium-form-group textarea.error {
+    border-color: var(--bright-red) !important;
+    animation: shake 0.3s ease;
+}
+
+.premium-form-group .error-message.show {
+    display: block !important;
 }
 
         /* CONTACT CARDS */
