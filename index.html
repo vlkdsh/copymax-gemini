@@ -707,246 +707,51 @@
         <p data-et="Võtame teiega peagi ühendust" data-en="We will contact you soon" data-ru="Мы свяжемся с вами в ближайшее время">Võtame teiega peagi ühendust</p>
     </div>
 
-    <!-- HERO SECTION - PREMIUM VERSION -->
-<div class="hero-section" id="hero" style="position: relative; width: 100%; height: 100vh; background: linear-gradient(to bottom, #e8e8e8 0%, #f2f2f2 50%, #e8e8e8 100%); overflow: hidden;">
-    
-    <!-- Blueprint lines -->
-    <div class="blueprint-lines" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;">
-        <div class="line h" style="position: absolute; background-color: var(--bright-red); opacity: 0.25; width: 100%; height: 1px; top: 1%;"></div>
-        <div class="line h" style="position: absolute; background-color: var(--bright-red); opacity: 0.25; width: 100%; height: 1px; top: 6%;"></div>
-        <div class="line h" style="position: absolute; background-color: var(--bright-red); opacity: 0.25; width: 100%; height: 1px; top: 8%;"></div>
-        <div class="line h" style="position: absolute; background-color: var(--bright-red); opacity: 0.25; width: 100%; height: 1px; top: 49%;"></div>
-        <div class="line h" style="position: absolute; background-color: var(--bright-red); opacity: 0.25; width: 100%; height: 1px; top: 51%;"></div>
-        <div class="line h" style="position: absolute; background-color: var(--bright-red); opacity: 0.25; width: 100%; height: 1px; top: 82%;"></div>
-        <div class="line h" style="position: absolute; background-color: var(--bright-red); opacity: 0.25; width: 100%; height: 1px; top: 91%;"></div>
-        
-        <div class="line v" style="position: absolute; background-color: var(--bright-red); opacity: 0.25; height: 100%; width: 1px; left: 2%;"></div>
-        <div class="line v" style="position: absolute; background-color: var(--bright-red); opacity: 0.25; height: 100%; width: 1px; left: 25%;"></div>
-        <div class="line v" style="position: absolute; background-color: var(--bright-red); opacity: 0.25; height: 100%; width: 1px; left: 26%;"></div>
-        <div class="line v" style="position: absolute; background-color: var(--bright-red); opacity: 0.25; height: 100%; width: 1px; left: 44.5%;"></div>
-        <div class="line v" style="position: absolute; background-color: var(--bright-red); opacity: 0.25; height: 100%; width: 1px; left: 62%;"></div>
-        <div class="line v" style="position: absolute; background-color: var(--bright-red); opacity: 0.25; height: 100%; width: 1px; left: 63%;"></div>
-        <div class="line v" style="position: absolute; background-color: var(--bright-red); opacity: 0.25; height: 100%; width: 1px; left: 79.5%;"></div>
-        <div class="line v" style="position: absolute; background-color: var(--bright-red); opacity: 0.25; height: 100%; width: 1px; left: 98.5%;"></div>
-    </div>
-
-    <!-- Ambient glows - красные свечения для глубины -->
-    <div style="position: absolute; top: 20%; left: 15%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,0,0,0.15) 0%, transparent 70%); filter: blur(80px); z-index: 2; pointer-events: none; animation: pulse 8s ease-in-out infinite;"></div>
-    <div style="position: absolute; top: 40%; right: 10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,0,0,0.12) 0%, transparent 70%); filter: blur(90px); z-index: 2; pointer-events: none; animation: pulse 10s ease-in-out infinite 2s;"></div>
-
-    <!-- Header -->
-    <header style="position: fixed; left: 2%; right: 2%; top: 2.5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; padding: 0;">
-        <img src="header-logo.png" alt="COPYMAX" class="header-logo-img" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" style="height: 32px; width: auto; filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15)); cursor: pointer;">
-        <div class="menu-icon" onclick="toggleMenu()" style="cursor: pointer; display: flex; flex-direction: column; gap: 7px; padding: 10px; z-index: 1001; position: relative;">
-            <span style="display: block; width: 40px; height: 3px; background: linear-gradient(135deg, #CC0000 0%, #FF0000 50%, #FF3333 100%); box-shadow: 0 2px 8px rgba(255, 0, 0, 0.4); border-radius: 2px; transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); transform-origin: center;"></span>
-            <span style="display: block; width: 40px; height: 3px; background: linear-gradient(135deg, #CC0000 0%, #FF0000 50%, #FF3333 100%); box-shadow: 0 2px 8px rgba(255, 0, 0, 0.4); border-radius: 2px; transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); transform-origin: center;"></span>
-            <span style="display: block; width: 40px; height: 3px; background: linear-gradient(135deg, #CC0000 0%, #FF0000 50%, #FF3333 100%); box-shadow: 0 2px 8px rgba(255, 0, 0, 0.4); border-radius: 2px; transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); transform-origin: center;"></span>
+    <!-- HERO SECTION -->
+    <div class="hero-section" id="hero">
+        <div class="blueprint-lines">
+            <div class="line h h-1"></div><div class="line h h-2"></div><div class="line h h-3"></div>
+            <div class="line h h-4"></div><div class="line h h-5"></div><div class="line h h-6"></div><div class="line h h-7"></div>
+            <div class="line v v-1"></div><div class="line v v-2"></div><div class="line v v-3"></div>
+            <div class="line v v-4"></div><div class="line v v-5"></div><div class="line v v-6"></div>
+            <div class="line v v-7"></div><div class="line v v-8"></div>
         </div>
-    </header>
 
-    <!-- LOGO - с эффектом глубины и появления -->
-    <div class="hero-layer-container" style="position: absolute; width: 85%; top: 30%; left: 30%; transform: translate(-50%, -50%); z-index: 10;">
-        <!-- Glow за логотипом -->
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 120%; height: 120%; background: radial-gradient(circle, rgba(255,0,0,0.3) 0%, transparent 60%); filter: blur(60px); opacity: 0.8;"></div>
-        
-        <!-- Сам логотип -->
-        <img src="logo.png" class="layer-logo" alt="COPYMAX 3D Logo" style="position: relative; width: 100%; filter: drop-shadow(-3px 5px 8px rgba(0,0,0,0.25)) drop-shadow(-8px 12px 18px rgba(0,0,0,0.15)) drop-shadow(-15px 22px 30px rgba(0,0,0,0.1)); opacity: 0; animation: fadeInScale 1.5s ease-out 0.3s forwards;">
+        <header>
+            <img src="header-logo.png" alt="COPYMAX" class="header-logo-img" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+
+        <img src="logo.png" class="layer layer-logo" alt="COPYMAX 3D Logo">
+        <img src="slogan.png" class="layer layer-slogan" alt="Estonia's Global Print Hub">
+        <div class="paper-animation"></div>
+        <img src="printer.png" class="layer layer-printer" alt="Professional Printer">
+
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
     </div>
 
-    <!-- SLOGAN - с эффектом появления -->
-    <div class="hero-layer-container" style="position: absolute; width: 26%; top: 55%; right: -2%; transform: translateY(-50%); z-index: 10;">
-        <!-- Glow за слоганом -->
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 140%; height: 140%; background: radial-gradient(circle, rgba(255,0,0,0.25) 0%, transparent 60%); filter: blur(50px); opacity: 0.7;"></div>
-        
-        <!-- Сам слоган -->
-        <img src="slogan.png" class="layer-slogan" alt="Estonia's Global Print Hub" style="position: relative; width: 100%; filter: drop-shadow(-3px 5px 8px rgba(0,0,0,0.25)) drop-shadow(-8px 12px 18px rgba(0,0,0,0.15)) drop-shadow(-15px 22px 30px rgba(0,0,0,0.1)); opacity: 0; animation: fadeInRight 1.5s ease-out 0.6s forwards;">
+    <!-- FULLSCREEN MENU -->
+    <div class="fullscreen-menu" id="fullscreenMenu">
+        <ul class="menu-nav">
+            <li><a href="#hero" onclick="toggleMenu()" data-et="Avaleht" data-en="Home" data-ru="Главная">Avaleht</a></li>
+            <li><a href="#about" onclick="toggleMenu()" data-et="Meist" data-en="About Us" data-ru="О нас">Meist</a></li>
+            <li><a href="#values" onclick="toggleMenu()" data-et="Väärtused" data-en="Values" data-ru="Ценности">Väärtused</a></li>
+            <li><a href="#team" onclick="toggleMenu()" data-et="Meeskond" data-en="Team" data-ru="Команда">Meeskond</a></li>
+            <li><a href="#request" onclick="toggleMenu()" data-et="Küsi pakkumist" data-en="Request a Quote" data-ru="Запросить КП">Küsi pakkumist</a></li>
+            <li><a href="#contact" onclick="toggleMenu()" data-et="Kontakt" data-en="Contact" data-ru="Контакты">Kontakt</a></li>
+        </ul>
+        <div class="language-switcher">
+            <button class="active" onclick="switchLanguage('et')">EST</button>
+            <button onclick="switchLanguage('en')">ENG</button>
+            <button onclick="switchLanguage('ru')">RUS</button>
+        </div>
     </div>
-
-    <!-- PRINTER - с эффектом глубины -->
-    <div class="hero-layer-container" style="position: absolute; width: 81%; bottom: -35%; left: 50%; transform: translateX(-50%); z-index: 15;">
-        <!-- Glow под принтером -->
-        <div style="position: absolute; bottom: 10%; left: 50%; transform: translateX(-50%); width: 90%; height: 200px; background: radial-gradient(ellipse, rgba(255,0,0,0.4) 0%, transparent 70%); filter: blur(70px); opacity: 0.9;"></div>
-        
-        <!-- Shadow на поверхность -->
-        <div style="position: absolute; bottom: 5%; left: 50%; transform: translateX(-50%); width: 85%; height: 80px; background: radial-gradient(ellipse, rgba(0,0,0,0.4) 0%, transparent 70%); filter: blur(30px);"></div>
-        
-        <!-- Сам принтер -->
-        <img src="printer.png" class="layer-printer" alt="Professional Printer" style="position: relative; width: 100%; filter: drop-shadow(-4px 6px 10px rgba(0,0,0,0.25)) drop-shadow(-10px 15px 22px rgba(0,0,0,0.15)) drop-shadow(-18px 26px 35px rgba(0,0,0,0.1)); opacity: 0; animation: fadeInUp 1.5s ease-out 0.9s forwards;">
-    </div>
-
-    <!-- Scroll Indicator -->
-    <div class="scroll-indicator" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 20; text-align: center;">
-        <span style="display: block; width: 2px; height: 40px; background: var(--bright-red); margin: 10px auto; animation: scrollAnim 2s ease-in-out infinite;"></span>
-    </div>
-</div>
-
-<style>
-/* Анимация пульсации для glows */
-@keyframes pulse {
-    0%, 100% { 
-        opacity: 0.6;
-        transform: scale(1);
-    }
-    50% { 
-        opacity: 0.9;
-        transform: scale(1.05);
-    }
-}
-
-/* Анимация появления логотипа */
-@keyframes fadeInScale {
-    0% {
-        opacity: 0;
-        transform: scale(0.9) translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-
-/* Анимация появления слогана справа */
-@keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Анимация появления принтера снизу */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Scroll indicator анимация */
-@keyframes scrollAnim {
-    0%, 100% { 
-        height: 40px; 
-        opacity: 0.5; 
-    }
-    50% { 
-        height: 60px; 
-        opacity: 1; 
-    }
-}
-
-/* Параллакс эффект при скролле */
-.hero-layer-container {
-    transition: transform 0.1s ease-out;
-}
-
-/* Hover эффект для menu icon */
-.menu-icon:hover span {
-    box-shadow: 0 2px 12px rgba(255, 0, 0, 0.6);
-}
-
-/* Анимация меню в крестик */
-.menu-icon.active span:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
-}
-
-.menu-icon.active span:nth-child(2) {
-    opacity: 0;
-    transform: translateX(-20px);
-}
-
-.menu-icon.active span:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
-}
-
-/* Улучшенный hover для header logo */
-.header-logo-img {
-    transition: all 0.3s ease;
-}
-
-.header-logo-img:hover {
-    filter: drop-shadow(0 6px 16px rgba(255, 0, 0, 0.4));
-    transform: translateY(-2px);
-}
-</style>
-
-<script>
-// Parallax эффект при движении мыши
-document.addEventListener('mousemove', (e) => {
-    const hero = document.getElementById('hero');
-    if (!hero) return;
-    
-    const mouseX = e.clientX / window.innerWidth;
-    const mouseY = e.clientY / window.innerHeight;
-    
-    // Логотип двигается больше всего
-    const logo = hero.querySelector('.layer-logo');
-    if (logo) {
-        const parentContainer = logo.closest('.hero-layer-container');
-        const moveX = (mouseX - 0.5) * 30;
-        const moveY = (mouseY - 0.5) * 30;
-        parentContainer.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
-    }
-    
-    // Слоган двигается меньше
-    const slogan = hero.querySelector('.layer-slogan');
-    if (slogan) {
-        const parentContainer = slogan.closest('.hero-layer-container');
-        const moveX = (mouseX - 0.5) * 20;
-        const moveY = (mouseY - 0.5) * 20;
-        parentContainer.style.transform = `translateY(calc(-50% + ${moveY}px)) translateX(${moveX}px)`;
-    }
-    
-    // Принтер двигается совсем немного
-    const printer = hero.querySelector('.layer-printer');
-    if (printer) {
-        const parentContainer = printer.closest('.hero-layer-container');
-        const moveX = (mouseX - 0.5) * 15;
-        const moveY = (mouseY - 0.5) * 10;
-        parentContainer.style.transform = `translateX(calc(-50% + ${moveX}px)) translateY(${moveY}px)`;
-    }
-});
-
-// Parallax эффект при скролле
-let ticking = false;
-window.addEventListener('scroll', () => {
-    if (!ticking) {
-        window.requestAnimationFrame(() => {
-            const scrolled = window.pageYOffset;
-            const hero = document.getElementById('hero');
-            if (!hero || scrolled > window.innerHeight) {
-                ticking = false;
-                return;
-            }
-            
-            // Все элементы двигаются с разной скоростью
-            const logo = hero.querySelector('.layer-logo');
-            if (logo) {
-                logo.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-            
-            const slogan = hero.querySelector('.layer-slogan');
-            if (slogan) {
-                slogan.style.transform = `translateY(${scrolled * 0.3}px)`;
-            }
-            
-            const printer = hero.querySelector('.layer-printer');
-            if (printer) {
-                printer.style.transform = `translateY(${scrolled * 0.2}px)`;
-            }
-            
-            ticking = false;
-        });
-        ticking = true;
-    }
-});
-</script>
 
     <!-- ABOUT SECTION -->
     <section id="about" style="background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 50%, #f5f5f5 100%); position: relative; overflow: hidden; padding: 120px 10%;">
