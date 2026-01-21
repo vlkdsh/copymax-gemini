@@ -1302,16 +1302,27 @@
     </div>
 </div>
 
-    <style>
-        .info-card-hover:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(255,0,0,0.25) !important;
-        }
-        .info-card-hover:hover > div > div:first-child {
-            transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 15px 40px rgba(255,0,0,0.5) !important;
-        }
-    </style>
+   </section>
+<style>
+    /* Dark cards hover effects */
+    .info-card-dark:hover {
+        transform: translateY(-15px) scale(1.03);
+        box-shadow: 0 25px 60px rgba(255,0,0,0.4), 0 0 50px rgba(255,0,0,0.2) !important;
+        border-color: rgba(255,0,0,0.5) !important;
+    }
+    
+    .info-card-dark:hover > div:nth-child(2) {
+        transform: scale(1.15) rotate(8deg);
+        box-shadow: 0 15px 45px rgba(255,0,0,0.7), 0 0 30px rgba(255,0,0,0.5) !important;
+    }
+    
+    /* Stats dark hover */
+    .stat-card-dark:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 50px rgba(255,0,0,0.4), 0 0 40px rgba(255,0,0,0.2) !important;
+        border-color: rgba(255,0,0,0.5) !important;
+    }
+</style>
 </section>
 
     <!-- VALUES & MISSION -->
