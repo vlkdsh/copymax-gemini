@@ -1464,7 +1464,7 @@
 </section>
 
     <!-- REQUEST FORM -->
-<section id="request" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%); position: relative; overflow: hidden; padding: 100px 8%;">
+<section id="request" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%); position: relative; overflow: hidden; padding: 110px 9%;">
     <!-- Animated tech grid -->
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.04; background-image: repeating-linear-gradient(0deg, var(--bright-red) 0px, transparent 1px, transparent 30px), repeating-linear-gradient(90deg, var(--bright-red) 0px, transparent 1px, transparent 30px);"></div>
     
@@ -1472,105 +1472,110 @@
     <div style="position: absolute; top: 10%; right: 10%; width: 200px; height: 200px; background: radial-gradient(circle, rgba(255,0,0,0.15) 0%, transparent 70%); border-radius: 50%; filter: blur(40px); animation: float 6s ease-in-out infinite;"></div>
     <div style="position: absolute; bottom: 15%; left: 15%; width: 250px; height: 250px; background: radial-gradient(circle, rgba(255,0,0,0.1) 0%, transparent 70%); border-radius: 50%; filter: blur(50px); animation: float 8s ease-in-out infinite reverse;"></div>
     
-    <div style="max-width: 1100px; margin: 0 auto; position: relative; z-index: 1;">
+    <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;">
         
-        <!-- Compact Header -->
-        <div style="text-align: center; margin-bottom: 50px;">
-            <h2 data-et="Küsi pakkumist" data-en="Request a Quote" data-ru="Запросить КП" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 2.8rem; margin-bottom: 15px; color: white; letter-spacing: -1px;">
-                Küsi pakkumist
+        <!-- Header -->
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 data-et="Võtke meiega ühendust" data-en="Get in Touch" data-ru="Свяжитесь с нами" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 3.2rem; margin-bottom: 20px; color: white; letter-spacing: -1px;">
+                Võtke meiega ühendust
             </h2>
-            <div style="width: 60px; height: 3px; background: var(--bright-red); margin: 0 auto 15px; box-shadow: 0 0 15px rgba(255,0,0,0.6);"></div>
-            <p data-et="Vastame 24h jooksul • Tasuta konsultatsioon"
-               data-en="Response within 24h • Free consultation"
-               data-ru="Ответ в течение 24ч • Бесплатная консультация"
-               style="font-size: 1rem; color: rgba(255,255,255,0.5); font-family: 'Inter', sans-serif; font-weight: 400;">
-                Vastame 24h jooksul • Tasuta konsultatsioon
+            <div style="width: 70px; height: 3px; background: var(--bright-red); margin: 0 auto 25px; box-shadow: 0 0 15px rgba(255,0,0,0.6);"></div>
+            <p data-et="Kui Teil on tekkinud küsimusi, siis kirjutage meile. Vastame Teie kirjale esimesel võimalusel."
+               data-en="If you have any questions, please write to us. We will reply to your letter as soon as possible."
+               data-ru="Если у вас возникнут вопросы, пожалуйста, напишите нам. Мы ответим на ваше письмо в кратчайшие сроки."
+               style="max-width: 750px; margin: 0 auto; font-size: 1.15rem; color: rgba(255,255,255,0.6); font-family: 'Inter', sans-serif; font-weight: 400; line-height: 1.7;">
+                Kui Teil on tekkinud küsimusi, siis kirjutage meile. Vastame Teie kirjale esimesel võimalusel.
             </p>
         </div>
 
-        <!-- SPLIT LAYOUT - более компактный -->
-        <div style="display: grid; grid-template-columns: 55% 40%; gap: 5%; align-items: center;">
+        <!-- SPLIT LAYOUT -->
+        <div style="display: grid; grid-template-columns: 58% 38%; gap: 4%; align-items: start;">
             
-            <!-- LEFT: SUPER COMPACT FORM -->
+            <!-- LEFT: FORM -->
             <div>
-                <form id="contactForm" onsubmit="handleSubmit(event)" style="background: rgba(15,15,15,0.6); backdrop-filter: blur(20px); padding: 35px 30px; border-radius: 16px; border: 1px solid rgba(255,0,0,0.15); position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
+                <form id="contactForm" onsubmit="handleSubmit(event)" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(20px); padding: 45px 40px; border-radius: 18px; border: 1px solid rgba(255,0,0,0.2); position: relative; box-shadow: 0 25px 70px rgba(0,0,0,0.6);">
                     
                     <!-- Glowing top line -->
-                    <div style="position: absolute; top: 0; left: 10%; right: 10%; height: 2px; background: linear-gradient(90deg, transparent, var(--bright-red), transparent); box-shadow: 0 0 15px rgba(255,0,0,0.8);"></div>
+                    <div style="position: absolute; top: 0; left: 15%; right: 15%; height: 2px; background: linear-gradient(90deg, transparent, var(--bright-red), transparent); box-shadow: 0 0 15px rgba(255,0,0,0.8);"></div>
                     
-                    <!-- 2 columns for Name + Company -->
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                    <!-- Row 1: Name + Company -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
                         <div>
-                            <input type="text" id="name" name="name" required placeholder="Nimi *" style="width: 100%; padding: 12px 15px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; font-size: 0.95rem; color: white; font-family: 'Inter', sans-serif; transition: all 0.3s ease;">
+                            <label data-et="Nimi *" data-en="Name *" data-ru="Имя *" style="display: block; margin-bottom: 8px; font-weight: 600; color: white; font-family: 'Poppins', sans-serif; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Nimi *</label>
+                            <input type="text" id="name" name="name" required style="width: 100%; padding: 13px 16px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; font-size: 0.98rem; color: white; font-family: 'Inter', sans-serif; transition: all 0.3s ease;">
                         </div>
                         <div>
-                            <input type="text" id="company" name="company" placeholder="Ettevõte" style="width: 100%; padding: 12px 15px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; font-size: 0.95rem; color: white; font-family: 'Inter', sans-serif; transition: all 0.3s ease;">
+                            <label data-et="Ettevõte" data-en="Company" data-ru="Компания" style="display: block; margin-bottom: 8px; font-weight: 600; color: white; font-family: 'Poppins', sans-serif; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Ettevõte</label>
+                            <input type="text" id="company" name="company" style="width: 100%; padding: 13px 16px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; font-size: 0.98rem; color: white; font-family: 'Inter', sans-serif; transition: all 0.3s ease;">
                         </div>
                     </div>
 
-                    <!-- 2 columns for Email + Phone -->
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                    <!-- Row 2: Email + Phone -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
                         <div>
-                            <input type="email" id="email" name="email" required placeholder="E-post *" style="width: 100%; padding: 12px 15px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; font-size: 0.95rem; color: white; font-family: 'Inter', sans-serif; transition: all 0.3s ease;">
+                            <label data-et="E-post *" data-en="Email *" data-ru="Email *" style="display: block; margin-bottom: 8px; font-weight: 600; color: white; font-family: 'Poppins', sans-serif; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">E-post *</label>
+                            <input type="email" id="email" name="email" required style="width: 100%; padding: 13px 16px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; font-size: 0.98rem; color: white; font-family: 'Inter', sans-serif; transition: all 0.3s ease;">
                         </div>
                         <div>
-                            <input type="tel" id="phone" name="phone" required placeholder="Telefon *" style="width: 100%; padding: 12px 15px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; font-size: 0.95rem; color: white; font-family: 'Inter', sans-serif; transition: all 0.3s ease;">
+                            <label data-et="Telefon *" data-en="Phone *" data-ru="Телефон *" style="display: block; margin-bottom: 8px; font-weight: 600; color: white; font-family: 'Poppins', sans-serif; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Telefon *</label>
+                            <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 13px 16px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; font-size: 0.98rem; color: white; font-family: 'Inter', sans-serif; transition: all 0.3s ease;">
                         </div>
                     </div>
 
                     <!-- Message -->
-                    <div style="margin-bottom: 20px;">
-                        <textarea id="message" name="message" required placeholder="Sõnum *" rows="4" style="width: 100%; padding: 12px 15px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; font-size: 0.95rem; color: white; font-family: 'Inter', sans-serif; resize: vertical; min-height: 100px; transition: all 0.3s ease;"></textarea>
+                    <div style="margin-bottom: 25px;">
+                        <label data-et="Sõnum *" data-en="Message *" data-ru="Сообщение *" style="display: block; margin-bottom: 8px; font-weight: 600; color: white; font-family: 'Poppins', sans-serif; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Sõnum *</label>
+                        <textarea id="message" name="message" required rows="5" style="width: 100%; padding: 13px 16px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; font-size: 0.98rem; color: white; font-family: 'Inter', sans-serif; resize: vertical; min-height: 130px; transition: all 0.3s ease;"></textarea>
                     </div>
 
-                    <!-- Submit Button with Icon -->
-                    <button type="submit" data-et="Saada päring →" data-en="Send Request →" data-ru="Отправить →" style="width: 100%; padding: 14px; background: linear-gradient(135deg, var(--bright-red) 0%, #CC0000 100%); color: white; border: none; border-radius: 10px; font-size: 1rem; font-weight: 700; cursor: pointer; font-family: 'Poppins', sans-serif; text-transform: uppercase; letter-spacing: 1.5px; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(255,0,0,0.4); transition: all 0.3s ease;">
-                        <span style="position: relative; z-index: 1;">Saada päring →</span>
-                        <div style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.6s ease;"></div>
+                    <!-- Submit Button -->
+                    <button type="submit" data-et="Saada sõnum" data-en="Send Message" data-ru="Отправить сообщение" style="width: 100%; padding: 16px; background: linear-gradient(135deg, var(--bright-red) 0%, #CC0000 100%); color: white; border: none; border-radius: 12px; font-size: 1.05rem; font-weight: 700; cursor: pointer; font-family: 'Poppins', sans-serif; text-transform: uppercase; letter-spacing: 1.8px; position: relative; overflow: hidden; box-shadow: 0 12px 35px rgba(255,0,0,0.45); transition: all 0.4s ease;">
+                        <span style="position: relative; z-index: 1;">Saada sõnum</span>
+                        <div style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent); transition: left 0.6s ease;"></div>
                     </button>
                 </form>
             </div>
 
-            <!-- RIGHT: VERTICAL FEATURES CARDS -->
-            <div style="display: flex; flex-direction: column; gap: 15px;">
+            <!-- RIGHT: FEATURES -->
+            <div style="display: flex; flex-direction: column; gap: 18px;">
                 
-                <!-- Feature 1 - Animated Card -->
-                <div class="feature-card-mini" style="background: linear-gradient(135deg, rgba(255,0,0,0.08) 0%, rgba(255,0,0,0.02) 100%); backdrop-filter: blur(10px); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,0,0,0.15); display: flex; align-items: center; gap: 15px; transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); position: relative; overflow: hidden;">
-                    <!-- Red pulse -->
-                    <div style="position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--bright-red); box-shadow: 0 0 10px var(--bright-red);"></div>
+                <!-- Feature 1 -->
+                <div class="feature-card-mini" style="background: linear-gradient(135deg, rgba(255,0,0,0.1) 0%, rgba(255,0,0,0.03) 100%); backdrop-filter: blur(12px); padding: 25px 22px; border-radius: 14px; border: 1px solid rgba(255,0,0,0.18); display: flex; align-items: center; gap: 18px; transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); position: relative; overflow: hidden;">
+                    <!-- Red pulse line -->
+                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--bright-red); box-shadow: 0 0 12px var(--bright-red);"></div>
                     
-                    <div style="width: 40px; height: 40px; min-width: 40px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(255,0,0,0.4);">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                    <div style="width: 48px; height: 48px; min-width: 48px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(255,0,0,0.45);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                     </div>
                     <div>
-                        <div data-et="Vastus 24h" data-en="24h Response" data-ru="Ответ 24ч" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1rem; color: white; margin-bottom: 2px;">Vastus 24h</div>
-                        <div data-et="Kiire tagasiside" data-en="Fast feedback" data-ru="Быстрый ответ" style="font-family: 'Inter', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.5);">Kiire tagasiside</div>
+                        <div data-et="Kiire vastus" data-en="Fast Response" data-ru="Быстрый ответ" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.1rem; color: white; margin-bottom: 4px;">Kiire vastus</div>
+                        <div data-et="Vastame esimesel võimalusel" data-en="We reply ASAP" data-ru="Отвечаем при первой возможности" style="font-family: 'Inter', sans-serif; font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.4;">Vastame esimesel võimalusel</div>
                     </div>
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="feature-card-mini" style="background: linear-gradient(135deg, rgba(255,0,0,0.08) 0%, rgba(255,0,0,0.02) 100%); backdrop-filter: blur(10px); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,0,0,0.15); display: flex; align-items: center; gap: 15px; transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--bright-red); box-shadow: 0 0 10px var(--bright-red);"></div>
+                <div class="feature-card-mini" style="background: linear-gradient(135deg, rgba(255,0,0,0.1) 0%, rgba(255,0,0,0.03) 100%); backdrop-filter: blur(12px); padding: 25px 22px; border-radius: 14px; border: 1px solid rgba(255,0,0,0.18); display: flex; align-items: center; gap: 18px; transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--bright-red); box-shadow: 0 0 12px var(--bright-red);"></div>
                     
-                    <div style="width: 40px; height: 40px; min-width: 40px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(255,0,0,0.4);">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                    <div style="width: 48px; height: 48px; min-width: 48px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(255,0,0,0.45);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                         </svg>
                     </div>
                     <div>
-                        <div data-et="Kvaliteet" data-en="Quality" data-ru="Качество" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1rem; color: white; margin-bottom: 2px;">Kvaliteet</div>
-                        <div data-et="Garanteeritud" data-en="Guaranteed" data-ru="Гарантировано" style="font-family: 'Inter', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.5);">Garanteeritud</div>
+                        <div data-et="Garanteeritud kvaliteet" data-en="Guaranteed Quality" data-ru="Гарантированное качество" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.1rem; color: white; margin-bottom: 4px;">Garanteeritud kvaliteet</div>
+                        <div data-et="Ainult parimad lahendused" data-en="Only best solutions" data-ru="Только лучшие решения" style="font-family: 'Inter', sans-serif; font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.4;">Ainult parimad lahendused</div>
                     </div>
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="feature-card-mini" style="background: linear-gradient(135deg, rgba(255,0,0,0.08) 0%, rgba(255,0,0,0.02) 100%); backdrop-filter: blur(10px); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,0,0,0.15); display: flex; align-items: center; gap: 15px; transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--bright-red); box-shadow: 0 0 10px var(--bright-red);"></div>
+                <div class="feature-card-mini" style="background: linear-gradient(135deg, rgba(255,0,0,0.1) 0%, rgba(255,0,0,0.03) 100%); backdrop-filter: blur(12px); padding: 25px 22px; border-radius: 14px; border: 1px solid rgba(255,0,0,0.18); display: flex; align-items: center; gap: 18px; transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--bright-red); box-shadow: 0 0 12px var(--bright-red);"></div>
                     
-                    <div style="width: 40px; height: 40px; min-width: 40px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(255,0,0,0.4);">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                    <div style="width: 48px; height: 48px; min-width: 48px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(255,0,0,0.45);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                             <circle cx="9" cy="7" r="4"></circle>
                             <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -1578,24 +1583,24 @@
                         </svg>
                     </div>
                     <div>
-                        <div data-et="1000+ kliente" data-en="1000+ clients" data-ru="1000+ клиентов" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1rem; color: white; margin-bottom: 2px;">1000+ kliente</div>
-                        <div data-et="Usaldavad meid" data-en="Trust us" data-ru="Доверяют нам" style="font-family: 'Inter', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.5);">Usaldavad meid</div>
+                        <div data-et="1000+ klienti" data-en="1000+ Clients" data-ru="1000+ клиентов" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.1rem; color: white; margin-bottom: 4px;">1000+ klienti</div>
+                        <div data-et="Usaldavad meie teenuseid" data-en="Trust our services" data-ru="Доверяют нашим услугам" style="font-family: 'Inter', sans-serif; font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.4;">Usaldavad meie teenuseid</div>
                     </div>
                 </div>
 
                 <!-- Feature 4 -->
-                <div class="feature-card-mini" style="background: linear-gradient(135deg, rgba(255,0,0,0.08) 0%, rgba(255,0,0,0.02) 100%); backdrop-filter: blur(10px); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,0,0,0.15); display: flex; align-items: center; gap: 15px; transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--bright-red); box-shadow: 0 0 10px var(--bright-red);"></div>
+                <div class="feature-card-mini" style="background: linear-gradient(135deg, rgba(255,0,0,0.1) 0%, rgba(255,0,0,0.03) 100%); backdrop-filter: blur(12px); padding: 25px 22px; border-radius: 14px; border: 1px solid rgba(255,0,0,0.18); display: flex; align-items: center; gap: 18px; transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--bright-red); box-shadow: 0 0 12px var(--bright-red);"></div>
                     
-                    <div style="width: 40px; height: 40px; min-width: 40px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(255,0,0,0.4);">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                    <div style="width: 48px; height: 48px; min-width: 48px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(255,0,0,0.45);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
                             <circle cx="12" cy="12" r="10"></circle>
                             <polyline points="12 6 12 12 16 14"></polyline>
                         </svg>
                     </div>
                     <div>
-                        <div data-et="22 aastat" data-en="22 years" data-ru="22 года" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1rem; color: white; margin-bottom: 2px;">22 aastat</div>
-                        <div data-et="Turul" data-en="On market" data-ru="На рынке" style="font-family: 'Inter', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.5);">Turul</div>
+                        <div data-et="22 aastat kogemust" data-en="22 Years Experience" data-ru="22 года опыта" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.1rem; color: white; margin-bottom: 4px;">22 aastat kogemust</div>
+                        <div data-et="Usaldusväärsus ja stabiilsus" data-en="Reliability and stability" data-ru="Надежность и стабильность" style="font-family: 'Inter', sans-serif; font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.4;">Usaldusväärsus ja stabiilsus</div>
                     </div>
                 </div>
 
@@ -1609,30 +1614,26 @@
         #contactForm textarea:focus {
             outline: none;
             border-color: var(--bright-red) !important;
-            box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.15);
-            background: rgba(255,255,255,0.06) !important;
-        }
-
-        #contactForm input::placeholder,
-        #contactForm textarea::placeholder {
-            color: rgba(255,255,255,0.3);
+            box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.15);
+            background: rgba(255,255,255,0.07) !important;
         }
 
         /* Feature cards hover */
         .feature-card-mini:hover {
-            transform: translateX(8px);
-            background: linear-gradient(135deg, rgba(255,0,0,0.12) 0%, rgba(255,0,0,0.04) 100%) !important;
-            border-color: rgba(255,0,0,0.3) !important;
+            transform: translateX(10px);
+            background: linear-gradient(135deg, rgba(255,0,0,0.15) 0%, rgba(255,0,0,0.05) 100%) !important;
+            border-color: rgba(255,0,0,0.35) !important;
         }
 
         .feature-card-mini:hover > div:first-child {
-            width: 5px !important;
+            width: 6px !important;
+            box-shadow: 0 0 20px var(--bright-red) !important;
         }
 
         /* Button hover */
         #contactForm button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255,0,0,0.6) !important;
+            transform: translateY(-4px);
+            box-shadow: 0 18px 50px rgba(255,0,0,0.65) !important;
         }
 
         #contactForm button:hover > div {
