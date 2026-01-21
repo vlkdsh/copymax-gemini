@@ -1657,113 +1657,135 @@
 </section>
 
    <!-- CONTACT -->
-<section id="contact" style="background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 50%, #f5f5f5 100%); position: relative; overflow: hidden; padding: 120px 10%;">
+<section id="contact" style="background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 50%, #f5f5f5 100%); position: relative; overflow: hidden; padding: 110px 10%;">
     <!-- Декоративные элементы -->
     <div style="position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,0,0,0.05) 0%, transparent 70%); border-radius: 50%;"></div>
     <div style="position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,0,0,0.03) 0%, transparent 70%); border-radius: 50%;"></div>
     
-    <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;">
+    <div style="max-width: 1100px; margin: 0 auto; position: relative; z-index: 1;">
         <!-- Заголовок -->
-        <div style="text-align: center; margin-bottom: 70px;">
-            <h2 data-et="Kontakt" data-en="Contact" data-ru="Контакты" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 3.5rem; margin-bottom: 25px; color: #1a1a1a;">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 data-et="Kontakt" data-en="Contact" data-ru="Контакты" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 3.2rem; margin-bottom: 20px; color: #1a1a1a;">
                 Kontakt
             </h2>
-            <div style="width: 80px; height: 4px; background: var(--bright-red); margin: 0 auto 25px;"></div>
-            <p data-et="Võtke meiega ühendust" data-en="Get in touch with us" data-ru="Свяжитесь с нами" style="max-width: 700px; margin: 0 auto; font-size: 1.2rem; color: #666; font-family: 'Poppins', sans-serif; font-weight: 300;">
+            <div style="width: 70px; height: 4px; background: var(--bright-red); margin: 0 auto 20px;"></div>
+            <p data-et="Võtke meiega ühendust" data-en="Get in touch with us" data-ru="Свяжитесь с нами" style="max-width: 600px; margin: 0 auto; font-size: 1.1rem; color: #666; font-family: 'Poppins', sans-serif; font-weight: 300;">
                 Võtke meiega ühendust
             </p>
         </div>
 
-        <!-- ДВЕ КАРТОЧКИ ГОРИЗОНТАЛЬНО -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px; position: relative;">
+        <!-- ДВЕ КАРТОЧКИ + СВЯЗЬ ПОСЕРЕДИНЕ -->
+        <div style="display: grid; grid-template-columns: 1fr 120px 1fr; gap: 0; margin-bottom: 50px; align-items: center; position: relative;">
             
-            <!-- ГОРИЗОНТАЛЬНАЯ КРАСНАЯ ЛИНИЯ между карточками -->
-            <div style="position: absolute; top: 50%; left: 48%; right: 48%; height: 3px; background: linear-gradient(90deg, var(--bright-red), #FF3333); transform: translateY(-50%); box-shadow: 0 0 15px rgba(255,0,0,0.5); z-index: 0;"></div>
-            
-            <!-- Пульсирующая точка в центре линии -->
-            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 20px; height: 20px; background: var(--bright-red); border-radius: 50%; border: 4px solid #f5f5f5; box-shadow: 0 0 20px rgba(255,0,0,0.7); z-index: 1;">
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 35px; height: 35px; border: 2px solid var(--bright-red); border-radius: 50%; animation: pulse-ring 2s ease-out infinite;"></div>
-            </div>
-
-            <!-- Карточка 1 - Peakontor -->
-            <div class="contact-card-horizontal" style="background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%); padding: 40px 35px; border-radius: 18px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); border: 1px solid rgba(255,0,0,0.12); position: relative; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 2;">
-                <!-- Красная линия сверху -->
-                <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%); border-radius: 18px 18px 0 0;"></div>
+            <!-- Карточка 1 - КОМПАКТНАЯ -->
+            <div class="contact-card-mini" style="background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%); padding: 30px 28px; border-radius: 16px; box-shadow: 0 12px 35px rgba(0,0,0,0.1); border: 1px solid rgba(255,0,0,0.1); position: relative; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 2;">
+                <!-- Красная полоска сверху -->
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%); border-radius: 16px 16px 0 0;"></div>
+                
+                <!-- Декоративный уголок -->
+                <div style="position: absolute; top: -1px; right: -1px; width: 50px; height: 50px; background: linear-gradient(135deg, var(--bright-red), transparent); opacity: 0.08; border-radius: 0 16px 0 100%;"></div>
                 
                 <!-- Иконка -->
-                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; box-shadow: 0 10px 25px rgba(255,0,0,0.4);">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; box-shadow: 0 8px 20px rgba(255,0,0,0.35);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                         <circle cx="12" cy="10" r="3"></circle>
                     </svg>
                 </div>
                 
-                <h3 data-et="Peakontor" data-en="Head Office" data-ru="Главный офис" style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.5rem; color: var(--bright-red); margin-bottom: 20px;">
+                <h3 data-et="Peakontor" data-en="Head Office" data-ru="Главный офис" style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.3rem; color: var(--bright-red); margin-bottom: 14px;">
                     Peakontor
                 </h3>
                 
-                <div style="font-family: 'Inter', sans-serif; font-size: 1rem; line-height: 1.8; color: #555;">
-                    <p style="margin-bottom: 6px;"><strong style="color: #1a1a1a; font-size: 1.05rem;">Copymax OÜ</strong></p>
-                    <p style="margin-bottom: 6px;">Pärnu mnt 31-58</p>
-                    <p style="margin-bottom: 20px;">10119 Tallinn, Estonia</p>
+                <div style="font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.6; color: #555;">
+                    <p style="margin-bottom: 4px;"><strong style="color: #1a1a1a;">Copymax OÜ</strong></p>
+                    <p style="margin-bottom: 4px;">Pärnu mnt 31-58</p>
+                    <p style="margin-bottom: 14px;">10119 Tallinn, Estonia</p>
                     
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2">
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                         </svg>
-                        <a href="tel:+37268183111" style="color: var(--bright-red); text-decoration: none; transition: all 0.3s ease; font-weight: 600;">+372 681 83 111</a>
+                        <a href="tel:+37268183111" style="color: var(--bright-red); text-decoration: none; transition: all 0.3s ease; font-weight: 600; font-size: 0.92rem;">+372 681 83 111</a>
                     </div>
                     
-                    <div style="display: flex; align-items: center; gap: 12px;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
-                        <a href="mailto:info@copymax.ee" style="color: var(--bright-red); text-decoration: none; transition: all 0.3s ease; font-weight: 600;">info@copymax.ee</a>
+                        <a href="mailto:info@copymax.ee" style="color: var(--bright-red); text-decoration: none; transition: all 0.3s ease; font-weight: 600; font-size: 0.92rem;">info@copymax.ee</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Карточка 2 - Ladu -->
-            <div class="contact-card-horizontal" style="background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%); padding: 40px 35px; border-radius: 18px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); border: 1px solid rgba(255,0,0,0.12); position: relative; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 2;">
-                <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%); border-radius: 18px 18px 0 0;"></div>
+            <!-- ЦЕНТРАЛЬНЫЙ ЭЛЕМЕНТ - СТИЛЬНАЯ СВЯЗКА -->
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; z-index: 1;">
+                <!-- Верхняя линия -->
+                <div style="width: 2px; height: 40px; background: linear-gradient(to bottom, transparent, var(--bright-red)); opacity: 0.3;"></div>
                 
-                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; box-shadow: 0 10px 25px rgba(255,0,0,0.4);">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <!-- Центральный логотип -->
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(255,0,0,0.4); border: 4px solid #f5f5f5; position: relative;">
+                    <!-- Пульсирующее кольцо -->
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90px; height: 90px; border: 2px solid var(--bright-red); border-radius: 50%; animation: pulse-ring 2.5s ease-out infinite; opacity: 0.4;"></div>
+                    
+                    <!-- Иконка связи -->
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                        <path d="M22 2L11 13"></path>
+                        <path d="M22 2L15 22l-4-9-9-4 20-7z"></path>
+                    </svg>
+                </div>
+                
+                <!-- Нижняя линия -->
+                <div style="width: 2px; height: 40px; background: linear-gradient(to top, transparent, var(--bright-red)); opacity: 0.3;"></div>
+                
+                <!-- Левая и правая горизонтальные линии -->
+                <div style="position: absolute; top: 50%; left: -25px; width: 25px; height: 2px; background: linear-gradient(to left, var(--bright-red), transparent);"></div>
+                <div style="position: absolute; top: 50%; right: -25px; width: 25px; height: 2px; background: linear-gradient(to right, var(--bright-red), transparent);"></div>
+            </div>
+
+            <!-- Карточка 2 - КОМПАКТНАЯ -->
+            <div class="contact-card-mini" style="background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%); padding: 30px 28px; border-radius: 16px; box-shadow: 0 12px 35px rgba(0,0,0,0.1); border: 1px solid rgba(255,0,0,0.1); position: relative; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 2;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%); border-radius: 16px 16px 0 0;"></div>
+                <div style="position: absolute; top: -1px; right: -1px; width: 50px; height: 50px; background: linear-gradient(135deg, var(--bright-red), transparent); opacity: 0.08; border-radius: 0 16px 0 100%;"></div>
+                
+                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; box-shadow: 0 8px 20px rgba(255,0,0,0.35);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                         <polyline points="9 22 9 12 15 12 15 22"></polyline>
                     </svg>
                 </div>
                 
-                <h3 data-et="Meie ladu" data-en="Our Warehouse" data-ru="Наш склад" style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.5rem; color: var(--bright-red); margin-bottom: 20px;">
+                <h3 data-et="Meie ladu" data-en="Our Warehouse" data-ru="Наш склад" style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.3rem; color: var(--bright-red); margin-bottom: 14px;">
                     Meie ladu
                 </h3>
                 
-                <div style="font-family: 'Inter', sans-serif; font-size: 1rem; line-height: 1.8; color: #555;">
-                    <p style="margin-bottom: 6px;"><strong style="color: #1a1a1a; font-size: 1.05rem;">Miramis AS</strong></p>
-                    <p style="margin-bottom: 6px;">Lao 25, 74114 Maardu</p>
-                    <p style="margin-bottom: 20px;">Harju maakond, Estonia</p>
+                <div style="font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.6; color: #555;">
+                    <p style="margin-bottom: 4px;"><strong style="color: #1a1a1a;">Miramis AS</strong></p>
+                    <p style="margin-bottom: 4px;">Lao 25, 74114 Maardu</p>
+                    <p style="margin-bottom: 14px;">Harju maakond, Estonia</p>
                     
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2">
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                         </svg>
-                        <a href="tel:+37265813112" style="color: var(--bright-red); text-decoration: none; transition: all 0.3s ease; font-weight: 600;">+372 658 13 112</a>
+                        <a href="tel:+37265813112" style="color: var(--bright-red); text-decoration: none; transition: all 0.3s ease; font-weight: 600; font-size: 0.92rem;">+372 658 13 112</a>
                     </div>
                     
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
-                        <a href="mailto:info@miramis.ee" style="color: var(--bright-red); text-decoration: none; transition: all 0.3s ease; font-weight: 600;">info@miramis.ee</a>
+                        <a href="mailto:info@miramis.ee" style="color: var(--bright-red); text-decoration: none; transition: all 0.3s ease; font-weight: 600; font-size: 0.92rem;">info@miramis.ee</a>
                     </div>
                     
-                    <p style="padding-top: 14px; border-top: 1px solid rgba(255,0,0,0.15); font-size: 0.95rem; margin-bottom: 8px;">
-                        <strong style="color: #1a1a1a;">Reg:</strong> 10966040 • <strong style="color: #1a1a1a;">E-R:</strong> 9:00–18:00
-                    </p>
+                    <div style="padding-top: 12px; border-top: 1px solid rgba(255,0,0,0.12); font-size: 0.88rem; color: #666;">
+                        <span><strong style="color: #1a1a1a;">Reg:</strong> 10966040</span><br>
+                        <span><strong style="color: #1a1a1a;">E-R:</strong> 9:00–18:00</span>
+                    </div>
                     
-                    <a href="https://www.miramis.ee" target="_blank" style="display: inline-block; color: var(--bright-red); text-decoration: none; font-weight: 700; font-size: 0.95rem; transition: all 0.3s ease;">
+                    <a href="https://www.miramis.ee" target="_blank" style="display: inline-block; margin-top: 10px; color: var(--bright-red); text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: all 0.3s ease;">
                         www.miramis.ee →
                     </a>
                 </div>
@@ -1771,10 +1793,10 @@
         </div>
 
         <!-- Карта -->
-        <div style="background: white; padding: 45px; border-radius: 20px; box-shadow: 0 18px 45px rgba(0,0,0,0.15); position: relative; overflow: hidden; border: 1px solid rgba(255,0,0,0.12);">
-            <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%);"></div>
+        <div style="background: white; padding: 40px; border-radius: 18px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); position: relative; overflow: hidden; border: 1px solid rgba(255,0,0,0.1);">
+            <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%);"></div>
             
-            <h3 style="text-align: center; font-size: 2rem; margin-bottom: 35px; font-family: 'Poppins', sans-serif; font-weight: 600; color: #1a1a1a;" 
+            <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 30px; font-family: 'Poppins', sans-serif; font-weight: 600; color: #1a1a1a;" 
                 data-et="Kuidas meid leida" 
                 data-en="How to Find Us" 
                 data-ru="Как нас найти">Kuidas meid leida</h3>
@@ -1782,8 +1804,8 @@
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2029.2847662849087!2d24.7378!3d59.4372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTnCsDI2JzE0LjAiTiAyNMKwNDQnMTYuMCJF!5e0!3m2!1sen!2see!4v1234567890" 
                 width="100%" 
-                height="450" 
-                style="border: 2px solid rgba(255,0,0,0.15); border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);" 
+                height="420" 
+                style="border: 2px solid rgba(255,0,0,0.12); border-radius: 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" 
                 allowfullscreen="" 
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade">
@@ -1793,26 +1815,27 @@
 
     <style>
         /* Cards hover */
-        .contact-card-horizontal:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 28px 70px rgba(255,0,0,0.25) !important;
-            border-color: rgba(255,0,0,0.35) !important;
+        .contact-card-mini:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(255,0,0,0.25) !important;
+            border-color: rgba(255,0,0,0.3) !important;
         }
 
-        .contact-card-horizontal a:hover {
+        .contact-card-mini a:hover {
             color: #CC0000 !important;
-            text-decoration: underline;
+            transform: translateX(3px);
+            display: inline-block;
         }
 
         /* Pulse animation */
         @keyframes pulse-ring {
             0% {
-                opacity: 1;
+                opacity: 0.6;
                 transform: translate(-50%, -50%) scale(1);
             }
             100% {
                 opacity: 0;
-                transform: translate(-50%, -50%) scale(1.8);
+                transform: translate(-50%, -50%) scale(1.4);
             }
         }
 
@@ -1820,6 +1843,9 @@
         @media (max-width: 968px) {
             #contact > div > div:nth-child(2) {
                 grid-template-columns: 1fr !important;
+            }
+            #contact > div > div:nth-child(2) > div:nth-child(2) {
+                display: none !important;
             }
         }
     </style>
