@@ -1150,23 +1150,116 @@
         </div>
 
         <!-- BRANDS -->
-        <div style="margin-top: 80px;">
-            <h3 style="text-align: center; font-size: 2.2rem; margin-bottom: 40px; font-family: 'Poppins', sans-serif; font-weight: 600;" 
-                data-et="Meie partnerid" 
-                data-en="Our Partners" 
-                data-ru="Наши партнёры">Meie partnerid</h3>
-            <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px; padding: 40px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                <div style="font-size: 2rem; font-weight: 700; color: #666; padding: 20px 30px; transition: color 0.3s ease; font-family: 'Poppins', sans-serif; cursor: pointer;" onmouseover="this.style.color='var(--bright-red)'" onmouseout="this.style.color='#666'">Canon</div>
-                <div style="font-size: 2rem; font-weight: 700; color: #666; padding: 20px 30px; transition: color 0.3s ease; font-family: 'Poppins', sans-serif; cursor: pointer;" onmouseover="this.style.color='var(--bright-red)'" onmouseout="this.style.color='#666'">HP</div>
-                <div style="font-size: 2rem; font-weight: 700; color: #666; padding: 20px 30px; transition: color 0.3s ease; font-family: 'Poppins', sans-serif; cursor: pointer;" onmouseover="this.style.color='var(--bright-red)'" onmouseout="this.style.color='#666'">Kyocera</div>
-                <div style="font-size: 2rem; font-weight: 700; color: #666; padding: 20px 30px; transition: color 0.3s ease; font-family: 'Poppins', sans-serif; cursor: pointer;" onmouseover="this.style.color='var(--bright-red)'" onmouseout="this.style.color='#666'">Konica Minolta</div>
-                <div style="font-size: 2rem; font-weight: 700; color: #666; padding: 20px 30px; transition: color 0.3s ease; font-family: 'Poppins', sans-serif; cursor: pointer;" onmouseover="this.style.color='var(--bright-red)'" onmouseout="this.style.color='#666'">Ricoh</div>
-                <div style="font-size: 2rem; font-weight: 700; color: #666; padding: 20px 30px; transition: color 0.3s ease; font-family: 'Poppins', sans-serif; cursor: pointer;" onmouseover="this.style.color='var(--bright-red)'" onmouseout="this.style.color='#666'">Xerox</div>
-                <div style="font-size: 2rem; font-weight: 700; color: #666; padding: 20px 30px; transition: color 0.3s ease; font-family: 'Poppins', sans-serif; cursor: pointer;" onmouseover="this.style.color='var(--bright-red)'" onmouseout="this.style.color='#666'">Brother</div>
-                <div style="font-size: 2rem; font-weight: 700; color: #666; padding: 20px 30px; transition: color 0.3s ease; font-family: 'Poppins', sans-serif; cursor: pointer;" onmouseover="this.style.color='var(--bright-red)'" onmouseout="this.style.color='#666'">Logitech</div>
-                <div style="font-size: 2rem; font-weight: 700; color: #666; padding: 20px 30px; transition: color 0.3s ease; font-family: 'Poppins', sans-serif; cursor: pointer;" onmouseover="this.style.color='var(--bright-red)'" onmouseout="this.style.color='#666'">Jabra</div>
-            </div>
+<div style="margin-top: 80px;">
+    <h3 style="text-align: center; font-size: 2.2rem; margin-bottom: 40px; font-family: 'Poppins', sans-serif; font-weight: 600;" 
+        data-et="Meie partnerid" 
+        data-en="Our Partners" 
+        data-ru="Наши партнёры">Meie partnerid</h3>
+    
+    <div class="brands-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; padding: 50px 40px; background: white; border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid rgba(255,0,0,0.08); overflow: hidden; position: relative;">
+        <!-- Красная линия сверху -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%);"></div>
+        
+        <!-- Canon -->
+        <div class="brand-logo-card">
+            <img src="brands/canon.png" alt="Canon" style="width: 100%; height: auto; max-width: 140px; filter: grayscale(100%); transition: all 0.4s ease;">
         </div>
+        
+        <!-- HP -->
+        <div class="brand-logo-card">
+            <img src="brands/hp.png" alt="HP" style="width: 100%; height: auto; max-width: 140px; filter: grayscale(100%); transition: all 0.4s ease;">
+        </div>
+        
+        <!-- Kyocera -->
+        <div class="brand-logo-card">
+            <img src="brands/kyocera.png" alt="Kyocera" style="width: 100%; height: auto; max-width: 140px; filter: grayscale(100%); transition: all 0.4s ease;">
+        </div>
+        
+        <!-- Konica Minolta -->
+        <div class="brand-logo-card">
+            <img src="brands/konica-minolta.png" alt="Konica Minolta" style="width: 100%; height: auto; max-width: 140px; filter: grayscale(100%); transition: all 0.4s ease;">
+        </div>
+        
+        <!-- Ricoh -->
+        <div class="brand-logo-card">
+            <img src="brands/ricoh.png" alt="Ricoh" style="width: 100%; height: auto; max-width: 140px; filter: grayscale(100%); transition: all 0.4s ease;">
+        </div>
+        
+        <!-- Xerox -->
+        <div class="brand-logo-card">
+            <img src="brands/xerox.png" alt="Xerox" style="width: 100%; height: auto; max-width: 140px; filter: grayscale(100%); transition: all 0.4s ease;">
+        </div>
+        
+        <!-- Brother -->
+        <div class="brand-logo-card">
+            <img src="brands/brother.png" alt="Brother" style="width: 100%; height: auto; max-width: 140px; filter: grayscale(100%); transition: all 0.4s ease;">
+        </div>
+        
+        <!-- Logitech -->
+        <div class="brand-logo-card">
+            <img src="brands/logitech.png" alt="Logitech" style="width: 100%; height: auto; max-width: 140px; filter: grayscale(100%); transition: all 0.4s ease;">
+        </div>
+        
+        <!-- Jabra -->
+        <div class="brand-logo-card">
+            <img src="brands/jabra.png" alt="Jabra" style="width: 100%; height: auto; max-width: 140px; filter: grayscale(100%); transition: all 0.4s ease;">
+        </div>
+        
+        <!-- Dell -->
+        <div class="brand-logo-card">
+            <img src="brands/dell.png" alt="Dell" style="width: 100%; height: auto; max-width: 140px; filter: grayscale(100%); transition: all 0.4s ease;">
+        </div>
+        
+        <!-- Samsung -->
+        <div class="brand-logo-card">
+            <img src="brands/samsung.png" alt="Samsung" style="width: 100%; height: auto; max-width: 140px; filter: grayscale(100%); transition: all 0.4s ease;">
+        </div>
+        
+        <!-- Epson -->
+        <div class="brand-logo-card">
+            <img src="brands/epson.png" alt="Epson" style="width: 100%; height: auto; max-width: 140px; filter: grayscale(100%); transition: all 0.4s ease;">
+        </div>
+    </div>
+</div>
+
+<style>
+    .brand-logo-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        cursor: pointer;
+        position: relative;
+    }
+    
+    .brand-logo-card:hover {
+        transform: translateY(-8px) scale(1.05);
+    }
+    
+    .brand-logo-card:hover img {
+        filter: grayscale(0%) !important;
+        transform: scale(1.1);
+    }
+    
+    /* Красная рамка при hover */
+    .brand-logo-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 2px solid transparent;
+        border-radius: 12px;
+        transition: all 0.4s ease;
+    }
+    
+    .brand-logo-card:hover::before {
+        border-color: var(--bright-red);
+        box-shadow: 0 8px 25px rgba(255,0,0,0.3);
+    }
+</style>
 
         <!-- STATS -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-top: 80px;">
