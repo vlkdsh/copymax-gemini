@@ -1020,7 +1020,7 @@
         </div>
     </div>
 
-    <!-- ABOUT SECTION - DARK VERSION -->
+    <!-- ABOUT SECTION - DARK CARDS ONLY -->
 <section id="about" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%); position: relative; overflow: hidden; padding: 120px 10%;">
     
     <!-- Animated tech grid -->
@@ -1132,7 +1132,7 @@
         </div>
 
         <!-- ВТОРАЯ СТРОКА - 2 КАРТОЧКИ -->
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-bottom: 80px;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
             
             <!-- Card 4 -->
             <div class="info-card-dark" style="background: linear-gradient(135deg, rgba(30,30,30,0.9) 0%, rgba(20,20,20,0.95) 100%); backdrop-filter: blur(10px); border: 2px solid rgba(255,0,0,0.2); position: relative; overflow: hidden; padding: 45px 40px; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.5); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
@@ -1178,6 +1178,22 @@
                 </p>
             </div>
         </div>
+    </div>
+</section>
+
+<style>
+    /* Dark cards hover effects */
+    .info-card-dark:hover {
+        transform: translateY(-15px) scale(1.03);
+        box-shadow: 0 25px 60px rgba(255,0,0,0.4), 0 0 50px rgba(255,0,0,0.2) !important;
+        border-color: rgba(255,0,0,0.5) !important;
+    }
+    
+    .info-card-dark:hover > div:nth-child(2) {
+        transform: scale(1.15) rotate(8deg);
+        box-shadow: 0 15px 45px rgba(255,0,0,0.7), 0 0 30px rgba(255,0,0,0.5) !important;
+    }
+</style>
 
          <!-- BRANDS - DARK THEMED -->
         <div style="margin-top: 80px;">
