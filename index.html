@@ -1825,8 +1825,8 @@
     </style>
 </section>
        
-       
-   // MENU TOGGLE
+  <script>
+        // MENU TOGGLE
        function toggleMenu() {
     const menu = document.getElementById('fullscreenMenu');
     const menuIcon = document.querySelector('.menu-icon');
@@ -1941,7 +1941,6 @@
             // Проверка имени
             if (name.value.trim() === '') {
                 name.classList.add('error');
-                name.nextElementSibling.classList.add('show');
                 isValid = false;
             }
 
@@ -1949,21 +1948,18 @@
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email.value)) {
                 email.classList.add('error');
-                email.nextElementSibling.classList.add('show');
                 isValid = false;
             }
 
             // Проверка телефона
             if (phone.value.trim() === '') {
                 phone.classList.add('error');
-                phone.nextElementSibling.classList.add('show');
                 isValid = false;
             }
 
             // Проверка сообщения
             if (message.value.trim() === '') {
                 message.classList.add('error');
-                message.nextElementSibling.classList.add('show');
                 isValid = false;
             }
 
