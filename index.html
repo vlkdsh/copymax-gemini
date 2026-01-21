@@ -2001,40 +2001,68 @@
             fadeInObserver.observe(el);
         });
 
-       // ANIMATED COUNTERS
+       // ANIMATED COUNTERS - УЛУЧШЕННАЯ ВЕРСИЯ
 function animateCounter(element) {
     const target = parseInt(element.getAttribute('data-target'));
+    const isPercentage = element.textContent.includes('%') || element.nextElementSibling?.textContent.includes('originaaltooted') || element.nextElementSibling?.textContent.includes('usaldusväärne');
+    
     let current = 0;
-    const increment = target / 100;
+    const duration = 2000; // 2 секунды
+    const frameDuration = 1000 / 60; // 60 FPS
+    const totalFrames = Math.round(duration / frameDuration);
+    const increment = target / totalFrames;
+    
+    let frame = 0;
+    
     const timer = setInterval(() => {
+        frame++;
         current += increment;
-        if (current >= target) {
-            element.textContent = target + '+';
+        
+        // Easing функция для плавности (ease-out)
+        const progress = frame / totalFrames;
+        const easeProgress = 1 - Math.pow(1 - progress, 3);
+        const displayValue = Math.floor(easeProgress * target);
+        
+        if (frame >= totalFrames) {
+            if (isPercentage) {
+                element.textContent = target + '%';
+            } else {
+                element.textContent = target + '+';
+            }
             clearInterval(timer);
         } else {
-            element.textContent = Math.floor(current);
+            if (isPercentage) {
+                element.textContent = displayValue + '%';
+            } else {
+                element.textContent = displayValue;
+            }
         }
-    }, 20);
+    }, frameDuration);
 }
 
 const statsObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const counters = entry.target.querySelectorAll('.stat-number');
-            counters.forEach(counter => {
+            const counter = entry.target.querySelector('.stat-number') || entry.target;
+            
+            if (counter.classList && counter.classList.contains('stat-number')) {
                 // Проверяем, что счетчик еще не анимировался
                 if (!counter.classList.contains('animated')) {
                     counter.classList.add('animated');
-                    animateCounter(counter);
+                    
+                    // Небольшая задержка для более красивого эффекта
+                    setTimeout(() => {
+                        animateCounter(counter);
+                    }, 100);
                 }
-            });
+            }
         }
     });
 }, { threshold: 0.3 });
 
-// Ищем все stat-number на странице
-document.querySelectorAll('.stat-number').forEach(stat => {
-    statsObserver.observe(stat.closest('.stat-card-v2'));
+// Ищем все stat-card-v2 на странице
+document.querySelectorAll('.stat-card-v2').forEach(card => {
+    statsObserver.observe(card);
 });
        // FORM VALIDATION & SUBMIT
         function handleSubmit(e) {
