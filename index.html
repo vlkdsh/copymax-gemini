@@ -1345,109 +1345,142 @@
     }
 </style>
 
-    <!-- VALUES & MISSION -->
-<section id="values" style="background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 50%, #ffffff 100%); position: relative; overflow: hidden; padding: 120px 10%;">
-    <!-- Декоративные элементы фона -->
-    <div style="position: absolute; top: -100px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,0,0,0.04) 0%, transparent 70%); border-radius: 50%;"></div>
-    <div style="position: absolute; bottom: -80px; right: -80px; width: 350px; height: 350px; background: radial-gradient(circle, rgba(255,0,0,0.03) 0%, transparent 70%); border-radius: 50%;"></div>
+    <!-- VALUES & MISSION - ЧЁРНЫЙ ПРЕМИУМ ФОН -->
+<section id="values" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%); position: relative; overflow: hidden; padding: 120px 10%;">
+    <!-- Animated red grid background -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.05; background-image: repeating-linear-gradient(0deg, var(--bright-red) 0px, transparent 1px, transparent 50px), repeating-linear-gradient(90deg, var(--bright-red) 0px, transparent 1px, transparent 50px); pointer-events: none;"></div>
+    
+    <!-- Floating red orbs -->
+    <div style="position: absolute; top: -80px; right: -80px; width: 450px; height: 450px; background: radial-gradient(circle, rgba(255,0,0,0.12) 0%, transparent 70%); border-radius: 50%; filter: blur(70px); animation: float 10s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: -100px; left: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,0,0,0.1) 0%, transparent 70%); border-radius: 50%; filter: blur(80px); animation: float 12s ease-in-out infinite reverse;"></div>
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 350px; height: 350px; background: radial-gradient(circle, rgba(255,0,0,0.06) 0%, transparent 70%); border-radius: 50%; filter: blur(60px); animation: float 8s ease-in-out infinite;"></div>
     
     <div style="max-width: 1400px; margin: 0 auto; position: relative; z-index: 1;">
+        <!-- Header -->
         <div style="text-align: center; margin-bottom: 80px;">
-            <h2 data-et="Meie väärtused ja missioon" data-en="Our Values and Mission" data-ru="Наши ценности и миссия" style="margin-bottom: 25px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 3.5rem;">Meie väärtused ja missioon</h2>
-            <p style="max-width: 800px; margin: 0 auto; font-size: 1.35rem; color: #666; font-family: 'Poppins', sans-serif; font-weight: 300;">
-                <span data-et="Meie põhimõtted ja eesmärgid" data-en="Our principles and goals" data-ru="Наши принципы и цели">Meie põhimõtted ja eesmärgid</span>
+            <div style="display: inline-block; position: relative;">
+                <h2 data-et="Meie väärtused ja missioon" data-en="Our Values and Mission" data-ru="Наши ценности и миссия" style="margin-bottom: 25px; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 3.8rem; color: white; letter-spacing: -1px;">Meie väärtused ja missioon</h2>
+                
+                <!-- Animated red line -->
+                <div style="position: absolute; bottom: -15px; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, transparent, var(--bright-red), transparent); animation: glow-line 2s ease-in-out infinite;"></div>
+            </div>
+            
+            <p data-et="Meie põhimõtted ja eesmärgid" data-en="Our principles and goals" data-ru="Наши принципы и цели" style="max-width: 800px; margin: 25px auto 0; font-size: 1.35rem; color: rgba(255,255,255,0.65); font-family: 'Inter', sans-serif; font-weight: 300; line-height: 1.8;">
+                Meie põhimõtted ja eesmärgid
             </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 40px;">
-            <!-- Карточка 1 - Missioon -->
-            <div class="value-card-hover" style="background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%); padding: 50px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border-left: 5px solid var(--bright-red); position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
-                <div style="position: absolute; top: -30px; right: -30px; width: 120px; height: 120px; background: rgba(255,0,0,0.04); border-radius: 50%; z-index: 0;"></div>
+        <!-- Cards Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
+            
+            <!-- Card 1 - Missioon -->
+            <div class="value-card-dark" style="background: linear-gradient(135deg, rgba(25,25,25,0.95) 0%, rgba(15,15,15,0.98) 100%); padding: 50px 40px; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); border: 2px solid rgba(255,0,0,0.2); position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+                
+                <!-- Top red line -->
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%); box-shadow: 0 0 15px rgba(255,0,0,0.6);"></div>
+                
+                <!-- Decorative corner -->
+                <div style="position: absolute; top: -1px; right: -1px; width: 100px; height: 100px; background: linear-gradient(135deg, var(--bright-red), transparent); opacity: 0.1; border-radius: 0 20px 0 100%;"></div>
+                
+                <!-- Floating orb inside card -->
+                <div style="position: absolute; bottom: -50px; right: -50px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(255,0,0,0.15) 0%, transparent 70%); border-radius: 50%; filter: blur(40px);"></div>
                 
                 <div style="position: relative; z-index: 1;">
-                    <!-- Иконка -->
-                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; box-shadow: 0 10px 35px rgba(255,0,0,0.35); transition: all 0.4s ease;">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <!-- Icon -->
+                    <div style="width: 85px; height: 85px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; box-shadow: 0 15px 40px rgba(255,0,0,0.45); transition: all 0.5s ease; position: relative;">
+                        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
                             <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
                             <path d="M2 17l10 5 10-5"></path>
                             <path d="M2 12l10 5 10-5"></path>
                         </svg>
+                        <div style="position: absolute; top: -6px; left: -6px; right: -6px; bottom: -6px; border-radius: 18px; border: 2px solid var(--bright-red); opacity: 0; animation: icon-glow 2.5s ease-in-out infinite;"></div>
                     </div>
                     
-                    <h3 data-et="Copymax missioon" data-en="Copymax Mission" data-ru="Миссия Copymax" style="color: var(--bright-red); margin-bottom: 20px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.8rem;">Copymax missioon</h3>
+                    <h3 data-et="Copymax missioon" data-en="Copymax Mission" data-ru="Миссия Copymax" style="color: var(--bright-red); margin-bottom: 20px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.9rem; letter-spacing: -0.5px;">Copymax missioon</h3>
                     
                     <p data-et="On pakkuda klientidele kvaliteetseid kopeerimis- ja trükiteenuseid ning innovaatilisi dokumendihalduse lahendusi. Püüame saada oma klientide jaoks usaldusväärseks partneriks, aidates neil oma tööd optimeerida ja äri efektiivsust suurendada."
                        data-en="Is to provide customers with high-quality copying and printing services and innovative document management solutions. We strive to become a reliable partner for our customers, helping them optimize their work and increase business efficiency."
                        data-ru="Предоставлять клиентам высококачественные услуги копирования и печати, а также инновационные решения для управления документами. Мы стремимся стать надежным партнером для наших клиентов, помогая им оптимизировать работу и повысить эффективность бизнеса."
-                       style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 1.1rem; line-height: 1.8; color: #555;">
+                       style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 1.05rem; line-height: 1.8; color: rgba(255,255,255,0.75);">
                         On pakkuda klientidele kvaliteetseid kopeerimis- ja trükiteenuseid ning innovaatilisi dokumendihalduse lahendusi. Püüame saada oma klientide jaoks usaldusväärseks partneriks, aidates neil oma tööd optimeerida ja äri efektiivsust suurendada.
                     </p>
                 </div>
             </div>
 
-            <!-- Карточка 2 - Eesmärk -->
-            <div class="value-card-hover" style="background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%); padding: 50px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border-left: 5px solid var(--bright-red); position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
-                <div style="position: absolute; top: -30px; right: -30px; width: 120px; height: 120px; background: rgba(255,0,0,0.04); border-radius: 50%; z-index: 0;"></div>
+            <!-- Card 2 - Eesmärk -->
+            <div class="value-card-dark" style="background: linear-gradient(135deg, rgba(25,25,25,0.95) 0%, rgba(15,15,15,0.98) 100%); padding: 50px 40px; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); border: 2px solid rgba(255,0,0,0.2); position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+                
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%); box-shadow: 0 0 15px rgba(255,0,0,0.6);"></div>
+                <div style="position: absolute; top: -1px; right: -1px; width: 100px; height: 100px; background: linear-gradient(135deg, var(--bright-red), transparent); opacity: 0.1; border-radius: 0 20px 0 100%;"></div>
+                <div style="position: absolute; bottom: -50px; right: -50px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(255,0,0,0.15) 0%, transparent 70%); border-radius: 50%; filter: blur(40px);"></div>
                 
                 <div style="position: relative; z-index: 1;">
-                    <!-- Иконка -->
-                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; box-shadow: 0 10px 35px rgba(255,0,0,0.35); transition: all 0.4s ease;">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <div style="width: 85px; height: 85px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; box-shadow: 0 15px 40px rgba(255,0,0,0.45); transition: all 0.5s ease; position: relative;">
+                        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
                             <circle cx="12" cy="12" r="10"></circle>
                             <polyline points="12 6 12 12 16 14"></polyline>
                         </svg>
+                        <div style="position: absolute; top: -6px; left: -6px; right: -6px; bottom: -6px; border-radius: 18px; border: 2px solid var(--bright-red); opacity: 0; animation: icon-glow 2.5s ease-in-out infinite 0.3s;"></div>
                     </div>
                     
-                    <h3 data-et="Copymax eesmärk" data-en="Copymax Goal" data-ru="Цель Copymax" style="color: var(--bright-red); margin-bottom: 20px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.8rem;">Copymax eesmärk</h3>
+                    <h3 data-et="Copymax eesmärk" data-en="Copymax Goal" data-ru="Цель Copymax" style="color: var(--bright-red); margin-bottom: 20px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.9rem; letter-spacing: -0.5px;">Copymax eesmärk</h3>
                     
                     <p data-et="On olla tunnustatud liidriks dokumendihalduses ja tipptasemel digitaalse transformatsiooni lahenduste pakkumisel. Saada innovaatiliseks ettevõtteks, mis kohaneb muutuvate turunõuetega ning pakub tipptasemel tehnoloogiaid ja teenuseid."
                        data-en="Is to be recognized as a leader in document management and providing cutting-edge digital transformation solutions. To become an innovative company that adapts to changing market needs and offers cutting-edge technologies and services."
                        data-ru="Быть признанным лидером в управлении документами и предоставлении передовых решений цифровой трансформации. Стать инновационной компанией, адаптирующейся к меняющимся потребностям рынка и предлагающей передовые технологии и услуги."
-                       style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 1.1rem; line-height: 1.8; color: #555;">
+                       style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 1.05rem; line-height: 1.8; color: rgba(255,255,255,0.75);">
                         On olla tunnustatud liidriks dokumendihalduses ja tipptasemel digitaalse transformatsiooni lahenduste pakkumisel. Saada innovaatiliseks ettevõtteks, mis kohaneb muutuvate turunõuetega ning pakub tipptasemel tehnoloogiaid ja teenuseid.
                     </p>
                 </div>
             </div>
 
-            <!-- Карточка 3 - Väärtused -->
-            <div class="value-card-hover" style="background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%); padding: 50px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border-left: 5px solid var(--bright-red); position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
-                <div style="position: absolute; top: -30px; right: -30px; width: 120px; height: 120px; background: rgba(255,0,0,0.04); border-radius: 50%; z-index: 0;"></div>
+            <!-- Card 3 - Väärtused -->
+            <div class="value-card-dark" style="background: linear-gradient(135deg, rgba(25,25,25,0.95) 0%, rgba(15,15,15,0.98) 100%); padding: 50px 40px; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); border: 2px solid rgba(255,0,0,0.2); position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+                
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%); box-shadow: 0 0 15px rgba(255,0,0,0.6);"></div>
+                <div style="position: absolute; top: -1px; right: -1px; width: 100px; height: 100px; background: linear-gradient(135deg, var(--bright-red), transparent); opacity: 0.1; border-radius: 0 20px 0 100%;"></div>
+                <div style="position: absolute; bottom: -50px; right: -50px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(255,0,0,0.15) 0%, transparent 70%); border-radius: 50%; filter: blur(40px);"></div>
                 
                 <div style="position: relative; z-index: 1;">
-                    <!-- Иконка -->
-                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; box-shadow: 0 10px 35px rgba(255,0,0,0.35); transition: all 0.4s ease;">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <div style="width: 85px; height: 85px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; box-shadow: 0 15px 40px rgba(255,0,0,0.45); transition: all 0.5s ease; position: relative;">
+                        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
                             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                             <polyline points="22 4 12 14.01 9 11.01"></polyline>
                         </svg>
+                        <div style="position: absolute; top: -6px; left: -6px; right: -6px; bottom: -6px; border-radius: 18px; border: 2px solid var(--bright-red); opacity: 0; animation: icon-glow 2.5s ease-in-out infinite 0.6s;"></div>
                     </div>
                     
-                    <h3 data-et="Copymax väärtused" data-en="Copymax Values" data-ru="Ценности Copymax" style="color: var(--bright-red); margin-bottom: 20px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.8rem;">Copymax väärtused</h3>
+                    <h3 data-et="Copymax väärtused" data-en="Copymax Values" data-ru="Ценности Copymax" style="color: var(--bright-red); margin-bottom: 20px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.9rem; letter-spacing: -0.5px;">Copymax väärtused</h3>
                     
                     <p data-et="On kliendikeskne lähenemine, kvaliteet ja usaldusväärsus. Hindame oma klientide usaldust ning püüdleme pikaajaliste partnerlussuhete poole, pakkudes kvaliteetseid teenuseid ja tooteid."
                        data-en="Are customer focus, quality and reliability. We value the trust of our customers and strive for long-term partnerships by providing quality services and products."
                        data-ru="Ориентированность на клиента, качество и надежность. Мы ценим доверие наших клиентов и стремимся к долгосрочному партнерству, предоставляя качественные услуги и продукты."
-                       style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 1.1rem; line-height: 1.8; color: #555;">
+                       style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 1.05rem; line-height: 1.8; color: rgba(255,255,255,0.75);">
                         On kliendikeskne lähenemine, kvaliteet ja usaldusväärsus. Hindame oma klientide usaldust ning püüdleme pikaajaliste partnerlussuhete poole, pakkudes kvaliteetseid teenuseid ja tooteid.
                     </p>
                 </div>
             </div>
         </div>
     </div>
-
-    <style>
-        .value-card-hover:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 25px 60px rgba(255,0,0,0.25) !important;
-            border-left-width: 8px;
-        }
-        
-        .value-card-hover:hover > div > div:first-child {
-            transform: scale(1.15) rotate(8deg);
-            box-shadow: 0 15px 45px rgba(255,0,0,0.55) !important;
-        }
-    </style>
 </section>
+
+<style>
+    /* VALUE CARDS DARK HOVER */
+    .value-card-dark:hover {
+        transform: translateY(-15px) scale(1.02);
+        box-shadow: 0 35px 80px rgba(255,0,0,0.35) !important;
+        border-color: rgba(255,0,0,0.5) !important;
+    }
+    
+    .value-card-dark:hover > div:first-child {
+        box-shadow: 0 0 30px rgba(255,0,0,1) !important;
+    }
+    
+    .value-card-dark:hover > div:nth-child(4) > div:first-child {
+        transform: scale(1.15) rotate(8deg);
+        box-shadow: 0 20px 50px rgba(255,0,0,0.65) !important;
+    }
+</style>
 
     <!-- TEAM -->
 <section id="team" style="background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 50%, #ffffff 100%); position: relative; overflow: hidden; padding: 120px 10%;">
