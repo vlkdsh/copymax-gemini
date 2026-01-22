@@ -1022,7 +1022,7 @@
         </div>
     </div>
 
-    <!-- ABOUT SECTION -->
+    <!-- ABOUT SECTION - ТОЛЬКО КАРТОЧКИ НА ЧЕРНОМ ФОНЕ -->
 <section id="about" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%); position: relative; overflow: hidden; padding: 120px 10%;">
     <!-- Animated red grid background -->
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.06; background-image: repeating-linear-gradient(0deg, var(--bright-red) 0px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, var(--bright-red) 0px, transparent 1px, transparent 40px); pointer-events: none;"></div>
@@ -1049,224 +1049,271 @@
             </p>
         </div>
 
-       <!-- КАРТОЧКИ НА ТЕМНОМ ФОНЕ -->
-<div style="background: linear-gradient(135deg, rgba(20,20,20,0.95) 0%, rgba(10,10,10,0.98) 100%); padding: 70px 50px; border-radius: 24px; position: relative; overflow: hidden; margin-bottom: 70px; box-shadow: 0 30px 80px rgba(0,0,0,0.8); border: 2px solid rgba(255,0,0,0.25);">
-    
-    <!-- Tech grid background -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.05; background-image: repeating-linear-gradient(0deg, var(--bright-red) 0px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, var(--bright-red) 0px, transparent 1px, transparent 40px); pointer-events: none;"></div>
-    
-    <!-- Floating red orbs inside -->
-    <div style="position: absolute; top: -80px; right: -80px; width: 350px; height: 350px; background: radial-gradient(circle, rgba(255,0,0,0.15) 0%, transparent 70%); border-radius: 50%; filter: blur(70px);"></div>
-    <div style="position: absolute; bottom: -80px; left: -80px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,0,0,0.12) 0%, transparent 70%); border-radius: 50%; filter: blur(60px);"></div>
-    
-    <!-- Red glow lines -->
-    <div style="position: absolute; top: 0; left: 10%; right: 10%; height: 2px; background: linear-gradient(90deg, transparent, var(--bright-red), transparent); box-shadow: 0 0 20px rgba(255,0,0,0.8);"></div>
-    <div style="position: absolute; bottom: 0; left: 10%; right: 10%; height: 2px; background: linear-gradient(90deg, transparent, var(--bright-red), transparent); box-shadow: 0 0 20px rgba(255,0,0,0.8);"></div>
-    
-    <div style="position: relative; z-index: 1;">
-        
-        <!-- ПЕРВАЯ СТРОКА - 3 КАРТОЧКИ -->
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 25px;">
+        <!-- КАРТОЧКИ НА ТЕМНОМ ФОНЕ -->
+        <div style="background: linear-gradient(135deg, rgba(20,20,20,0.95) 0%, rgba(10,10,10,0.98) 100%); padding: 70px 50px; border-radius: 24px; position: relative; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.8); border: 2px solid rgba(255,0,0,0.25);">
             
-            <!-- Card 1 -->
-            <div class="info-card-hover-v2" style="background: linear-gradient(135deg, rgba(30,30,30,0.9) 0%, rgba(15,15,15,0.95) 100%); border: 2px solid rgba(255,0,0,0.25); position: relative; overflow: hidden; padding: 32px 28px; border-radius: 18px; box-shadow: 0 15px 40px rgba(0,0,0,0.5); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
-                
-                <div style="position: absolute; top: 0; right: 0; width: 70px; height: 70px; background: linear-gradient(135deg, var(--bright-red), transparent); opacity: 0.15; border-radius: 0 18px 0 100%;"></div>
-                
-                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(255,0,0,0.5); transition: all 0.5s ease; position: relative;">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                    </svg>
-                    <div style="position: absolute; top: -5px; left: -5px; right: -5px; bottom: -5px; border-radius: 14px; border: 2px solid var(--bright-red); opacity: 0; animation: icon-glow 2s ease-in-out infinite;"></div>
-                </div>
-                
-                <h3 data-et="Euroopa ja ülemaailmne tegevus" data-en="European & Worldwide Operations" data-ru="Европейская и мировая деятельность" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--bright-red); margin-bottom: 14px; line-height: 1.3;">Euroopa ja ülemaailmne tegevus</h3>
-                
-                <p data-et="Copymax on printerite ja printeritarvikute hulgimüüja Euroopas ja teistes maailma riikides"
-                   data-en="Copymax is a wholesaler of printers and printer accessories in Europe and other countries around the world"
-                   data-ru="Copymax - оптовый поставщик принтеров и аксессуаров в Европе и других странах мира"
-                   style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 0.95rem; line-height: 1.6; color: rgba(255,255,255,0.7);">
-                    Copymax on printerite ja printeritarvikute hulgimüüja Euroopas ja teistes maailma riikides
-                </p>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="info-card-hover-v2" style="background: linear-gradient(135deg, rgba(30,30,30,0.9) 0%, rgba(15,15,15,0.95) 100%); border: 2px solid rgba(255,0,0,0.25); position: relative; overflow: hidden; padding: 32px 28px; border-radius: 18px; box-shadow: 0 15px 40px rgba(0,0,0,0.5); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
-                
-                <div style="position: absolute; top: 0; right: 0; width: 70px; height: 70px; background: linear-gradient(135deg, var(--bright-red), transparent); opacity: 0.15; border-radius: 0 18px 0 100%;"></div>
-                
-                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(255,0,0,0.5); transition: all 0.5s ease; position: relative;">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="9" cy="7" r="4"></circle>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87m-4-12a4 4 0 0 1 0 7.75"></path>
-                    </svg>
-                    <div style="position: absolute; top: -5px; left: -5px; right: -5px; bottom: -5px; border-radius: 14px; border: 2px solid var(--bright-red); opacity: 0; animation: icon-glow 2s ease-in-out infinite 0.3s;"></div>
-                </div>
-                
-                <h3 data-et="Turuliider" data-en="Market Leader" data-ru="Лидер рынка" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--bright-red); margin-bottom: 14px; line-height: 1.3;">Turuliider</h3>
-                
-                <p data-et="Copymax on majandusindikaatorite poolest oma valdkonnas suurim ja mõjukaim ettevõte"
-                   data-en="Copymax is the biggest and most influential company in its area on economic indicators"
-                   data-ru="Copymax - крупнейшая и наиболее влиятельная компания в своей области по экономическим показателям"
-                   style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 0.95rem; line-height: 1.6; color: rgba(255,255,255,0.7);">
-                    Copymax on majandusindikaatorite poolest oma valdkonnas suurim ja mõjukaim ettevõte
-                </p>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="info-card-hover-v2" style="background: linear-gradient(135deg, rgba(30,30,30,0.9) 0%, rgba(15,15,15,0.95) 100%); border: 2px solid rgba(255,0,0,0.25); position: relative; overflow: hidden; padding: 32px 28px; border-radius: 18px; box-shadow: 0 15px 40px rgba(0,0,0,0.5); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
-                
-                <div style="position: absolute; top: 0; right: 0; width: 70px; height: 70px; background: linear-gradient(135deg, var(--bright-red), transparent); opacity: 0.15; border-radius: 0 18px 0 100%;"></div>
-                
-                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(255,0,0,0.5); transition: all 0.5s ease; position: relative;">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
-                        <rect x="1" y="3" width="15" height="13"></rect>
-                        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-                        <circle cx="5.5" cy="18.5" r="2.5"></circle>
-                        <circle cx="18.5" cy="18.5" r="2.5"></circle>
-                    </svg>
-                    <div style="position: absolute; top: -5px; left: -5px; right: -5px; bottom: -5px; border-radius: 14px; border: 2px solid var(--bright-red); opacity: 0; animation: icon-glow 2s ease-in-out infinite 0.6s;"></div>
-                </div>
-                
-                <h3 data-et="Kiire tarnimine" data-en="Fast Delivery" data-ru="Быстрая доставка" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--bright-red); margin-bottom: 14px; line-height: 1.3;">Kiire tarnimine</h3>
-                
-                <p data-et="Tarnime tellimusi klientidele kiiresti ja minimaalse ooteajaga meie laost"
-                   data-en="We deliver orders to customers quickly and with minimum waiting time from our warehouse"
-                   data-ru="Мы доставляем заказы клиентам быстро и с минимальным временем ожидания"
-                   style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 0.95rem; line-height: 1.6; color: rgba(255,255,255,0.7);">
-                    Tarnime tellimusi klientidele kiiresti ja minimaalse ooteajaga meie laost
-                </p>
-            </div>
-        </div>
-
-        <!-- ВТОРАЯ СТРОКА - 2 КАРТОЧКИ -->
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px;">
+            <!-- Tech grid background -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.05; background-image: repeating-linear-gradient(0deg, var(--bright-red) 0px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, var(--bright-red) 0px, transparent 1px, transparent 40px); pointer-events: none;"></div>
             
-            <!-- Card 4 -->
-            <div class="info-card-hover-v2" style="background: linear-gradient(135deg, rgba(30,30,30,0.9) 0%, rgba(15,15,15,0.95) 100%); border: 2px solid rgba(255,0,0,0.25); position: relative; overflow: hidden; padding: 36px 32px; border-radius: 18px; box-shadow: 0 15px 40px rgba(0,0,0,0.5); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+            <!-- Floating red orbs inside -->
+            <div style="position: absolute; top: -80px; right: -80px; width: 350px; height: 350px; background: radial-gradient(circle, rgba(255,0,0,0.15) 0%, transparent 70%); border-radius: 50%; filter: blur(70px);"></div>
+            <div style="position: absolute; bottom: -80px; left: -80px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,0,0,0.12) 0%, transparent 70%); border-radius: 50%; filter: blur(60px);"></div>
+            
+            <!-- Red glow lines -->
+            <div style="position: absolute; top: 0; left: 10%; right: 10%; height: 2px; background: linear-gradient(90deg, transparent, var(--bright-red), transparent); box-shadow: 0 0 20px rgba(255,0,0,0.8);"></div>
+            <div style="position: absolute; bottom: 0; left: 10%; right: 10%; height: 2px; background: linear-gradient(90deg, transparent, var(--bright-red), transparent); box-shadow: 0 0 20px rgba(255,0,0,0.8);"></div>
+            
+            <div style="position: relative; z-index: 1;">
                 
-                <div style="position: absolute; top: 0; right: 0; width: 85px; height: 85px; background: linear-gradient(135deg, var(--bright-red), transparent); opacity: 0.15; border-radius: 0 18px 0 100%;"></div>
-                
-                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; box-shadow: 0 12px 35px rgba(255,0,0,0.55); transition: all 0.5s ease; position: relative;">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                    <div style="position: absolute; top: -6px; left: -6px; right: -6px; bottom: -6px; border-radius: 16px; border: 2px solid var(--bright-red); opacity: 0; animation: icon-glow 2s ease-in-out infinite 0.9s;"></div>
+                <!-- ПЕРВАЯ СТРОКА - 3 КАРТОЧКИ -->
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 25px;">
+                    
+                    <!-- Card 1 -->
+                    <div class="info-card-hover-v2" style="background: linear-gradient(135deg, rgba(30,30,30,0.9) 0%, rgba(15,15,15,0.95) 100%); border: 2px solid rgba(255,0,0,0.25); position: relative; overflow: hidden; padding: 32px 28px; border-radius: 18px; box-shadow: 0 15px 40px rgba(0,0,0,0.5); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+                        
+                        <div style="position: absolute; top: 0; right: 0; width: 70px; height: 70px; background: linear-gradient(135deg, var(--bright-red), transparent); opacity: 0.15; border-radius: 0 18px 0 100%;"></div>
+                        
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(255,0,0,0.5); transition: all 0.5s ease; position: relative;">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                            <div style="position: absolute; top: -5px; left: -5px; right: -5px; bottom: -5px; border-radius: 14px; border: 2px solid var(--bright-red); opacity: 0; animation: icon-glow 2s ease-in-out infinite;"></div>
+                        </div>
+                        
+                        <h3 data-et="Euroopa ja ülemaailmne tegevus" data-en="European & Worldwide Operations" data-ru="Европейская и мировая деятельность" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--bright-red); margin-bottom: 14px; line-height: 1.3;">Euroopa ja ülemaailmne tegevus</h3>
+                        
+                        <p data-et="Copymax on printerite ja printeritarvikute hulgimüüja Euroopas ja teistes maailma riikides"
+                           data-en="Copymax is a wholesaler of printers and printer accessories in Europe and other countries around the world"
+                           data-ru="Copymax - оптовый поставщик принтеров и аксессуаров в Европе и других странах мира"
+                           style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 0.95rem; line-height: 1.6; color: rgba(255,255,255,0.7);">
+                            Copymax on printerite ja printeritarvikute hulgimüüja Euroopas ja teistes maailma riikides
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="info-card-hover-v2" style="background: linear-gradient(135deg, rgba(30,30,30,0.9) 0%, rgba(15,15,15,0.95) 100%); border: 2px solid rgba(255,0,0,0.25); position: relative; overflow: hidden; padding: 32px 28px; border-radius: 18px; box-shadow: 0 15px 40px rgba(0,0,0,0.5); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+                        
+                        <div style="position: absolute; top: 0; right: 0; width: 70px; height: 70px; background: linear-gradient(135deg, var(--bright-red), transparent); opacity: 0.15; border-radius: 0 18px 0 100%;"></div>
+                        
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(255,0,0,0.5); transition: all 0.5s ease; position: relative;">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87m-4-12a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <div style="position: absolute; top: -5px; left: -5px; right: -5px; bottom: -5px; border-radius: 14px; border: 2px solid var(--bright-red); opacity: 0; animation: icon-glow 2s ease-in-out infinite 0.3s;"></div>
+                        </div>
+                        
+                        <h3 data-et="Turuliider" data-en="Market Leader" data-ru="Лидер рынка" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--bright-red); margin-bottom: 14px; line-height: 1.3;">Turuliider</h3>
+                        
+                        <p data-et="Copymax on majandusindikaatorite poolest oma valdkonnas suurim ja mõjukaim ettevõte"
+                           data-en="Copymax is the biggest and most influential company in its area on economic indicators"
+                           data-ru="Copymax - крупнейшая и наиболее влиятельная компания в своей области по экономическим показателям"
+                           style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 0.95rem; line-height: 1.6; color: rgba(255,255,255,0.7);">
+                            Copymax on majandusindikaatorite poolest oma valdkonnas suurim ja mõjukaim ettevõte
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="info-card-hover-v2" style="background: linear-gradient(135deg, rgba(30,30,30,0.9) 0%, rgba(15,15,15,0.95) 100%); border: 2px solid rgba(255,0,0,0.25); position: relative; overflow: hidden; padding: 32px 28px; border-radius: 18px; box-shadow: 0 15px 40px rgba(0,0,0,0.5); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+                        
+                        <div style="position: absolute; top: 0; right: 0; width: 70px; height: 70px; background: linear-gradient(135deg, var(--bright-red), transparent); opacity: 0.15; border-radius: 0 18px 0 100%;"></div>
+                        
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(255,0,0,0.5); transition: all 0.5s ease; position: relative;">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                                <rect x="1" y="3" width="15" height="13"></rect>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                            </svg>
+                            <div style="position: absolute; top: -5px; left: -5px; right: -5px; bottom: -5px; border-radius: 14px; border: 2px solid var(--bright-red); opacity: 0; animation: icon-glow 2s ease-in-out infinite 0.6s;"></div>
+                        </div>
+                        
+                        <h3 data-et="Kiire tarnimine" data-en="Fast Delivery" data-ru="Быстрая доставка" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--bright-red); margin-bottom: 14px; line-height: 1.3;">Kiire tarnimine</h3>
+                        
+                        <p data-et="Tarnime tellimusi klientidele kiiresti ja minimaalse ooteajaga meie laost"
+                           data-en="We deliver orders to customers quickly and with minimum waiting time from our warehouse"
+                           data-ru="Мы доставляем заказы клиентам быстро и с минимальным временем ожидания"
+                           style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 0.95rem; line-height: 1.6; color: rgba(255,255,255,0.7);">
+                            Tarnime tellimusi klientidele kiiresti ja minimaalse ooteajaga meie laost
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ВТОРАЯ СТРОКА - 2 КАРТОЧКИ -->
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px;">
+                    
+                    <!-- Card 4 -->
+                    <div class="info-card-hover-v2" style="background: linear-gradient(135deg, rgba(30,30,30,0.9) 0%, rgba(15,15,15,0.95) 100%); border: 2px solid rgba(255,0,0,0.25); position: relative; overflow: hidden; padding: 36px 32px; border-radius: 18px; box-shadow: 0 15px 40px rgba(0,0,0,0.5); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+                        
+                        <div style="position: absolute; top: 0; right: 0; width: 85px; height: 85px; background: linear-gradient(135deg, var(--bright-red), transparent); opacity: 0.15; border-radius: 0 18px 0 100%;"></div>
+                        
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; box-shadow: 0 12px 35px rgba(255,0,0,0.55); transition: all 0.5s ease; position: relative;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <div style="position: absolute; top: -6px; left: -6px; right: -6px; bottom: -6px; border-radius: 16px; border: 2px solid var(--bright-red); opacity: 0; animation: icon-glow 2s ease-in-out infinite 0.9s;"></div>
+                        </div>
+                        
+                        <h3 data-et="Copymax väärtused" data-en="Copymax Values" data-ru="Ценности Copymax" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.5rem; color: var(--bright-red); margin-bottom: 16px; line-height: 1.3;">Copymax väärtused</h3>
+                        
+                        <p data-et="On kliendikeskne lähenemine, kvaliteet ja usaldusväärsus. Hindame oma klientide usaldust ning püüdleme pikaajaliste partnerlussuhete poole."
+                           data-en="Are customer focus, quality and reliability. We value the trust of our customers and strive for long-term partnerships."
+                           data-ru="Ориентированность на клиента, качество и надежность. Мы ценим доверие наших клиентов."
+                           style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 1.02rem; line-height: 1.7; color: rgba(255,255,255,0.7);">
+                            On kliendikeskne lähenemine, kvaliteet ja usaldusväärsus. Hindame oma klientide usaldust ning püüdleme pikaajaliste partnerlussuhete poole.
+                        </p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="info-card-hover-v2" style="background: linear-gradient(135deg, rgba(30,30,30,0.9) 0%, rgba(15,15,15,0.95) 100%); border: 2px solid rgba(255,0,0,0.25); position: relative; overflow: hidden; padding: 36px 32px; border-radius: 18px; box-shadow: 0 15px 40px rgba(0,0,0,0.5); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+                        
+                        <div style="position: absolute; top: 0; right: 0; width: 85px; height: 85px; background: linear-gradient(135deg, var(--bright-red), transparent); opacity: 0.15; border-radius: 0 18px 0 100%;"></div>
+                        
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; box-shadow: 0 12px 35px rgba(255,0,0,0.55); transition: all 0.5s ease; position: relative;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                            </svg>
+                            <div style="position: absolute; top: -6px; left: -6px; right: -6px; bottom: -6px; border-radius: 16px; border: 2px solid var(--bright-red); opacity: 0; animation: icon-glow 2s ease-in-out infinite 1.2s;"></div>
+                        </div>
+                        
+                        <h3 data-et="100% Eesti kapital" data-en="100% Estonian Capital" data-ru="100% Эстонский капитал" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.5rem; color: var(--bright-red); margin-bottom: 16px; line-height: 1.3;">100% Eesti kapital</h3>
+                        
+                        <p data-et="Copymax on 100% Eesti kapitali baasil tegutsev ettevõte, mis alustas oma tegevust 2003. aastal"
+                           data-en="Copymax is 100% Estonian capital based company and started its activity in 2003"
+                           data-ru="Copymax - компания, основанная на 100% эстонском капитале, начавшая свою деятельность в 2003 году"
+                           style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 1.02rem; line-height: 1.7; color: rgba(255,255,255,0.7);">
+                            Copymax on 100% Eesti kapitali baasil tegutsev ettevõe, mis alustas oma tegevust 2003. aastal
+                        </p>
+                    </div>
                 </div>
                 
-                <h3 data-et="Copymax väärtused" data-en="Copymax Values" data-ru="Ценности Copymax" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.5rem; color: var(--bright-red); margin-bottom: 16px; line-height: 1.3;">Copymax väärtused</h3>
-                
-                <p data-et="On kliendikeskne lähenemine, kvaliteet ja usaldusväärsus. Hindame oma klientide usaldust ning püüdleme pikaajaliste partnerlussuhete poole."
-                   data-en="Are customer focus, quality and reliability. We value the trust of our customers and strive for long-term partnerships."
-                   data-ru="Ориентированность на клиента, качество и надежность. Мы ценим доверие наших клиентов."
-                   style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 1.02rem; line-height: 1.7; color: rgba(255,255,255,0.7);">
-                    On kliendikeskne lähenemine, kvaliteet ja usaldusväärsus. Hindame oma klientide usaldust ning püüdleme pikaajaliste partnerlussuhete poole.
-                </p>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="info-card-hover-v2" style="background: linear-gradient(135deg, rgba(30,30,30,0.9) 0%, rgba(15,15,15,0.95) 100%); border: 2px solid rgba(255,0,0,0.25); position: relative; overflow: hidden; padding: 36px 32px; border-radius: 18px; box-shadow: 0 15px 40px rgba(0,0,0,0.5); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
-                
-                <div style="position: absolute; top: 0; right: 0; width: 85px; height: 85px; background: linear-gradient(135deg, var(--bright-red), transparent); opacity: 0.15; border-radius: 0 18px 0 100%;"></div>
-                
-                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; box-shadow: 0 12px 35px rgba(255,0,0,0.55); transition: all 0.5s ease; position: relative;">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                    </svg>
-                    <div style="position: absolute; top: -6px; left: -6px; right: -6px; bottom: -6px; border-radius: 16px; border: 2px solid var(--bright-red); opacity: 0; animation: icon-glow 2s ease-in-out infinite 1.2s;"></div>
-                </div>
-                
-                <h3 data-et="100% Eesti kapital" data-en="100% Estonian Capital" data-ru="100% Эстонский капитал" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.5rem; color: var(--bright-red); margin-bottom: 16px; line-height: 1.3;">100% Eesti kapital</h3>
-                
-                <p data-et="Copymax on 100% Eesti kapitali baasil tegutsev ettevõte, mis alustas oma tegevust 2003. aastal"
-                   data-en="Copymax is 100% Estonian capital based company and started its activity in 2003"
-                   data-ru="Copymax - компания, основанная на 100% эстонском капитале, начавшая свою деятельность в 2003 году"
-                   style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 1.02rem; line-height: 1.7; color: rgba(255,255,255,0.7);">
-                    Copymax on 100% Eesti kapitali baasil tegutsev ettevõe, mis alustas oma tegevust 2003. aastal
-                </p>
-            </div>
-        </div>
-        
-    </div>
-</div>
-
-        <!-- BRANDS -->
-<div style="margin-top: 80px;">
-    <h3 style="text-align: center; font-size: 2.2rem; margin-bottom: 40px; font-family: 'Poppins', sans-serif; font-weight: 600; color: white;" 
-        data-et="Meie partnerid" 
-        data-en="Our Partners" 
-        data-ru="Наши партнёры">Meie partnerid</h3>
-    
-    <div style="padding: 50px 40px; background: rgba(20,20,20,0.8); border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(255,0,0,0.15); overflow: hidden; position: relative;">
-        <!-- Красная линия сверху -->
-        <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%);"></div>
-        
-        <!-- Красная линия по центру (рельсы) -->
-        <div style="position: absolute; top: 50%; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent 0%, rgba(255,0,0,0.4) 20%, rgba(255,0,0,0.4) 80%, transparent 100%); transform: translateY(-50%);"></div>
-        
-        <!-- Контейнер с бесконечной прокруткой -->
-        <div class="brands-scroll-container" style="overflow: hidden; position: relative;">
-            <div class="brands-scroll" style="display: flex; gap: 60px; animation: scroll-brands 30s linear infinite; width: max-content;">
-                <!-- Первый набор логотипов -->
-                <div class="brand-logo-scroll"><img src="brands/canon.png" alt="Canon"></div>
-                <div class="brand-logo-scroll"><img src="brands/hp.png" alt="HP"></div>
-                <div class="brand-logo-scroll"><img src="brands/kyocera.png" alt="Kyocera"></div>
-                <div class="brand-logo-scroll"><img src="brands/konica-minolta.png" alt="Konica Minolta"></div>
-                <div class="brand-logo-scroll"><img src="brands/ricoh.png" alt="Ricoh"></div>
-                <div class="brand-logo-scroll"><img src="brands/xerox.png" alt="Xerox"></div>
-                <div class="brand-logo-scroll"><img src="brands/brother.png" alt="Brother"></div>
-                <div class="brand-logo-scroll"><img src="brands/logitech.png" alt="Logitech"></div>
-                <div class="brand-logo-scroll"><img src="brands/jabra.png" alt="Jabra"></div>
-                <div class="brand-logo-scroll"><img src="brands/dell.png" alt="Dell"></div>
-                <div class="brand-logo-scroll"><img src="brands/samsung.png" alt="Samsung"></div>
-                <div class="brand-logo-scroll"><img src="brands/epson.png" alt="Epson"></div>
-                
-                <!-- Дублируем для бесконечности -->
-                <div class="brand-logo-scroll"><img src="brands/canon.png" alt="Canon"></div>
-                <div class="brand-logo-scroll"><img src="brands/hp.png" alt="HP"></div>
-                <div class="brand-logo-scroll"><img src="brands/kyocera.png" alt="Kyocera"></div>
-                <div class="brand-logo-scroll"><img src="brands/konica-minolta.png" alt="Konica Minolta"></div>
-                <div class="brand-logo-scroll"><img src="brands/ricoh.png" alt="Ricoh"></div>
-                <div class="brand-logo-scroll"><img src="brands/xerox.png" alt="Xerox"></div>
-                <div class="brand-logo-scroll"><img src="brands/brother.png" alt="Brother"></div>
-                <div class="brand-logo-scroll"><img src="brands/logitech.png" alt="Logitech"></div>
-                <div class="brand-logo-scroll"><img src="brands/jabra.png" alt="Jabra"></div>
-                <div class="brand-logo-scroll"><img src="brands/dell.png" alt="Dell"></div>
-                <div class="brand-logo-scroll"><img src="brands/samsung.png" alt="Samsung"></div>
-                <div class="brand-logo-scroll"><img src="brands/epson.png" alt="Epson"></div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+       <!-- BRANDS & STATS SECTION - БЕЛЫЙ ФОН -->
+<section id="partners" style="background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 50%, #ffffff 100%); position: relative; overflow: hidden; padding: 120px 10%;">
+    <!-- Декоративные элементы -->
+    <div style="position: absolute; top: -100px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,0,0,0.03) 0%, transparent 70%); border-radius: 50%;"></div>
+    <div style="position: absolute; bottom: -80px; right: -80px; width: 350px; height: 350px; background: radial-gradient(circle, rgba(255,0,0,0.02) 0%, transparent 70%); border-radius: 50%;"></div>
+    
+    <div style="max-width: 1400px; margin: 0 auto; position: relative; z-index: 1;">
+        
+        <!-- БРЕНДЫ -->
+        <div style="margin-bottom: 100px;">
+            <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px; font-family: 'Poppins', sans-serif; font-weight: 700; color: #1a1a1a;" 
+                data-et="Meie partnerid" 
+                data-en="Our Partners" 
+                data-ru="Наши партнёры">Meie partnerid</h3>
+            
+            <div style="padding: 60px 50px; background: white; border-radius: 20px; box-shadow: 0 15px 50px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.05); overflow: hidden; position: relative;">
+                <!-- Красная линия сверху -->
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%);"></div>
+                
+                <!-- Красная линия по центру (рельсы) -->
+                <div style="position: absolute; top: 50%; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent 0%, rgba(255,0,0,0.15) 20%, rgba(255,0,0,0.15) 80%, transparent 100%); transform: translateY(-50%);"></div>
+                
+                <!-- Контейнер с бесконечной прокруткой -->
+                <div class="brands-scroll-container" style="overflow: hidden; position: relative;">
+                    <div class="brands-scroll" style="display: flex; gap: 70px; animation: scroll-brands 30s linear infinite; width: max-content;">
+                        <!-- Первый набор логотипов -->
+                        <div class="brand-logo-scroll"><img src="brands/canon.png" alt="Canon"></div>
+                        <div class="brand-logo-scroll"><img src="brands/hp.png" alt="HP"></div>
+                        <div class="brand-logo-scroll"><img src="brands/kyocera.png" alt="Kyocera"></div>
+                        <div class="brand-logo-scroll"><img src="brands/konica-minolta.png" alt="Konica Minolta"></div>
+                        <div class="brand-logo-scroll"><img src="brands/ricoh.png" alt="Ricoh"></div>
+                        <div class="brand-logo-scroll"><img src="brands/xerox.png" alt="Xerox"></div>
+                        <div class="brand-logo-scroll"><img src="brands/brother.png" alt="Brother"></div>
+                        <div class="brand-logo-scroll"><img src="brands/logitech.png" alt="Logitech"></div>
+                        <div class="brand-logo-scroll"><img src="brands/jabra.png" alt="Jabra"></div>
+                        <div class="brand-logo-scroll"><img src="brands/dell.png" alt="Dell"></div>
+                        <div class="brand-logo-scroll"><img src="brands/samsung.png" alt="Samsung"></div>
+                        <div class="brand-logo-scroll"><img src="brands/epson.png" alt="Epson"></div>
+                        
+                        <!-- Дублируем для бесконечности -->
+                        <div class="brand-logo-scroll"><img src="brands/canon.png" alt="Canon"></div>
+                        <div class="brand-logo-scroll"><img src="brands/hp.png" alt="HP"></div>
+                        <div class="brand-logo-scroll"><img src="brands/kyocera.png" alt="Kyocera"></div>
+                        <div class="brand-logo-scroll"><img src="brands/konica-minolta.png" alt="Konica Minolta"></div>
+                        <div class="brand-logo-scroll"><img src="brands/ricoh.png" alt="Ricoh"></div>
+                        <div class="brand-logo-scroll"><img src="brands/xerox.png" alt="Xerox"></div>
+                        <div class="brand-logo-scroll"><img src="brands/brother.png" alt="Brother"></div>
+                        <div class="brand-logo-scroll"><img src="brands/logitech.png" alt="Logitech"></div>
+                        <div class="brand-logo-scroll"><img src="brands/jabra.png" alt="Jabra"></div>
+                        <div class="brand-logo-scroll"><img src="brands/dell.png" alt="Dell"></div>
+                        <div class="brand-logo-scroll"><img src="brands/samsung.png" alt="Samsung"></div>
+                        <div class="brand-logo-scroll"><img src="brands/epson.png" alt="Epson"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STATS -->
+        <div>
+            <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 60px; font-family: 'Poppins', sans-serif; font-weight: 700; color: #1a1a1a;" 
+                data-et="Meie saavutused" 
+                data-en="Our Achievements" 
+                data-ru="Наши достижения">Meie saavutused</h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px;">
+                <div class="stat-card-v2" style="text-align: center; padding: 50px 30px; background: white; border-radius: 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.08); border: 2px solid rgba(255,0,0,0.1); position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red), #FF3333);"></div>
+                    <span class="stat-number" data-target="22" style="font-size: 4.5rem; font-weight: 800; color: var(--bright-red); display: block; font-family: 'Poppins', sans-serif; text-shadow: 0 4px 15px rgba(255,0,0,0.2);">0</span>
+                    <span class="stat-label" data-et="aastat turul" data-en="years on market" data-ru="лет на рынке" style="font-size: 1.15rem; color: #666; margin-top: 15px; font-family: 'Inter', sans-serif; font-weight: 500; display: block;">aastat turul</span>
+                </div>
+                
+                <div class="stat-card-v2" style="text-align: center; padding: 50px 30px; background: white; border-radius: 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.08); border: 2px solid rgba(255,0,0,0.1); position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red), #FF3333);"></div>
+                    <span class="stat-number" data-target="1000" style="font-size: 4.5rem; font-weight: 800; color: var(--bright-red); display: block; font-family: 'Poppins', sans-serif; text-shadow: 0 4px 15px rgba(255,0,0,0.2);">0</span>
+                    <span class="stat-label" data-et="rahuloleva klienti" data-en="satisfied clients" data-ru="довольных клиентов" style="font-size: 1.15rem; color: #666; margin-top: 15px; font-family: 'Inter', sans-serif; font-weight: 500; display: block;">rahuloleva klienti</span>
+                </div>
+                
+                <div class="stat-card-v2" style="text-align: center; padding: 50px 30px; background: white; border-radius: 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.08); border: 2px solid rgba(255,0,0,0.1); position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red), #FF3333);"></div>
+                    <span class="stat-number" data-target="100" style="font-size: 4.5rem; font-weight: 800; color: var(--bright-red); display: block; font-family: 'Poppins', sans-serif; text-shadow: 0 4px 15px rgba(255,0,0,0.2);">0%</span>
+                    <span class="stat-label" data-et="originaaltooted" data-en="original products" data-ru="оригинальная продукция" style="font-size: 1.15rem; color: #666; margin-top: 15px; font-family: 'Inter', sans-serif; font-weight: 500; display: block;">originaaltooted</span>
+                </div>
+                
+                <div class="stat-card-v2" style="text-align: center; padding: 50px 30px; background: white; border-radius: 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.08); border: 2px solid rgba(255,0,0,0.1); position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red), #FF3333);"></div>
+                    <span class="stat-number" data-target="100" style="font-size: 4.5rem; font-weight: 800; color: var(--bright-red); display: block; font-family: 'Poppins', sans-serif; text-shadow: 0 4px 15px rgba(255,0,0,0.2);">0%</span>
+                    <span class="stat-label" data-et="usaldusväärne koostöö" data-en="trusted cooperation" data-ru="доверенное сотрудничество" style="font-size: 1.15rem; color: #666; margin-top: 15px; font-family: 'Inter', sans-serif; font-weight: 500; display: block;">usaldusväärne koostöö</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <style>
+    /* BRANDS SCROLL STYLES */
     .brand-logo-scroll {
         display: flex;
         align-items: center;
         justify-content: center;
-        min-width: 150px;
+        min-width: 160px;
         transition: all 0.4s ease;
     }
     
     .brand-logo-scroll img {
-        width: 130px;
+        width: 140px;
         height: auto;
-        filter: grayscale(100%);
+        filter: grayscale(100%) brightness(0.4);
         transition: all 0.4s ease;
     }
     
     /* HP и Dell меньше */
     .brand-logo-scroll img[alt="HP"],
     .brand-logo-scroll img[alt="Dell"] {
-        width: 90px;
+        width: 95px;
     }
     
     .brand-logo-scroll:hover img {
-        filter: grayscale(0%);
+        filter: grayscale(0%) brightness(1);
         transform: scale(1.15);
     }
     
@@ -1284,45 +1331,19 @@
     .brands-scroll-container:hover .brands-scroll {
         animation-play-state: paused;
     }
+
+    /* STATS HOVER */
+    .stat-card-v2:hover {
+        transform: translateY(-12px) scale(1.02);
+        box-shadow: 0 25px 60px rgba(255,0,0,0.2) !important;
+        border-color: rgba(255,0,0,0.3) !important;
+    }
+    
+    .stat-card-v2:hover .stat-number {
+        transform: scale(1.1);
+        text-shadow: 0 8px 25px rgba(255,0,0,0.4) !important;
+    }
 </style>
-
-        <!-- STATS -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 35px; margin-top: 80px;">
-            <div class="stat-card-v2" style="text-align: center; padding: 45px 25px; background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%); border-radius: 18px; box-shadow: 0 12px 35px rgba(0,0,0,0.08); border: 2px solid rgba(255,0,0,0.12); position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
-                <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--bright-red), #FF3333);"></div>
-                <span class="stat-number" data-target="22" style="font-size: 4.2rem; font-weight: 800; color: var(--bright-red); display: block; font-family: 'Poppins', sans-serif; text-shadow: 0 4px 15px rgba(255,0,0,0.2);">0</span>
-                <span class="stat-label" data-et="aastat turul" data-en="years on market" data-ru="лет на рынке" style="font-size: 1.15rem; color: #666; margin-top: 12px; font-family: 'Inter', sans-serif; font-weight: 500; display: block;">aastat turul</span>
-            </div>
-            <div class="stat-card-v2" style="text-align: center; padding: 45px 25px; background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%); border-radius: 18px; box-shadow: 0 12px 35px rgba(0,0,0,0.08); border: 2px solid rgba(255,0,0,0.12); position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
-                <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--bright-red), #FF3333);"></div>
-                <span class="stat-number" data-target="1000" style="font-size: 4.2rem; font-weight: 800; color: var(--bright-red); display: block; font-family: 'Poppins', sans-serif; text-shadow: 0 4px 15px rgba(255,0,0,0.2);">0</span>
-                <span class="stat-label" data-et="rahuloleva klienti" data-en="satisfied clients" data-ru="довольных клиентов" style="font-size: 1.15rem; color: #666; margin-top: 12px; font-family: 'Inter', sans-serif; font-weight: 500; display: block;">rahuloleva klienti</span>
-            </div>
-            <div class="stat-card-v2" style="text-align: center; padding: 45px 25px; background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%); border-radius: 18px; box-shadow: 0 12px 35px rgba(0,0,0,0.08); border: 2px solid rgba(255,0,0,0.12); position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
-    <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--bright-red), #FF3333);"></div>
-    <span class="stat-number" data-target="100" style="font-size: 4.2rem; font-weight: 800; color: var(--bright-red); display: block; font-family: 'Poppins', sans-serif; text-shadow: 0 4px 15px rgba(255,0,0,0.2);">0%</span>
-    <span class="stat-label" data-et="originaaltooted" data-en="original products" data-ru="оригинальная продукция" style="font-size: 1.15rem; color: #666; margin-top: 12px; font-family: 'Inter', sans-serif; font-weight: 500; display: block;">originaaltooted</span>
-</div>
-            <div class="stat-card-v2" style="text-align: center; padding: 45px 25px; background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%); border-radius: 18px; box-shadow: 0 12px 35px rgba(0,0,0,0.08); border: 2px solid rgba(255,0,0,0.12); position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
-    <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--bright-red), #FF3333);"></div>
-    <span class="stat-number" data-target="100" style="font-size: 4.2rem; font-weight: 800; color: var(--bright-red); display: block; font-family: 'Poppins', sans-serif; text-shadow: 0 4px 15px rgba(255,0,0,0.2);">0%</span>
-    <span class="stat-label" data-et="usaldusväärne koostöö" data-en="trusted cooperation" data-ru="доверенное сотрудничество" style="font-size: 1.15rem; color: #666; margin-top: 12px; font-family: 'Inter', sans-serif; font-weight: 500; display: block;">usaldusväärne koostöö</span>
-</div>
-</div>
-</div>
-
-    <style>
-        .info-card-hover:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(255,0,0,0.25) !important;
-        }
-        .info-card-hover:hover > div > div:first-child {
-            transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 15px 40px rgba(255,0,0,0.5) !important;
-        }
-    </style>
-</section>
-
     <!-- VALUES & MISSION -->
 <section id="values" style="background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 50%, #ffffff 100%); position: relative; overflow: hidden; padding: 120px 10%;">
     <!-- Декоративные элементы фона -->
