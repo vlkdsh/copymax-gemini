@@ -1482,163 +1482,315 @@
 </style>
 </section>
 
-    <!-- TEAM -->
-<section id="team" style="background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 50%, #ffffff 100%); position: relative; overflow: hidden; padding: 120px 10%;">
+    <!-- TEAM SECTION - УЛУЧШЕННАЯ БЕЛАЯ ВЕРСИЯ -->
+<section id="team" style="background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 50%, #ffffff 100%); position: relative; overflow: hidden; padding: 130px 10%;">
     <!-- Декоративные элементы фона -->
-    <div style="position: absolute; top: -80px; right: -80px; width: 350px; height: 350px; background: radial-gradient(circle, rgba(255,0,0,0.04) 0%, transparent 70%); border-radius: 50%;"></div>
-    <div style="position: absolute; bottom: -60px; left: -60px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,0,0,0.03) 0%, transparent 70%); border-radius: 50%;"></div>
+    <div style="position: absolute; top: -120px; right: -120px; width: 450px; height: 450px; background: radial-gradient(circle, rgba(255,0,0,0.04) 0%, transparent 70%); border-radius: 50%; filter: blur(60px);"></div>
+    <div style="position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,0,0,0.03) 0%, transparent 70%); border-radius: 50%; filter: blur(50px);"></div>
+    
+    <!-- Floating animated lines -->
+    <div style="position: absolute; top: 15%; left: 5%; width: 150px; height: 2px; background: linear-gradient(90deg, transparent, rgba(255,0,0,0.2), transparent); animation: float-line 8s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: 20%; right: 8%; width: 120px; height: 2px; background: linear-gradient(90deg, transparent, rgba(255,0,0,0.15), transparent); animation: float-line 10s ease-in-out infinite reverse;"></div>
     
     <div style="max-width: 1400px; margin: 0 auto; position: relative; z-index: 1;">
-        <!-- Заголовок секции -->
-        <div style="text-align: center; margin-bottom: 80px;">
-            <h2 data-et="Meie meeskond" data-en="Our Team" data-ru="Наша команда" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 3.5rem; margin-bottom: 25px; color: #1a1a1a;">Meie meeskond</h2>
-            <div style="width: 80px; height: 4px; background: var(--bright-red); margin: 0 auto 25px;"></div>
+        <!-- Header -->
+        <div style="text-align: center; margin-bottom: 90px; position: relative;">
+            <div style="display: inline-block; position: relative;">
+                <h2 data-et="Meie meeskond" data-en="Our Team" data-ru="Наша команда" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 3.8rem; margin-bottom: 25px; color: #1a1a1a; letter-spacing: -1px; position: relative;">
+                    Meie meeskond
+                </h2>
+                
+                <!-- Animated underline -->
+                <div style="position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%); width: 100px; height: 5px; background: linear-gradient(90deg, transparent, var(--bright-red), transparent); border-radius: 3px; box-shadow: 0 0 20px rgba(255,0,0,0.5);"></div>
+            </div>
+            
             <p data-et="Professionaalne meeskond teie teenistuses"
                data-en="Professional team at your service"
                data-ru="Профессиональная команда к вашим услугам"
-               style="max-width: 800px; margin: 0 auto; font-size: 1.35rem; color: #666; font-family: 'Poppins', sans-serif; font-weight: 300;">
+               style="max-width: 750px; margin: 30px auto 0; font-size: 1.3rem; color: #666; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 1.7;">
                 Professionaalne meeskond teie teenistuses
             </p>
         </div>
 
-        <!-- Сетка команды -->
-        <div class="team-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px;">
+        <!-- Team Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 45px;">
             
-            <!-- Карточка 1 -->
-            <div class="team-card-premium fade-in" style="background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%); padding: 45px 35px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); position: relative; overflow: hidden; border: 1px solid rgba(255,0,0,0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); text-align: center;">
-                <!-- Красная линия сверху -->
-                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%);"></div>
+            <!-- Card 1 - Dmitri -->
+            <div class="team-card-premium-v2" style="background: white; padding: 45px 38px; border-radius: 22px; box-shadow: 0 15px 50px rgba(0,0,0,0.1); position: relative; overflow: hidden; border: 2px solid rgba(255,0,0,0.08); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); text-align: center;">
                 
-                <!-- Декоративный круг -->
-                <div style="position: absolute; top: -30px; right: -30px; width: 100px; height: 100px; background: rgba(255,0,0,0.04); border-radius: 50%; z-index: 0;"></div>
+                <!-- Top gradient line -->
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 50%, var(--bright-red) 100%); box-shadow: 0 2px 15px rgba(255,0,0,0.4);"></div>
+                
+                <!-- Decorative corner -->
+                <div style="position: absolute; top: -1px; right: -1px; width: 80px; height: 80px; background: linear-gradient(135deg, rgba(255,0,0,0.06), transparent); border-radius: 0 22px 0 100%;"></div>
+                
+                <!-- Floating particles effect -->
+                <div style="position: absolute; top: 20%; left: 10%; width: 4px; height: 4px; background: var(--bright-red); border-radius: 50%; opacity: 0; animation: particle-float 3s ease-in-out infinite;"></div>
+                <div style="position: absolute; top: 60%; right: 15%; width: 3px; height: 3px; background: var(--bright-red); border-radius: 50%; opacity: 0; animation: particle-float 4s ease-in-out infinite 1s;"></div>
                 
                 <div style="position: relative; z-index: 1;">
-                    <!-- Инициалы вместо фото -->
-                    <div style="width: 90px; height: 90px; margin: 0 auto 25px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(255,0,0,0.3); transition: all 0.4s ease;">
-                        <span style="font-family: 'Poppins', sans-serif; font-size: 2rem; font-weight: 700; color: white;">DP</span>
+                    <!-- Avatar with ring -->
+                    <div style="position: relative; width: 110px; height: 110px; margin: 0 auto 25px;">
+                        <!-- Pulsating ring -->
+                        <div style="position: absolute; top: -8px; left: -8px; right: -8px; bottom: -8px; border-radius: 50%; border: 3px solid var(--bright-red); opacity: 0; animation: pulse-ring 2.5s ease-in-out infinite;"></div>
+                        
+                        <!-- Avatar -->
+                        <div style="width: 110px; height: 110px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 35px rgba(255,0,0,0.35); transition: all 0.5s ease; position: relative;">
+                            <span style="font-family: 'Poppins', sans-serif; font-size: 2.4rem; font-weight: 800; color: white;">DP</span>
+                        </div>
                     </div>
                     
-                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.6rem; color: #1a1a1a; margin-bottom: 8px;">Dmitri Pärn</h3>
+                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.75rem; color: #1a1a1a; margin-bottom: 12px;">Dmitri Pärn</h3>
                     
-                    <div class="position" data-et="Müügijuht" data-en="Head of Sales" data-ru="Начальник отдела продаж" style="font-size: 1.05rem; color: var(--bright-red); margin-bottom: 25px; font-family: 'Poppins', sans-serif; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Müügijuht</div>
+                    <!-- Position Badge -->
+                    <div data-et="Müügijuht" data-en="Head of Sales" data-ru="Начальник отдела продаж" style="display: inline-block; background: linear-gradient(135deg, var(--bright-red), #FF3333); color: white; padding: 8px 20px; border-radius: 25px; font-size: 0.9rem; font-family: 'Poppins', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; box-shadow: 0 5px 20px rgba(255,0,0,0.3);">
+                        Müügijuht
+                    </div>
                     
-                    <div style="border-top: 1px solid rgba(255,0,0,0.1); padding-top: 20px;">
-                        <div class="contact" style="font-size: 1rem; color: #555; margin: 8px 0; font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                            <a href="tel:+3725568895 7" style="color: #555; text-decoration: none; transition: color 0.3s ease;">+372 556 88 957</a>
+                    <!-- Divider -->
+                    <div style="width: 60px; height: 2px; background: linear-gradient(90deg, transparent, var(--bright-red), transparent); margin: 0 auto 25px;"></div>
+                    
+                    <!-- Contacts -->
+                    <div style="text-align: left; display: inline-block;">
+                        <div class="contact-item" style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px; transition: all 0.3s ease;">
+                            <div style="width: 38px; height: 38px; background: linear-gradient(135deg, rgba(255,0,0,0.1), rgba(255,0,0,0.05)); border-radius: 10px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2.5">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <a href="tel:+3725568895 7" style="color: #555; text-decoration: none; transition: all 0.3s ease; font-family: 'Inter', sans-serif; font-size: 0.98rem; font-weight: 500;">+372 556 88 957</a>
                         </div>
-                        <div class="contact" style="font-size: 1rem; color: #555; margin: 8px 0; font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <a href="mailto:dmitri@copymax.ee" style="color: #555; text-decoration: none; transition: color 0.3s ease;">dmitri@copymax.ee</a>
+                        
+                        <div class="contact-item" style="display: flex; align-items: center; gap: 12px; transition: all 0.3s ease;">
+                            <div style="width: 38px; height: 38px; background: linear-gradient(135deg, rgba(255,0,0,0.1), rgba(255,0,0,0.05)); border-radius: 10px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2.5">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <a href="mailto:dmitri@copymax.ee" style="color: #555; text-decoration: none; transition: all 0.3s ease; font-family: 'Inter', sans-serif; font-size: 0.98rem; font-weight: 500;">dmitri@copymax.ee</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Карточка 2 -->
-            <div class="team-card-premium fade-in" style="background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%); padding: 45px 35px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); position: relative; overflow: hidden; border: 1px solid rgba(255,0,0,0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); text-align: center;">
-                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%);"></div>
-                <div style="position: absolute; top: -30px; right: -30px; width: 100px; height: 100px; background: rgba(255,0,0,0.04); border-radius: 50%; z-index: 0;"></div>
+            <!-- Card 2 - Vitali -->
+            <div class="team-card-premium-v2" style="background: white; padding: 45px 38px; border-radius: 22px; box-shadow: 0 15px 50px rgba(0,0,0,0.1); position: relative; overflow: hidden; border: 2px solid rgba(255,0,0,0.08); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); text-align: center;">
+                
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 50%, var(--bright-red) 100%); box-shadow: 0 2px 15px rgba(255,0,0,0.4);"></div>
+                <div style="position: absolute; top: -1px; right: -1px; width: 80px; height: 80px; background: linear-gradient(135deg, rgba(255,0,0,0.06), transparent); border-radius: 0 22px 0 100%;"></div>
+                <div style="position: absolute; top: 20%; left: 10%; width: 4px; height: 4px; background: var(--bright-red); border-radius: 50%; opacity: 0; animation: particle-float 3s ease-in-out infinite;"></div>
+                <div style="position: absolute; top: 60%; right: 15%; width: 3px; height: 3px; background: var(--bright-red); border-radius: 50%; opacity: 0; animation: particle-float 4s ease-in-out infinite 1s;"></div>
                 
                 <div style="position: relative; z-index: 1;">
-                    <div style="width: 90px; height: 90px; margin: 0 auto 25px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(255,0,0,0.3); transition: all 0.4s ease;">
-                        <span style="font-family: 'Poppins', sans-serif; font-size: 2rem; font-weight: 700; color: white;">VI</span>
+                    <div style="position: relative; width: 110px; height: 110px; margin: 0 auto 25px;">
+                        <div style="position: absolute; top: -8px; left: -8px; right: -8px; bottom: -8px; border-radius: 50%; border: 3px solid var(--bright-red); opacity: 0; animation: pulse-ring 2.5s ease-in-out infinite 0.5s;"></div>
+                        <div style="width: 110px; height: 110px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 35px rgba(255,0,0,0.35); transition: all 0.5s ease; position: relative;">
+                            <span style="font-family: 'Poppins', sans-serif; font-size: 2.4rem; font-weight: 800; color: white;">VI</span>
+                        </div>
                     </div>
                     
-                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.6rem; color: #1a1a1a; margin-bottom: 8px;">Vitali Ivahnenko</h3>
+                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.75rem; color: #1a1a1a; margin-bottom: 12px;">Vitali Ivahnenko</h3>
                     
-                    <div class="position" data-et="Müügijuht" data-en="Head of Sales" data-ru="Начальник отдела продаж" style="font-size: 1.05rem; color: var(--bright-red); margin-bottom: 25px; font-family: 'Poppins', sans-serif; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Müügijuht</div>
+                    <div data-et="Müügijuht" data-en="Head of Sales" data-ru="Начальник отдела продаж" style="display: inline-block; background: linear-gradient(135deg, var(--bright-red), #FF3333); color: white; padding: 8px 20px; border-radius: 25px; font-size: 0.9rem; font-family: 'Poppins', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; box-shadow: 0 5px 20px rgba(255,0,0,0.3);">
+                        Müügijuht
+                    </div>
                     
-                    <div style="border-top: 1px solid rgba(255,0,0,0.1); padding-top: 20px;">
-                        <div class="contact" style="font-size: 1rem; color: #555; margin: 8px 0; font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                            <a href="tel:+3725622756 7" style="color: #555; text-decoration: none; transition: color 0.3s ease;">+372 562 27 567</a>
+                    <div style="width: 60px; height: 2px; background: linear-gradient(90deg, transparent, var(--bright-red), transparent); margin: 0 auto 25px;"></div>
+                    
+                    <div style="text-align: left; display: inline-block;">
+                        <div class="contact-item" style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px; transition: all 0.3s ease;">
+                            <div style="width: 38px; height: 38px; background: linear-gradient(135deg, rgba(255,0,0,0.1), rgba(255,0,0,0.05)); border-radius: 10px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2.5">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <a href="tel:+3725622756 7" style="color: #555; text-decoration: none; transition: all 0.3s ease; font-family: 'Inter', sans-serif; font-size: 0.98rem; font-weight: 500;">+372 562 27 567</a>
                         </div>
-                        <div class="contact" style="font-size: 1rem; color: #555; margin: 8px 0; font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <a href="mailto:vi@copymax.ee" style="color: #555; text-decoration: none; transition: color 0.3s ease;">vi@copymax.ee</a>
+                        
+                        <div class="contact-item" style="display: flex; align-items: center; gap: 12px; transition: all 0.3s ease;">
+                            <div style="width: 38px; height: 38px; background: linear-gradient(135deg, rgba(255,0,0,0.1), rgba(255,0,0,0.05)); border-radius: 10px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2.5">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <a href="mailto:vi@copymax.ee" style="color: #555; text-decoration: none; transition: all 0.3s ease; font-family: 'Inter', sans-serif; font-size: 0.98rem; font-weight: 500;">vi@copymax.ee</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Карточка 3 -->
-            <div class="team-card-premium fade-in" style="background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%); padding: 45px 35px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); position: relative; overflow: hidden; border: 1px solid rgba(255,0,0,0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); text-align: center;">
-                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%);"></div>
-                <div style="position: absolute; top: -30px; right: -30px; width: 100px; height: 100px; background: rgba(255,0,0,0.04); border-radius: 50%; z-index: 0;"></div>
+            <!-- Card 3 - Jevgeni -->
+            <div class="team-card-premium-v2" style="background: white; padding: 45px 38px; border-radius: 22px; box-shadow: 0 15px 50px rgba(0,0,0,0.1); position: relative; overflow: hidden; border: 2px solid rgba(255,0,0,0.08); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); text-align: center;">
+                
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 50%, var(--bright-red) 100%); box-shadow: 0 2px 15px rgba(255,0,0,0.4);"></div>
+                <div style="position: absolute; top: -1px; right: -1px; width: 80px; height: 80px; background: linear-gradient(135deg, rgba(255,0,0,0.06), transparent); border-radius: 0 22px 0 100%;"></div>
+                <div style="position: absolute; top: 20%; left: 10%; width: 4px; height: 4px; background: var(--bright-red); border-radius: 50%; opacity: 0; animation: particle-float 3s ease-in-out infinite;"></div>
+                <div style="position: absolute; top: 60%; right: 15%; width: 3px; height: 3px; background: var(--bright-red); border-radius: 50%; opacity: 0; animation: particle-float 4s ease-in-out infinite 1s;"></div>
                 
                 <div style="position: relative; z-index: 1;">
-                    <div style="width: 90px; height: 90px; margin: 0 auto 25px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(255,0,0,0.3); transition: all 0.4s ease;">
-                        <span style="font-family: 'Poppins', sans-serif; font-size: 2rem; font-weight: 700; color: white;">JZ</span>
+                    <div style="position: relative; width: 110px; height: 110px; margin: 0 auto 25px;">
+                        <div style="position: absolute; top: -8px; left: -8px; right: -8px; bottom: -8px; border-radius: 50%; border: 3px solid var(--bright-red); opacity: 0; animation: pulse-ring 2.5s ease-in-out infinite 1s;"></div>
+                        <div style="width: 110px; height: 110px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 35px rgba(255,0,0,0.35); transition: all 0.5s ease; position: relative;">
+                            <span style="font-family: 'Poppins', sans-serif; font-size: 2.4rem; font-weight: 800; color: white;">JZ</span>
+                        </div>
                     </div>
                     
-                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.6rem; color: #1a1a1a; margin-bottom: 8px;">Jevgeni Zurjari</h3>
+                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.75rem; color: #1a1a1a; margin-bottom: 12px;">Jevgeni Zurjari</h3>
                     
-                    <div class="position" data-et="Müük ja ost" data-en="Sales and Purchasing" data-ru="Продажи и закупки" style="font-size: 1.05rem; color: var(--bright-red); margin-bottom: 25px; font-family: 'Poppins', sans-serif; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Müük ja ost</div>
+                    <div data-et="Müük ja ost" data-en="Sales and Purchasing" data-ru="Продажи и закупки" style="display: inline-block; background: linear-gradient(135deg, var(--bright-red), #FF3333); color: white; padding: 8px 20px; border-radius: 25px; font-size: 0.9rem; font-family: 'Poppins', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; box-shadow: 0 5px 20px rgba(255,0,0,0.3);">
+                        Müük ja ost
+                    </div>
                     
-                    <div style="border-top: 1px solid rgba(255,0,0,0.1); padding-top: 20px;">
-                        <div class="contact" style="font-size: 1rem; color: #555; margin: 8px 0; font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                            <a href="tel:+37252286 58" style="color: #555; text-decoration: none; transition: color 0.3s ease;">+372 522 86 58</a>
+                    <div style="width: 60px; height: 2px; background: linear-gradient(90deg, transparent, var(--bright-red), transparent); margin: 0 auto 25px;"></div>
+                    
+                    <div style="text-align: left; display: inline-block;">
+                        <div class="contact-item" style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px; transition: all 0.3s ease;">
+                            <div style="width: 38px; height: 38px; background: linear-gradient(135deg, rgba(255,0,0,0.1), rgba(255,0,0,0.05)); border-radius: 10px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2.5">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <a href="tel:+37252286 58" style="color: #555; text-decoration: none; transition: all 0.3s ease; font-family: 'Inter', sans-serif; font-size: 0.98rem; font-weight: 500;">+372 522 86 58</a>
                         </div>
-                        <div class="contact" style="font-size: 1rem; color: #555; margin: 8px 0; font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <a href="mailto:jevgeni@copymax.ee" style="color: #555; text-decoration: none; transition: color 0.3s ease;">jevgeni@copymax.ee</a>
+                        
+                        <div class="contact-item" style="display: flex; align-items: center; gap: 12px; transition: all 0.3s ease;">
+                            <div style="width: 38px; height: 38px; background: linear-gradient(135deg, rgba(255,0,0,0.1), rgba(255,0,0,0.05)); border-radius: 10px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2.5">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <a href="mailto:jevgeni@copymax.ee" style="color: #555; text-decoration: none; transition: all 0.3s ease; font-family: 'Inter', sans-serif; font-size: 0.98rem; font-weight: 500;">jevgeni@copymax.ee</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Карточка 4 -->
-            <div class="team-card-premium fade-in" style="background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%); padding: 45px 35px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); position: relative; overflow: hidden; border: 1px solid rgba(255,0,0,0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); text-align: center;">
-                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%);"></div>
-                <div style="position: absolute; top: -30px; right: -30px; width: 100px; height: 100px; background: rgba(255,0,0,0.04); border-radius: 50%; z-index: 0;"></div>
+            <!-- Card 4 - Juri -->
+            <div class="team-card-premium-v2" style="background: white; padding: 45px 38px; border-radius: 22px; box-shadow: 0 15px 50px rgba(0,0,0,0.1); position: relative; overflow: hidden; border: 2px solid rgba(255,0,0,0.08); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); text-align: center;">
+                
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 50%, var(--bright-red) 100%); box-shadow: 0 2px 15px rgba(255,0,0,0.4);"></div>
+                <div style="position: absolute; top: -1px; right: -1px; width: 80px; height: 80px; background: linear-gradient(135deg, rgba(255,0,0,0.06), transparent); border-radius: 0 22px 0 100%;"></div>
+                <div style="position: absolute; top: 20%; left: 10%; width: 4px; height: 4px; background: var(--bright-red); border-radius: 50%; opacity: 0; animation: particle-float 3s ease-in-out infinite;"></div>
+                <div style="position: absolute; top: 60%; right: 15%; width: 3px; height: 3px; background: var(--bright-red); border-radius: 50%; opacity: 0; animation: particle-float 4s ease-in-out infinite 1s;"></div>
                 
                 <div style="position: relative; z-index: 1;">
-                    <div style="width: 90px; height: 90px; margin: 0 auto 25px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(255,0,0,0.3); transition: all 0.4s ease;">
-                        <span style="font-family: 'Poppins', sans-serif; font-size: 2rem; font-weight: 700; color: white;">JH</span>
+                    <div style="position: relative; width: 110px; height: 110px; margin: 0 auto 25px;">
+                        <div style="position: absolute; top: -8px; left: -8px; right: -8px; bottom: -8px; border-radius: 50%; border: 3px solid var(--bright-red); opacity: 0; animation: pulse-ring 2.5s ease-in-out infinite 1.5s;"></div>
+                        <div style="width: 110px; height: 110px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 35px rgba(255,0,0,0.35); transition: all 0.5s ease; position: relative;">
+                            <span style="font-family: 'Poppins', sans-serif; font-size: 2.4rem; font-weight: 800; color: white;">JH</span>
+                        </div>
                     </div>
                     
-                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.6rem; color: #1a1a1a; margin-bottom: 8px;">Juri Hain</h3>
+                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.75rem; color: #1a1a1a; margin-bottom: 12px;">Juri Hain</h3>
                     
-                    <div class="position" data-et="Müük ja ost" data-en="Sales and Purchasing" data-ru="Продажи и закупки" style="font-size: 1.05rem; color: var(--bright-red); margin-bottom: 25px; font-family: 'Poppins', sans-serif; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Müük ja ost</div>
+                    <div data-et="Müük ja ost" data-en="Sales and Purchasing" data-ru="Продажи и закупки" style="display: inline-block; background: linear-gradient(135deg, var(--bright-red), #FF3333); color: white; padding: 8px 20px; border-radius: 25px; font-size: 0.9rem; font-family: 'Poppins', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; box-shadow: 0 5px 20px rgba(255,0,0,0.3);">
+                        Müük ja ost
+                    </div>
                     
-                    <div style="border-top: 1px solid rgba(255,0,0,0.1); padding-top: 20px;">
-                        <div class="contact" style="font-size: 1rem; color: #555; margin: 8px 0; font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2">
+                    <div style="width: 60px; height: 2px; background: linear-gradient(90deg, transparent, var(--bright-red), transparent); margin: <function_calls>
+<invoke name="artifacts">
+<parameter name="command">update</parameter>
+<parameter name="id">team_section_upgraded</parameter>
+<parameter name="old_str">                    <div style="width: 60px; height: 2px; background: linear-gradient(90deg, transparent, var(--bright-red), transparent); margin: </parameter>
+<parameter name="new_str">                    <div style="width: 60px; height: 2px; background: linear-gradient(90deg, transparent, var(--bright-red), transparent); margin: 0 auto 25px;"></div><div style="text-align: left; display: inline-block;">
+                    <div class="contact-item" style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px; transition: all 0.3s ease;">
+                        <div style="width: 38px; height: 38px; background: linear-gradient(135deg, rgba(255,0,0,0.1), rgba(255,0,0,0.05)); border-radius: 10px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2.5">
                                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                             </svg>
-                            <a href="tel:+37258111 508" style="color: #555; text-decoration: none; transition: color 0.3s ease;">+372 581 11 508</a>
                         </div>
-                        <div class="contact" style="font-size: 1rem; color: #555; margin: 8px 0; font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2">
+                        <a href="tel:+37258111 508" style="color: #555; text-decoration: none; transition: all 0.3s ease; font-family: 'Inter', sans-serif; font-size: 0.98rem; font-weight: 500;">+372 581 11 508</a>
+                    </div>
+                    
+                    <div class="contact-item" style="display: flex; align-items: center; gap: 12px; transition: all 0.3s ease;">
+                        <div style="width: 38px; height: 38px; background: linear-gradient(135deg, rgba(255,0,0,0.1), rgba(255,0,0,0.05)); border-radius: 10px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2.5">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                                 <polyline points="22,6 12,13 2,6"></polyline>
                             </svg>
-                            <a href="mailto:juri@copymax.ee" style="color: #555; text-decoration: none; transition: color 0.3s ease;">juri@copymax.ee</a>
                         </div>
+                        <a href="mailto:juri@copymax.ee" style="color: #555; text-decoration: none; transition: all 0.3s ease; font-family: 'Inter', sans-serif; font-size: 0.98rem; font-weight: 500;">juri@copymax.ee</a>
                     </div>
                 </div>
             </div>
-
         </div>
+
     </div>
-</section>
+</div> 
+<style>
+    /* TEAM CARDS HOVER EFFECTS */
+    .team-card-premium-v2:hover {
+        transform: translateY(-18px) scale(1.03);
+        box-shadow: 0 30px 70px rgba(255,0,0,0.25) !important;
+        border-color: rgba(255,0,0,0.3) !important;
+    }
+    
+    .team-card-premium-v2:hover > div:first-child {
+        height: 6px;
+        box-shadow: 0 4px 25px rgba(255,0,0,0.7) !important;
+    }
+    
+    .team-card-premium-v2:hover .contact-item > div {
+        background: linear-gradient(135deg, rgba(255,0,0,0.2), rgba(255,0,0,0.1)) !important;
+        transform: scale(1.1);
+    }
+    
+    .team-card-premium-v2:hover .contact-item a {
+        color: var(--bright-red) !important;
+        transform: translateX(3px);
+    }
+    
+    /* PULSE RING ANIMATION */
+    @keyframes pulse-ring {
+        0% {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        50% {
+            opacity: 0.7;
+            transform: scale(1.1);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(1.3);
+        }
+    }
+    
+    /* PARTICLE FLOAT ANIMATION */
+    @keyframes particle-float {
+        0% {
+            opacity: 0;
+            transform: translate(0, 0);
+        }
+        20% {
+            opacity: 1;
+        }
+        80% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: translate(30px, -50px);
+        }
+    }
+    
+    /* FLOATING LINE ANIMATION */
+    @keyframes float-line {
+        0%, 100% {
+            transform: translateY(0px) translateX(0px);
+            opacity: 0.3;
+        }
+        50% {
+            transform: translateY(-20px) translateX(10px);
+            opacity: 0.6;
+        }
+    }
+</style></parameter>
+                   
+                    
 
     <!-- REQUEST FORM -->
 <section id="request" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%); position: relative; overflow: hidden; padding: 110px 9%;">
