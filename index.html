@@ -2668,24 +2668,77 @@ document.querySelectorAll('.info-card-hover-v2').forEach(card => {
                 </div>
             </div>
         </div>
+<script>
+// ====== BACKGROUND SLIDER С АВТОПРОКРУТКОЙ ======
+let currentBgSlide = 0;
+const totalBgSlides = 11;
+let bgSliderInterval;
 
-        <!-- ИНДИКАТОРЫ СЛАЙДЕРА -->
-        <div id="bgSliderDots" style="display: flex; justify-content: center; gap: 12px; margin-top: 45px;">
-            <span class="bg-dot active" onclick="changeBgSlide(0)" style="width: 12px; height: 12px; background: var(--bright-red); border-radius: 50%; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255,0,0,0.8);"></span>
-            <span class="bg-dot" onclick="changeBgSlide(1)" style="width: 12px; height: 12px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: all 0.3s ease;"></span>
-            <span class="bg-dot" onclick="changeBgSlide(2)" style="width: 12px; height: 12px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: all 0.3s ease;"></span>
-            <span class="bg-dot" onclick="changeBgSlide(3)" style="width: 12px; height: 12px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: all 0.3s ease;"></span>
-            <span class="bg-dot" onclick="changeBgSlide(4)" style="width: 12px; height: 12px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: all 0.3s ease;"></span>
-            <span class="bg-dot" onclick="changeBgSlide(5)" style="width: 12px; height: 12px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: all 0.3s ease;"></span>
-            <span class="bg-dot" onclick="changeBgSlide(6)" style="width: 12px; height: 12px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: all 0.3s ease;"></span>
-            <span class="bg-dot" onclick="changeBgSlide(7)" style="width: 12px; height: 12px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: all 0.3s ease;"></span>
-            <span class="bg-dot" onclick="changeBgSlide(8)" style="width: 12px; height: 12px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: all 0.3s ease;"></span>
-            <span class="bg-dot" onclick="changeBgSlide(9)" style="width: 12px; height: 12px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: all 0.3s ease;"></span>
-            <span class="bg-dot" onclick="changeBgSlide(10)" style="width: 12px; height: 12px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: all 0.3s ease;"></span>
-        </div>
-    </div>
-</section>
+// Функция переключения слайда
+function changeBgSlide(index) {
+    const slides = document.querySelectorAll('.bg-slide');
+    const dots = document.querySelectorAll('.bg-dot');
+    
+    // Скрываем текущий слайд
+    slides[currentBgSlide].style.opacity = '0';
+    
+    // Обновляем индекс
+    currentBgSlide = index;
+    
+    // Показываем новый слайд
+    slides[currentBgSlide].style.opacity = '1';
+    
+    // Обновляем точки
+    dots.forEach((dot, i) => {
+        if (i === currentBgSlide) {
+            dot.classList.add('active');
+            dot.style.background = 'var(--bright-red)';
+            dot.style.width = '35px';
+            dot.style.borderRadius = '6px';
+            dot.style.boxShadow = '0 0 25px rgba(255,0,0,1)';
+        } else {
+            dot.classList.remove('active');
+            dot.style.background = 'rgba(255,255,255,0.3)';
+            dot.style.width = '12px';
+            dot.style.borderRadius = '50%';
+            dot.style.boxShadow = 'none';
+        }
+    });
+    
+    // Сбрасываем таймер автопрокрутки
+    resetBgSliderInterval();
+}
 
+// Следующий слайд
+function nextBgSlide() {
+    const nextIndex = (currentBgSlide + 1) % totalBgSlides;
+    changeBgSlide(nextIndex);
+}
+
+// Предыдущий слайд
+function prevBgSlide() {
+    const prevIndex = (currentBgSlide - 1 + totalBgSlides) % totalBgSlides;
+    changeBgSlide(prevIndex);
+}
+
+// Автопрокрутка каждые 4 секунды
+function startBgSliderInterval() {
+    bgSliderInterval = setInterval(() => {
+        nextBgSlide();
+    }, 4000);
+}
+
+// Сброс таймера (когда пользователь сам переключает)
+function resetBgSliderInterval() {
+    clearInterval(bgSliderInterval);
+    startBgSliderInterval();
+}
+
+// Запускаем автопрокрутку при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+    startBgSliderInterval();
+});
+</script>
 <style>
     /* GLASS CARDS HOVER */
     .glass-card:hover {
