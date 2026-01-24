@@ -2543,6 +2543,128 @@ document.querySelectorAll('.stat-card-v2').forEach(card => {
 </style>
 </section>
 
+    <!-- LOCATION MAPS - WHITE BACKGROUND -->
+<section id="location" style="background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 50%, #ffffff 100%); position: relative; overflow: hidden; padding: 110px 10%;">
+    
+    <!-- Декоративные элементы -->
+    <div style="position: absolute; top: -60px; right: -60px; width: 350px; height: 350px; background: radial-gradient(circle, rgba(255,0,0,0.04) 0%, transparent 70%); border-radius: 50%; animation: float 10s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: -80px; left: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,0,0,0.03) 0%, transparent 70%); border-radius: 50%; animation: float 12s ease-in-out infinite reverse;"></div>
+    
+    <!-- Tech grid background -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.02; background-image: repeating-linear-gradient(0deg, var(--bright-red) 0px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, var(--bright-red) 0px, transparent 1px, transparent 40px); pointer-events: none;"></div>
+    
+    <div style="max-width: 1400px; margin: 0 auto; position: relative; z-index: 1;">
+        
+        <!-- Header -->
+        <div style="text-align: center; margin-bottom: 70px;">
+            <div style="display: inline-block; position: relative;">
+                <h2 data-et="Kuidas meid leida" data-en="How to Find Us" data-ru="Как нас найти" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 3.8rem; margin-bottom: 25px; color: #1a1a1a; letter-spacing: -1px;">
+                    Kuidas meid leida
+                </h2>
+                <!-- Animated red line -->
+                <div style="position: absolute; bottom: -15px; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, transparent, var(--bright-red), transparent);"></div>
+            </div>
+            
+            <p data-et="Meie asukohad Tallinnas ja Maardus"
+               data-en="Our locations in Tallinn and Maardu"
+               data-ru="Наши адреса в Таллинне и Маарду"
+               style="max-width: 800px; margin: 30px auto 0; font-size: 1.35rem; color: #666; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 1.8;">
+                Meie asukohad Tallinnas ja Maardus
+            </p>
+        </div>
+
+        <!-- ДВЕ КАРТЫ -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px;">
+            
+            <!-- Карта 1: Офис -->
+            <div class="map-card" style="background: white; padding: 35px; border-radius: 22px; box-shadow: 0 15px 50px rgba(0,0,0,0.08); position: relative; overflow: hidden; border: 2px solid rgba(255,0,0,0.1); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+                <!-- Top red line -->
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%); box-shadow: 0 0 15px rgba(255,0,0,0.6); transition: height 0.5s ease;"></div>
+                
+                <!-- Tech corner -->
+                <div style="position: absolute; top: -2px; right: -2px; width: 80px; height: 80px; border-top: 3px solid rgba(255,0,0,0.15); border-right: 3px solid rgba(255,0,0,0.15); border-radius: 0 22px 0 0; transition: all 0.5s ease;"></div>
+                
+                <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 25px;">
+                    <div style="width: 55px; height: 55px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(255,0,0,0.35);">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 data-et="Peakontor" data-en="Head Office" data-ru="Главный офис" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.6rem; color: var(--bright-red); margin: 0; line-height: 1.2;">
+                            Peakontor
+                        </h3>
+                        <p style="font-family: 'Inter', sans-serif; font-size: 0.92rem; color: #999; margin: 5px 0 0;">Pärnu mnt 31-58, Tallinn</p>
+                    </div>
+                </div>
+                
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2029.2847662849087!2d24.7378!3d59.4372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTnCsDI2JzE0LjAiTiAyNMKwNDQnMTYuMCJF!5e0!3m2!1sen!2see!4v1234567890" 
+                    width="100%" 
+                    height="400" 
+                    style="border: 3px solid rgba(255,0,0,0.15); border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.08);" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <!-- Карта 2: Склад -->
+            <div class="map-card" style="background: white; padding: 35px; border-radius: 22px; box-shadow: 0 15px 50px rgba(0,0,0,0.08); position: relative; overflow: hidden; border: 2px solid rgba(255,0,0,0.1); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%); box-shadow: 0 0 15px rgba(255,0,0,0.6); transition: height 0.5s ease;"></div>
+                <div style="position: absolute; top: -2px; right: -2px; width: 80px; height: 80px; border-top: 3px solid rgba(255,0,0,0.15); border-right: 3px solid rgba(255,0,0,0.15); border-radius: 0 22px 0 0; transition: all 0.5s ease;"></div>
+                
+                <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 25px;">
+                    <div style="width: 55px; height: 55px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(255,0,0,0.35);">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 data-et="Meie ladu" data-en="Our Warehouse" data-ru="Наш склад" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.6rem; color: var(--bright-red); margin: 0; line-height: 1.2;">
+                            Meie ladu
+                        </h3>
+                        <p style="font-family: 'Inter', sans-serif; font-size: 0.92rem; color: #999; margin: 5px 0 0;">Lae 25, Maardu</p>
+                    </div>
+                </div>
+                
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2029.2847662849087!2d25.0115!3d59.4715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTnCsDI4JzE3LjQiTiAyNcKwMDAnNDEuNCJF!5e0!3m2!1sen!2see!4v1234567890" 
+                    width="100%" 
+                    height="400" 
+                    style="border: 3px solid rgba(255,0,0,0.15); border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.08);" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* MAP CARDS HOVER */
+    .map-card:hover {
+        transform: translateY(-12px) scale(1.02);
+        box-shadow: 0 30px 80px rgba(255,0,0,0.2) !important;
+        border-color: rgba(255,0,0,0.3) !important;
+    }
+    
+    .map-card:hover > div:first-child {
+        height: 8px !important;
+    }
+    
+    /* Responsive */
+    @media (max-width: 968px) {
+        #location > div > div:last-child {
+            grid-template-columns: 1fr !important;
+            gap: 30px !important;
+        }
+    }
+</style>
+
    <!-- PREMIUM FOOTER - ВСТАВИТЬ ПЕРЕД </body> -->
 <footer style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%); position: relative; overflow: hidden; padding: 80px 10% 0;">
     
