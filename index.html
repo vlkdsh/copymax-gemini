@@ -2550,14 +2550,14 @@ document.querySelectorAll('.info-card-hover-v2').forEach(card => {
         </svg>
     </button>
     
-    <!-- ЗАГОЛОВОК ВВЕРХУ -->
-    <div style="position: relative; z-index: 10; text-align: center; padding-top: 100px;">
+    <!-- ЗАГОЛОВОК ВВЕРХУ (УМЕНЬШЕННЫЙ) -->
+    <div style="position: relative; z-index: 10; text-align: center; padding-top: 80px;">
         <div style="display: inline-block; position: relative;">
-            <h2 data-et="Kontakt" data-en="Contact" data-ru="Контакты" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 5rem; margin: 0; color: white; letter-spacing: -2px; text-shadow: 0 10px 40px rgba(0,0,0,0.8);">
+            <h2 data-et="Kontakt" data-en="Contact" data-ru="Контакты" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 2.8rem; margin: 0; color: white; letter-spacing: -1px; text-shadow: 0 4px 20px rgba(0,0,0,0.6); opacity: 0.95;">
                 Kontakt
             </h2>
             <!-- Animated red line -->
-            <div style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 120px; height: 4px; background: linear-gradient(90deg, transparent, var(--bright-red), transparent); box-shadow: 0 0 20px rgba(255,0,0,0.8);"></div>
+            <div style="position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background: linear-gradient(90deg, transparent, var(--bright-red), transparent); box-shadow: 0 0 15px rgba(255,0,0,0.6);"></div>
         </div>
     </div>
     
@@ -2661,7 +2661,7 @@ document.querySelectorAll('.info-card-hover-v2').forEach(card => {
         }
         
         #contact h2 {
-            font-size: 4rem !important;
+            font-size: 2.2rem !important;
         }
     }
     
@@ -2692,7 +2692,7 @@ document.querySelectorAll('.info-card-hover-v2').forEach(card => {
         }
         
         #contact h2 {
-            font-size: 2.5rem !important;
+            font-size: 1.8rem !important;
         }
         
         #contact button {
@@ -2703,40 +2703,59 @@ document.querySelectorAll('.info-card-hover-v2').forEach(card => {
 </style>
 
 <script>
-// BACKGROUND SLIDER (БЕЗ АВТОПРОКРУТКИ, ТОЛЬКО ПО КЛИКУ)
+// ====== BACKGROUND SLIDER С АВТОПРОКРУТКОЙ ======
 let currentBgSlide = 0;
 const totalBgSlides = 11;
+let bgSliderInterval;
 
+// Функция переключения слайда
 function changeBgSlide(index) {
-    const slides = document.querySelectorAll('.bg-slide');
-    const dots = document.querySelectorAll('.bg-dot');
+    const slides = document.querySelectorAll('#contactBgSlider .bg-slide');
     
     // Скрываем текущий слайд
     slides[currentBgSlide].style.opacity = '0';
+    slides[currentBgSlide].classList.remove('active');
     
     // Обновляем индекс
     currentBgSlide = index;
     
     // Показываем новый слайд
     slides[currentBgSlide].style.opacity = '1';
+    slides[currentBgSlide].classList.add('active');
     
-    // Обновляем точки
-    dots.forEach((dot, i) => {
-        if (i === currentBgSlide) {
-            dot.classList.add('active');
-            dot.style.background = 'var(--bright-red)';
-            dot.style.width = '35px';
-            dot.style.borderRadius = '6px';
-            dot.style.boxShadow = '0 0 25px rgba(255,0,0,1)';
-        } else {
-            dot.classList.remove('active');
-            dot.style.background = 'rgba(255,255,255,0.3)';
-            dot.style.width = '12px';
-            dot.style.borderRadius = '50%';
-            dot.style.boxShadow = 'none';
-        }
-    });
+    // Сбрасываем таймер автопрокрутки
+    resetBgSliderInterval();
 }
+
+// Следующий слайд
+function nextBgSlide() {
+    const nextIndex = (currentBgSlide + 1) % totalBgSlides;
+    changeBgSlide(nextIndex);
+}
+
+// Предыдущий слайд
+function prevBgSlide() {
+    const prevIndex = (currentBgSlide - 1 + totalBgSlides) % totalBgSlides;
+    changeBgSlide(prevIndex);
+}
+
+// Автопрокрутка каждые 4 секунды
+function startBgSliderInterval() {
+    bgSliderInterval = setInterval(() => {
+        nextBgSlide();
+    }, 4000);
+}
+
+// Сброс таймера (когда пользователь сам переключает)
+function resetBgSliderInterval() {
+    clearInterval(bgSliderInterval);
+    startBgSliderInterval();
+}
+
+// Запускаем автопрокрутку при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+    startBgSliderInterval();
+});
 </script>
 </section>
 
