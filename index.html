@@ -2083,7 +2083,7 @@
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
             
             <!-- Certificate 1: Estonian Chamber -->
-            <div class="certificate-card fade-in" style="background: white; border-radius: 24px; padding: 45px 35px; box-shadow: 0 15px 50px rgba(0,0,0,0.08); border: 2px solid rgba(255,0,0,0.1); position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+            <div class="certificate-card fade-in" onclick="openLightbox('cert/cert-chamber.png')" style="background: white; border-radius: 24px; padding: 45px 35px; box-shadow: 0 15px 50px rgba(0,0,0,0.08); border: 2px solid rgba(255,0,0,0.1); position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); cursor: pointer;">
                 
                 <!-- Top red line -->
                 <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%); transition: height 0.5s ease;"></div>
@@ -2094,6 +2094,17 @@
                 <!-- Certificate Image -->
                 <div style="width: 100%; height: 280px; background: #f5f5f5; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; padding: 15px; box-shadow: inset 0 2px 8px rgba(0,0,0,0.05); position: relative; overflow: hidden;">
                     <img src="cert/cert-chamber.png" alt="Estonian Chamber of Commerce" style="width: 100%; height: 100%; object-fit: contain; filter: grayscale(20%); transition: all 0.5s ease;">
+                    
+                    <!-- Hover overlay -->
+                    <div class="cert-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,0,0,0.9); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.4s ease; border-radius: 16px;">
+                        <div style="text-align: center; color: white;">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="margin-bottom: 10px;">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            <p style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.1rem; margin: 0;" data-et="Vaata lähemalt" data-en="View Certificate" data-ru="Посмотреть">Vaata lähemalt</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Badge/Year -->
@@ -2114,13 +2125,23 @@
             </div>
 
             <!-- Certificate 2: AA Credit Rating -->
-            <div class="certificate-card fade-in" style="background: white; border-radius: 24px; padding: 45px 35px; box-shadow: 0 15px 50px rgba(0,0,0,0.08); border: 2px solid rgba(255,0,0,0.1); position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+            <div class="certificate-card fade-in" onclick="openLightbox('cert/cert-creditinfo.png')" style="background: white; border-radius: 24px; padding: 45px 35px; box-shadow: 0 15px 50px rgba(0,0,0,0.08); border: 2px solid rgba(255,0,0,0.1); position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); cursor: pointer;">
                 
                 <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%); transition: height 0.5s ease;"></div>
                 <div style="position: absolute; top: -2px; right: -2px; width: 80px; height: 80px; border-top: 3px solid rgba(255,0,0,0.15); border-right: 3px solid rgba(255,0,0,0.15); border-radius: 0 24px 0 0; transition: all 0.5s ease;"></div>
                 
                 <div style="width: 100%; height: 280px; background: #f5f5f5; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; padding: 15px; box-shadow: inset 0 2px 8px rgba(0,0,0,0.05); position: relative; overflow: hidden;">
                     <img src="cert/cert-creditinfo.png" alt="Creditinfo AA Rating" style="width: 100%; height: 100%; object-fit: contain; filter: grayscale(20%); transition: all 0.5s ease;">
+                    
+                    <div class="cert-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,0,0,0.9); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.4s ease; border-radius: 16px;">
+                        <div style="text-align: center; color: white;">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="margin-bottom: 10px;">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            <p style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.1rem; margin: 0;" data-et="Vaata lähemalt" data-en="View Certificate" data-ru="Посмотреть">Vaata lähemalt</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <div style="display: inline-block; background: linear-gradient(135deg, var(--bright-red), #FF3333); color: white; padding: 8px 20px; border-radius: 20px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.9rem; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(255,0,0,0.3);">
@@ -2140,13 +2161,23 @@
             </div>
 
             <!-- Certificate 3: Competitiveness Ranking -->
-            <div class="certificate-card fade-in" style="background: white; border-radius: 24px; padding: 45px 35px; box-shadow: 0 15px 50px rgba(0,0,0,0.08); border: 2px solid rgba(255,0,0,0.1); position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+            <div class="certificate-card fade-in" onclick="openLightbox('cert/cert-konkurentsivõime.png')" style="background: white; border-radius: 24px; padding: 45px 35px; box-shadow: 0 15px 50px rgba(0,0,0,0.08); border: 2px solid rgba(255,0,0,0.1); position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); cursor: pointer;">
                 
                 <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%); transition: height 0.5s ease;"></div>
                 <div style="position: absolute; top: -2px; right: -2px; width: 80px; height: 80px; border-top: 3px solid rgba(255,0,0,0.15); border-right: 3px solid rgba(255,0,0,0.15); border-radius: 0 24px 0 0; transition: all 0.5s ease;"></div>
                 
                 <div style="width: 100%; height: 280px; background: #f5f5f5; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; padding: 15px; box-shadow: inset 0 2px 8px rgba(0,0,0,0.05); position: relative; overflow: hidden;">
                     <img src="cert/cert-konkurentsivõime.png" alt="Competitiveness Ranking 2024" style="width: 100%; height: 100%; object-fit: contain; filter: grayscale(20%); transition: all 0.5s ease;">
+                    
+                    <div class="cert-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,0,0,0.9); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.4s ease; border-radius: 16px;">
+                        <div style="text-align: center; color: white;">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="margin-bottom: 10px;">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            <p style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.1rem; margin: 0;" data-et="Vaata lähemalt" data-en="View Certificate" data-ru="Посмотреть">Vaata lähemalt</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <div style="display: inline-block; background: linear-gradient(135deg, var(--bright-red), #FF3333); color: white; padding: 8px 20px; border-radius: 20px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.9rem; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(255,0,0,0.3);">
@@ -2168,6 +2199,18 @@
     </div>
 </section>
 
+<!-- LIGHTBOX MODAL -->
+<div id="certLightbox" onclick="closeLightbox()" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 10000; align-items: center; justify-content: center; backdrop-filter: blur(10px); animation: fadeIn 0.3s ease;">
+    <button onclick="closeLightbox()" style="position: absolute; top: 30px; right: 30px; background: var(--bright-red); border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; z-index: 10001; box-shadow: 0 5px 20px rgba(255,0,0,0.5);">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </button>
+    
+    <img id="lightboxImg" src="" onclick="event.stopPropagation()" style="max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 12px; box-shadow: 0 25px 100px rgba(255,0,0,0.3); animation: zoomIn 0.3s ease;">
+</div>
+
 <style>
     /* Certificate Cards Hover Effects */
     .certificate-card:hover {
@@ -2185,6 +2228,26 @@
         transform: scale(1.05);
     }
     
+    .certificate-card:hover .cert-overlay {
+        opacity: 1 !important;
+    }
+    
+    /* Lightbox Animations */
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    @keyframes zoomIn {
+        from { transform: scale(0.8); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+    
+    #certLightbox button:hover {
+        background: #CC0000;
+        transform: rotate(90deg) scale(1.1);
+    }
+    
     /* Responsive */
     @media (max-width: 1200px) {
         #certificates > div > div:last-child {
@@ -2196,11 +2259,44 @@
         #certificates > div > div:last-child {
             grid-template-columns: 1fr !important;
         }
+        
+        #lightboxImg {
+            max-width: 95% !important;
+            max-height: 85% !important;
+        }
+        
+        #certLightbox button {
+            top: 15px !important;
+            right: 15px !important;
+            width: 40px !important;
+            height: 40px !important;
+        }
     }
 </style>
-</section>
-       
-  <script>
+
+<script>
+// LIGHTBOX FUNCTIONS
+function openLightbox(imageSrc) {
+    const lightbox = document.getElementById('certLightbox');
+    const img = document.getElementById('lightboxImg');
+    img.src = imageSrc;
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Блокируем скролл
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('certLightbox');
+    lightbox.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Разблокируем скролл
+}
+
+// Закрытие по ESC
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeLightbox();
+    }
+});
+</script>
         // MENU TOGGLE
        function toggleMenu() {
     const menu = document.getElementById('fullscreenMenu');
