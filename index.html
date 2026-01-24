@@ -2416,5 +2416,238 @@ document.querySelectorAll('.stat-card-v2').forEach(card => {
         });
     </script>
 
+    <!-- PREMIUM FOOTER - ВСТАВИТЬ ПЕРЕД </body> -->
+<footer style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%); position: relative; overflow: hidden; padding: 80px 10% 0;">
+    
+    <!-- Animated tech grid background -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.04; background-image: repeating-linear-gradient(0deg, var(--bright-red) 0px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, var(--bright-red) 0px, transparent 1px, transparent 40px); pointer-events: none;"></div>
+    
+    <!-- Top red glowing line -->
+    <div style="position: absolute; top: 0; left: 10%; right: 10%; height: 3px; background: linear-gradient(90deg, transparent, var(--bright-red), transparent); box-shadow: 0 0 20px rgba(255,0,0,0.8);"></div>
+    
+    <!-- Floating red orbs -->
+    <div style="position: absolute; top: -50px; right: 10%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,0,0,0.08) 0%, transparent 70%); border-radius: 50%; filter: blur(60px); animation: float 8s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: -80px; left: 15%; width: 250px; height: 250px; background: radial-gradient(circle, rgba(255,0,0,0.06) 0%, transparent 70%); border-radius: 50%; filter: blur(50px); animation: float 10s ease-in-out infinite reverse;"></div>
+    
+    <div style="max-width: 1400px; margin: 0 auto; position: relative; z-index: 1;">
+        
+        <!-- Main Footer Content -->
+        <div style="display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr; gap: 60px; margin-bottom: 60px;">
+            
+            <!-- Column 1: About -->
+            <div>
+                <img src="header-logo.png" alt="COPYMAX" style="height: 40px; margin-bottom: 25px; filter: drop-shadow(0 4px 15px rgba(255,0,0,0.3));">
+                
+                <p data-et="Eesti juhtiv printerite ja trükitarvikute hulgimüüja alates 2003. aastast. Usaldusväärne partner teie äri jaoks."
+                   data-en="Estonia's leading wholesaler of printers and printing supplies since 2003. A reliable partner for your business."
+                   data-ru="Ведущий оптовый поставщик принтеров и расходных материалов в Эстонии с 2003 года. Надёжный партнёр для вашего бизнеса."
+                   style="font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.8; color: rgba(255,255,255,0.6); margin-bottom: 25px;">
+                    Eesti juhtiv printerite ja trükitarvikute hulgimüüja alates 2003. aastast. Usaldusväärne partner teie äri jaoks.
+                </p>
+                
+                <!-- Company Details -->
+                <div style="background: rgba(255,0,0,0.08); border: 1px solid rgba(255,0,0,0.2); border-radius: 12px; padding: 20px; backdrop-filter: blur(10px);">
+                    <div style="font-family: 'Inter', sans-serif; font-size: 0.88rem; line-height: 1.7; color: rgba(255,255,255,0.65);">
+                        <div style="margin-bottom: 8px;">
+                            <span style="color: var(--bright-red); font-weight: 600;">Reg:</span> 10966040
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <span style="color: var(--bright-red); font-weight: 600;">VAT:</span> EE100860153
+                        </div>
+                        <div>
+                            <span style="color: var(--bright-red); font-weight: 600;">ESTONIA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h4 data-et="Kiirlingid" data-en="Quick Links" data-ru="Быстрые ссылки" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.2rem; color: white; margin-bottom: 25px; position: relative; padding-bottom: 12px;">
+                    Kiirlingid
+                    <div style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: var(--bright-red); box-shadow: 0 0 10px rgba(255,0,0,0.6);"></div>
+                </h4>
+                
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 12px;">
+                        <a href="#hero" class="footer-link" style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;" data-et="Avaleht" data-en="Home" data-ru="Главная">
+                            <span style="width: 0; height: 2px; background: var(--bright-red); transition: width 0.3s ease; box-shadow: 0 0 8px rgba(255,0,0,0.6);"></span>
+                            Avaleht
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 12px;">
+                        <a href="#about" class="footer-link" style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;" data-et="Meist" data-en="About Us" data-ru="О нас">
+                            <span style="width: 0; height: 2px; background: var(--bright-red); transition: width 0.3s ease; box-shadow: 0 0 8px rgba(255,0,0,0.6);"></span>
+                            Meist
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 12px;">
+                        <a href="#values" class="footer-link" style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;" data-et="Väärtused" data-en="Values" data-ru="Ценности">
+                            <span style="width: 0; height: 2px; background: var(--bright-red); transition: width 0.3s ease; box-shadow: 0 0 8px rgba(255,0,0,0.6);"></span>
+                            Väärtused
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 12px;">
+                        <a href="#team" class="footer-link" style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;" data-et="Meeskond" data-en="Team" data-ru="Команда">
+                            <span style="width: 0; height: 2px; background: var(--bright-red); transition: width 0.3s ease; box-shadow: 0 0 8px rgba(255,0,0,0.6);"></span>
+                            Meeskond
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 12px;">
+                        <a href="#contact" class="footer-link" style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;" data-et="Kontakt" data-en="Contact" data-ru="Контакты">
+                            <span style="width: 0; height: 2px; background: var(--bright-red); transition: width 0.3s ease; box-shadow: 0 0 8px rgba(255,0,0,0.6);"></span>
+                            Kontakt
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Column 3: Contact -->
+            <div>
+                <h4 data-et="Kontakt" data-en="Contact" data-ru="Контакты" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.2rem; color: white; margin-bottom: 25px; position: relative; padding-bottom: 12px;">
+                    Kontakt
+                    <div style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: var(--bright-red); box-shadow: 0 0 10px rgba(255,0,0,0.6);"></div>
+                </h4>
+                
+                <div style="display: flex; flex-direction: column; gap: 18px;">
+                    <div style="display: flex; align-items: start; gap: 12px;">
+                        <div style="width: 35px; height: 35px; min-width: 35px; background: rgba(255,0,0,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div>
+                            <div style="font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.6; color: rgba(255,255,255,0.6);">
+                                Pärnu mnt 31-58<br>
+                                10119 Tallinn, Estonia
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <div style="width: 35px; height: 35px; min-width: 35px; background: rgba(255,0,0,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2.5">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <a href="tel:+3726818311" style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.3s ease;">
+                            +372 68 18 311
+                        </a>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <div style="width: 35px; height: 35px; min-width: 35px; background: rgba(255,0,0,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2.5">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <a href="mailto:info@copymax.ee" style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.3s ease;">
+                            info@copymax.ee
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Column 4: Working Hours -->
+            <div>
+                <h4 data-et="Lahtiolekuajad" data-en="Working Hours" data-ru="Часы работы" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.2rem; color: white; margin-bottom: 25px; position: relative; padding-bottom: 12px;">
+                    Lahtiolekuajad
+                    <div style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: var(--bright-red); box-shadow: 0 0 10px rgba(255,0,0,0.6);"></div>
+                </h4>
+                
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <span data-et="Esmaspäev - Reede" data-en="Monday - Friday" data-ru="Понедельник - Пятница" style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.7);">Esmaspäev - Reede</span>
+                        <span style="font-family: 'Poppins', sans-serif; font-size: 0.9rem; color: var(--bright-red); font-weight: 600;">9:00 - 18:00</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <span data-et="Laupäev" data-en="Saturday" data-ru="Суббота" style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.7);">Laupäev</span>
+                        <span data-et="Suletud" data-en="Closed" data-ru="Закрыто" style="font-family: 'Poppins', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.5);">Suletud</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0;">
+                        <span data-et="Pühapäev" data-en="Sunday" data-ru="Воскресенье" style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.7);">Pühapäev</span>
+                        <span data-et="Suletud" data-en="Closed" data-ru="Закрыто" style="font-family: 'Poppins', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.5);">Suletud</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Divider Line -->
+        <div style="width: 100%; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,0,0,0.3), transparent); margin: 40px 0;"></div>
+        
+        <!-- Bottom Copyright -->
+        <div style="padding-bottom: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <p style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.4); margin: 0;">
+                © 2003-2025 <span style="color: var(--bright-red); font-weight: 600;">COPYMAX OÜ</span>. 
+                <span data-et="Kõik õigused kaitstud." data-en="All rights reserved." data-ru="Все права защищены.">Kõik õigused kaitstud.</span>
+            </p>
+            
+            <div style="display: flex; gap: 25px;">
+                <a href="#" class="footer-bottom-link" data-et="Privaatsuspoliitika" data-en="Privacy Policy" data-ru="Политика конфиденциальности" style="font-family: 'Inter', sans-serif; font-size: 0.88rem; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.3s ease;">Privaatsuspoliitika</a>
+                <a href="#" class="footer-bottom-link" data-et="Tingimused" data-en="Terms" data-ru="Условия" style="font-family: 'Inter', sans-serif; font-size: 0.88rem; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.3s ease;">Tingimused</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    /* Footer Link Hover Effects */
+    .footer-link:hover {
+        color: var(--bright-red) !important;
+        transform: translateX(5px);
+    }
+    
+    .footer-link:hover span {
+        width: 20px !important;
+    }
+    
+    /* Social Icons Hover */
+    .footer-social-icon:hover {
+        transform: translateY(-5px);
+        border-color: var(--bright-red) !important;
+        box-shadow: 0 8px 25px rgba(255,0,0,0.4);
+    }
+    
+    .footer-social-icon:hover div {
+        transform: translateY(0) !important;
+    }
+    
+    .footer-social-icon:hover svg {
+        fill: white !important;
+    }
+    
+    /* Contact Links Hover */
+    div a[href^="tel"]:hover,
+    div a[href^="mailto"]:hover {
+        color: var(--bright-red) !important;
+    }
+    
+    /* Bottom Links Hover */
+    .footer-bottom-link:hover {
+        color: var(--bright-red) !important;
+    }
+    
+    /* Responsive */
+    @media (max-width: 1200px) {
+        footer > div > div:first-of-type {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 40px !important;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        footer > div > div:first-of-type {
+            grid-template-columns: 1fr !important;
+        }
+        
+        footer > div > div:last-of-type {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+</style>
+
 </body>
 </html>
