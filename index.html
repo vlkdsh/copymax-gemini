@@ -2970,12 +2970,34 @@ document.querySelectorAll('.info-card-hover-v2').forEach(card => {
     /* Общие отступы секций */
     section { padding: 80px 5% !important; }
     
-    /* Hero секция */
+    /* Hero секция - ИСПРАВЛЕНО */
     .hero-section { height: 100svh; }
-    .layer-logo { width: 85%; top: 25%; }
-    .layer-slogan { width: 45%; top: 50%; }
-    .layer-printer { width: 100%; bottom: -30%; }
-    .paper-animation { width: 38%; }
+    
+    .layer-logo { 
+        width: 70%; 
+        top: 15%; 
+        left: 50%;
+        transform: translate(-50%, 0) !important;
+    }
+    
+    .layer-slogan { 
+        width: 50%; 
+        top: 38%; 
+        right: 5%;
+        transform: translateY(0) !important;
+    }
+    
+    .layer-printer { 
+        width: 95%; 
+        bottom: -25%;
+        left: 50%;
+        transform: translateX(-50%) !important;
+    }
+    
+    .paper-animation { 
+        width: 35%;
+        bottom: 22%;
+    }
     
     header { top: 3%; left: 5%; right: 5%; }
     .header-logo-img { height: 28px; }
@@ -3076,10 +3098,26 @@ document.querySelectorAll('.info-card-hover-v2').forEach(card => {
 
 /* ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ (до 480px) */
 @media (max-width: 480px) {
-    /* Hero */
-    .layer-logo { width: 90%; top: 22%; }
-    .layer-slogan { width: 55%; top: 48%; }
-    .layer-printer { width: 110%; }
+    /* Hero - ИСПРАВЛЕНО */
+    .layer-logo { 
+        width: 75%; 
+        top: 12%;
+    }
+    
+    .layer-slogan { 
+        width: 60%; 
+        top: 36%;
+    }
+    
+    .layer-printer { 
+        width: 100%; 
+        bottom: -20%;
+    }
+    
+    .paper-animation {
+        width: 38%;
+        bottom: 24%;
+    }
     
     /* Заголовки */
     h2 { font-size: 1.8rem !important; }
