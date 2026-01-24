@@ -2516,8 +2516,8 @@ document.querySelectorAll('.info-card-hover-v2').forEach(card => {
 });
     </script>
 
-    <!-- CONTACT - BLACK BACKGROUND С ГАЛЕРЕЕЙ ОФИСА -->
-<section id="contact" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%); position: relative; overflow: hidden; padding: 110px 10%;">
+    <!-- CONTACT - BLACK BACKGROUND С ПРЕМИУМ СЛАЙДЕРОМ -->
+<section id="contact" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%); position: relative; overflow: hidden; padding: 110px 10% 80px;">
     <!-- Animated tech grid -->
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.04; background-image: repeating-linear-gradient(0deg, var(--bright-red) 0px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, var(--bright-red) 0px, transparent 1px, transparent 40px); pointer-events: none;"></div>
     
@@ -2541,153 +2541,134 @@ document.querySelectorAll('.info-card-hover-v2').forEach(card => {
             </p>
         </div>
 
-        <!-- GRID: Карточки слева + Галерея справа -->
-        <div style="display: grid; grid-template-columns: 38% 58%; gap: 4%; align-items: start;">
+        <!-- ДВЕ КОМПАКТНЫЕ КАРТОЧКИ -->
+        <div style="display: flex; gap: 25px; margin-bottom: 50px; max-width: 900px; margin-left: auto; margin-right: auto;">
             
-            <!-- ЛЕВАЯ КОЛОНКА - 2 КОМПАКТНЫЕ КАРТОЧКИ -->
-            <div style="display: flex; flex-direction: column; gap: 25px;">
+            <!-- Карточка 1 - ОФИС -->
+            <div class="contact-card-compact" style="flex: 1; background: linear-gradient(135deg, rgba(25,25,25,0.95) 0%, rgba(15,15,15,0.98) 100%); padding: 28px 26px; border-radius: 18px; box-shadow: 0 15px 50px rgba(0,0,0,0.6); border: 2px solid rgba(255,0,0,0.25); position: relative; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%); box-shadow: 0 0 15px rgba(255,0,0,0.8); transition: height 0.5s ease;"></div>
+                <div style="position: absolute; top: -2px; right: -2px; width: 60px; height: 60px; background: linear-gradient(135deg, var(--bright-red), transparent); opacity: 0.12; border-radius: 0 18px 0 100%;"></div>
                 
-                <!-- Карточка 1 - ОФИС -->
-                <div class="contact-card-compact" style="background: linear-gradient(135deg, rgba(25,25,25,0.95) 0%, rgba(15,15,15,0.98) 100%); padding: 28px 26px; border-radius: 18px; box-shadow: 0 15px 50px rgba(0,0,0,0.6); border: 2px solid rgba(255,0,0,0.25); position: relative; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%); box-shadow: 0 0 15px rgba(255,0,0,0.8); transition: height 0.5s ease;"></div>
-                    <div style="position: absolute; top: -2px; right: -2px; width: 60px; height: 60px; background: linear-gradient(135deg, var(--bright-red), transparent); opacity: 0.12; border-radius: 0 18px 0 100%;"></div>
-                    
-                    <div style="position: relative; z-index: 1;">
-                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; box-shadow: 0 10px 25px rgba(255,0,0,0.5); transition: all 0.5s ease;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                        </div>
-                        
-                        <h3 data-et="Peakontor" data-en="Head Office" data-ru="Главный офис" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.35rem; color: var(--bright-red); margin-bottom: 15px; letter-spacing: -0.5px;">
-                            Peakontor
-                        </h3>
-                        
-                        <div style="font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.7; color: rgba(255,255,255,0.7);">
-                            <p style="margin-bottom: 4px; color: white; font-weight: 600;">Copymax OÜ</p>
-                            <p style="margin-bottom: 4px;">Pärnu mnt 31-58</p>
-                            <p style="margin-bottom: 15px;">10119 Tallinn, Estonia</p>
-                            
-                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2.5">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                                </svg>
-                                <a href="tel:+3726818311" style="color: var(--bright-red); text-decoration: none; transition: all 0.3s ease; font-weight: 600; font-size: 0.95rem;">+372 68 18 311</a>
-                            </div>
-                            
-                            <div style="display: flex; align-items: center; gap: 10px;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2.5">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                </svg>
-                                <a href="mailto:info@copymax.ee" style="color: var(--bright-red); text-decoration: none; transition: all 0.3s ease; font-weight: 600; font-size: 0.95rem;">info@copymax.ee</a>
-                            </div>
-                        </div>
+                <div style="position: relative; z-index: 1;">
+                    <div style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; box-shadow: 0 10px 25px rgba(255,0,0,0.5); transition: all 0.5s ease;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
                     </div>
-                </div>
-
-                <!-- Карточка 2 - СКЛАД -->
-                <div class="contact-card-compact" style="background: linear-gradient(135deg, rgba(25,25,25,0.95) 0%, rgba(15,15,15,0.98) 100%); padding: 28px 26px; border-radius: 18px; box-shadow: 0 15px 50px rgba(0,0,0,0.6); border: 2px solid rgba(255,0,0,0.25); position: relative; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%); box-shadow: 0 0 15px rgba(255,0,0,0.8); transition: height 0.5s ease;"></div>
-                    <div style="position: absolute; top: -2px; right: -2px; width: 60px; height: 60px; background: linear-gradient(135deg, var(--bright-red), transparent); opacity: 0.12; border-radius: 0 18px 0 100%;"></div>
                     
-                    <div style="position: relative; z-index: 1;">
-                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; box-shadow: 0 10px 25px rgba(255,0,0,0.5); transition: all 0.5s ease;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    <h3 data-et="Peakontor" data-en="Head Office" data-ru="Главный офис" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.35rem; color: var(--bright-red); margin-bottom: 15px; letter-spacing: -0.5px;">
+                        Peakontor
+                    </h3>
+                    
+                    <div style="font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.7; color: rgba(255,255,255,0.7);">
+                        <p style="margin-bottom: 4px; color: white; font-weight: 600;">Copymax OÜ</p>
+                        <p style="margin-bottom: 4px;">Pärnu mnt 31-58</p>
+                        <p style="margin-bottom: 15px;">10119 Tallinn, Estonia</p>
+                        
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2.5">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                             </svg>
+                            <a href="tel:+3726818311" style="color: var(--bright-red); text-decoration: none; transition: all 0.3s ease; font-weight: 600; font-size: 0.95rem;">+372 68 18 311</a>
                         </div>
                         
-                        <h3 data-et="Meie ladu" data-en="Our Warehouse" data-ru="Наш склад" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.35rem; color: var(--bright-red); margin-bottom: 15px; letter-spacing: -0.5px;">
-                            Meie ladu
-                        </h3>
-                        
-                        <div style="font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.7; color: rgba(255,255,255,0.7);">
-                            <p style="margin-bottom: 4px; color: white; font-weight: 600;">Miramis AS</p>
-                            <p style="margin-bottom: 4px;">Lae 25, 74114 Maardu</p>
-                            <p style="margin-bottom: 15px;">Harju maakond, Estonia</p>
-                            
-                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2.5">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                                </svg>
-                                <a href="tel:+37265813112" style="color: var(--bright-red); text-decoration: none; transition: all 0.3s ease; font-weight: 600; font-size: 0.95rem;">+372 658 13 112</a>
-                            </div>
-                            
-                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2.5">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                </svg>
-                                <a href="mailto:info@miramis.ee" style="color: var(--bright-red); text-decoration: none; transition: all 0.3s ease; font-weight: 600; font-size: 0.95rem;">info@miramis.ee</a>
-                            </div>
-                            
-                            <div style="padding-top: 12px; border-top: 1px solid rgba(255,0,0,0.2); font-size: 0.88rem; color: rgba(255,255,255,0.6);">
-                                <span><strong style="color: white;">Reg:</strong> 10966040</span><br>
-                                <span><strong style="color: white;">E-R:</strong> 9:00–18:00</span>
-                            </div>
-                            
-                            <a href="https://www.miramis.ee" target="_blank" style="display: inline-block; margin-top: 10px; color: var(--bright-red); text-decoration: none; font-weight: 700; font-size: 0.92rem; transition: all 0.3s ease;">
-                                www.miramis.ee →
-                            </a>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2.5">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <a href="mailto:info@copymax.ee" style="color: var(--bright-red); text-decoration: none; transition: all 0.3s ease; font-weight: 600; font-size: 0.95rem;">info@copymax.ee</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- ПРАВАЯ КОЛОНКА - ГАЛЕРЕЯ ОФИСА -->
-            <div style="display: grid; grid-template-rows: 1fr 1fr; gap: 20px; height: 100%;">
+            <!-- Карточка 2 - СКЛАД -->
+            <div class="contact-card-compact" style="flex: 1; background: linear-gradient(135deg, rgba(25,25,25,0.95) 0%, rgba(15,15,15,0.98) 100%); padding: 28px 26px; border-radius: 18px; box-shadow: 0 15px 50px rgba(0,0,0,0.6); border: 2px solid rgba(255,0,0,0.25); position: relative; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%); box-shadow: 0 0 15px rgba(255,0,0,0.8); transition: height 0.5s ease;"></div>
+                <div style="position: absolute; top: -2px; right: -2px; width: 60px; height: 60px; background: linear-gradient(135deg, var(--bright-red), transparent); opacity: 0.12; border-radius: 0 18px 0 100%;"></div>
                 
-                <!-- Большое фото сверху - Reception -->
-                <div onclick="openOfficeLightbox('office/office-reception.jpg')" class="office-photo" style="position: relative; overflow: hidden; border-radius: 20px; cursor: pointer; box-shadow: 0 15px 50px rgba(0,0,0,0.5); border: 2px solid rgba(255,0,0,0.2); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
-                    <img src="office/office-reception.jpg" alt="COPYMAX Reception" style="width: 100%; height: 100%; object-fit: cover; transition: all 0.5s ease;">
+                <div style="position: relative; z-index: 1;">
+                    <div style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--bright-red), #FF3333); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; box-shadow: 0 10px 25px rgba(255,0,0,0.5); transition: all 0.5s ease;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
                     
-                    <!-- Overlay -->
-                    <div class="office-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.4s ease;">
-                        <div style="text-align: center; color: white;">
-                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="margin-bottom: 10px;">
-                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                <circle cx="12" cy="12" r="3"></circle>
+                    <h3 data-et="Meie ladu" data-en="Our Warehouse" data-ru="Наш склад" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.35rem; color: var(--bright-red); margin-bottom: 15px; letter-spacing: -0.5px;">
+                        Meie ladu
+                    </h3>
+                    
+                    <div style="font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.7; color: rgba(255,255,255,0.7);">
+                        <p style="margin-bottom: 4px; color: white; font-weight: 600;">Miramis AS</p>
+                        <p style="margin-bottom: 4px;">Lae 25, 74114 Maardu</p>
+                        <p style="margin-bottom: 15px;">Harju maakond, Estonia</p>
+                        
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2.5">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                             </svg>
-                            <p style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.1rem; margin: 0;" data-et="Vaata lähemalt" data-en="View Photo" data-ru="Посмотреть">Vaata lähemalt</p>
+                            <a href="tel:+37265813112" style="color: var(--bright-red); text-decoration: none; transition: all 0.3s ease; font-weight: 600; font-size: 0.95rem;">+372 658 13 112</a>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="2.5">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <a href="mailto:info@miramis.ee" style="color: var(--bright-red); text-decoration: none; transition: all 0.3s ease; font-weight: 600; font-size: 0.95rem;">info@miramis.ee</a>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
 
-                <!-- Два маленьких фото снизу -->
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                    
-                    <!-- Office space -->
-                    <div onclick="openOfficeLightbox('office/office-space.jpg')" class="office-photo" style="position: relative; overflow: hidden; border-radius: 20px; cursor: pointer; box-shadow: 0 15px 50px rgba(0,0,0,0.5); border: 2px solid rgba(255,0,0,0.2); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
-                        <img src="office/office-space.jpg" alt="COPYMAX Office" style="width: 100%; height: 100%; object-fit: cover; transition: all 0.5s ease;">
-                        
-                        <div class="office-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.4s ease;">
-                            <div style="text-align: center; color: white;">
-                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="margin-bottom: 8px;">
-                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                    <circle cx="12" cy="12" r="3"></circle>
-                                </svg>
-                                <p style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 0.95rem; margin: 0;" data-et="Vaata" data-en="View" data-ru="Смотреть">Vaata</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Lounge -->
-                    <div onclick="openOfficeLightbox('office/office-lounge.jpg')" class="office-photo" style="position: relative; overflow: hidden; border-radius: 20px; cursor: pointer; box-shadow: 0 15px 50px rgba(0,0,0,0.5); border: 2px solid rgba(255,0,0,0.2); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
-                        <img src="office/office-lounge.jpg" alt="COPYMAX Lounge" style="width: 100%; height: 100%; object-fit: cover; transition: all 0.5s ease;">
-                        
-                        <div class="office-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.4s ease;">
-                            <div style="text-align: center; color: white;">
-                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="margin-bottom: 8px;">
-                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                    <circle cx="12" cy="12" r="3"></circle>
-                                </svg>
-                                <p style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 0.95rem; margin: 0;" data-et="Vaata" data-en="View" data-ru="Смотреть">Vaata</p>
-                            </div>
-                        </div>
-                    </div>
+        <!-- ПРЕМИУМ СЛАЙДЕР ОФИСА -->
+        <div style="position: relative; background: linear-gradient(135deg, rgba(25,25,25,0.95) 0%, rgba(15,15,15,0.98) 100%); border-radius: 24px; overflow: hidden; border: 2px solid rgba(255,0,0,0.25); box-shadow: 0 20px 60px rgba(0,0,0,0.7);">
+            
+            <!-- Top red glowing line -->
+            <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bright-red) 0%, #FF3333 100%); box-shadow: 0 0 20px rgba(255,0,0,0.8); z-index: 10;"></div>
+            
+            <!-- Slider Container -->
+            <div id="officeSlider" style="position: relative; width: 100%; height: 550px; overflow: hidden;">
+                
+                <!-- Slides -->
+                <div class="slider-track" style="display: flex; transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); height: 100%;">
+                    <div class="slide" style="min-width: 100%; height: 100%;"><img src="office/office-1.jpg" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="slide" style="min-width: 100%; height: 100%;"><img src="office/office-2.jpg" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="slide" style="min-width: 100%; height: 100%;"><img src="office/office-3.jpg" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="slide" style="min-width: 100%; height: 100%;"><img src="office/office-4.jpg" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="slide" style="min-width: 100%; height: 100%;"><img src="office/office-5.jpg" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="slide" style="min-width: 100%; height: 100%;"><img src="office/office-6.jpg" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="slide" style="min-width: 100%; height: 100%;"><img src="office/office-7.jpg" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="slide" style="min-width: 100%; height: 100%;"><img src="office/office-8.jpg" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                </div>
+                
+                <!-- Navigation Arrows -->
+                <button onclick="officeSliderPrev()" style="position: absolute; left: 30px; top: 50%; transform: translateY(-50%); width: 55px; height: 55px; background: rgba(0,0,0,0.7); border: 2px solid var(--bright-red); border-radius: 50%; cursor: pointer; z-index: 10; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="3">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                
+                <button onclick="officeSliderNext()" style="position: absolute; right: 30px; top: 50%; transform: translateY(-50%); width: 55px; height: 55px; background: rgba(0,0,0,0.7); border: 2px solid var(--bright-red); border-radius: 50%; cursor: pointer; z-index: 10; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--bright-red)" stroke-width="3">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                
+                <!-- Dots Indicators -->
+                <div id="sliderDots" style="position: absolute; bottom: 25px; left: 50%; transform: translateX(-50%); display: flex; gap: 12px; z-index: 10;">
+                    <span class="dot active" onclick="officeSliderGoTo(0)" style="width: 12px; height: 12px; background: var(--bright-red); border-radius: 50%; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255,0,0,0.8);"></span>
+                    <span class="dot" onclick="officeSliderGoTo(1)" style="width: 12px; height: 12px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: all 0.3s ease;"></span>
+                    <span class="dot" onclick="officeSliderGoTo(2)" style="width: 12px; height: 12px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: all 0.3s ease;"></span>
+                    <span class="dot" onclick="officeSliderGoTo(3)" style="width: 12px; height: 12px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: all 0.3s ease;"></span>
+                    <span class="dot" onclick="officeSliderGoTo(4)" style="width: 12px; height: 12px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: all 0.3s ease;"></span>
+                    <span class="dot" onclick="officeSliderGoTo(5)" style="width: 12px; height: 12px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: all 0.3s ease;"></span>
+                    <span class="dot" onclick="officeSliderGoTo(6)" style="width: 12px; height: 12px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: all 0.3s ease;"></span>
+                    <span class="dot" onclick="officeSliderGoTo(7)" style="width: 12px; height: 12px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: all 0.3s ease;"></span>
                 </div>
             </div>
         </div>
@@ -2710,40 +2691,116 @@ document.querySelectorAll('.info-card-hover-v2').forEach(card => {
         color: #FF3333 !important;
     }
 
-    /* OFFICE PHOTOS HOVER */
-    .office-photo:hover {
-        transform: scale(1.03);
-        box-shadow: 0 25px 70px rgba(255,0,0,0.4) !important;
-        border-color: rgba(255,0,0,0.5) !important;
+    /* SLIDER ARROWS HOVER */
+    #officeSlider button:hover {
+        background: rgba(255,0,0,0.2) !important;
+        border-color: #FF3333 !important;
+        transform: translateY(-50%) scale(1.1);
+        box-shadow: 0 5px 25px rgba(255,0,0,0.5);
     }
     
-    .office-photo:hover img {
-        transform: scale(1.1);
-        filter: brightness(0.7);
+    /* DOTS HOVER */
+    .dot:hover {
+        background: rgba(255,0,0,0.7) !important;
+        transform: scale(1.3);
     }
     
-    .office-photo:hover .office-overlay {
-        opacity: 1 !important;
+    .dot.active {
+        background: var(--bright-red) !important;
+        width: 30px !important;
+        border-radius: 6px !important;
+        box-shadow: 0 0 20px rgba(255,0,0,1) !important;
     }
 
     /* Responsive */
     @media (max-width: 968px) {
         #contact > div > div:nth-child(2) {
-            grid-template-columns: 1fr !important;
-            gap: 30px !important;
+            flex-direction: column !important;
+        }
+        
+        #officeSlider {
+            height: 400px !important;
+        }
+        
+        #officeSlider button {
+            width: 45px !important;
+            height: 45px !important;
+        }
+        
+        #officeSlider button:first-of-type {
+            left: 15px !important;
+        }
+        
+        #officeSlider button:last-of-type {
+            right: 15px !important;
         }
     }
 </style>
 
 <script>
-// OFFICE LIGHTBOX FUNCTION
-function openOfficeLightbox(imageSrc) {
-    const lightbox = document.getElementById('certLightbox');
-    const img = document.getElementById('lightboxImg');
-    img.src = imageSrc;
-    lightbox.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
+// PREMIUM OFFICE SLIDER
+let currentSlide = 0;
+let sliderInterval;
+const totalSlides = 8;
+const slideSpeed = 4500; // 4.5 секунды на слайд
+
+function updateSlider() {
+    const track = document.querySelector('.slider-track');
+    const dots = document.querySelectorAll('.dot');
+    
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    dots.forEach((dot, index) => {
+        if (index === currentSlide) {
+            dot.classList.add('active');
+            dot.style.background = 'var(--bright-red)';
+            dot.style.width = '30px';
+            dot.style.borderRadius = '6px';
+            dot.style.boxShadow = '0 0 20px rgba(255,0,0,1)';
+        } else {
+            dot.classList.remove('active');
+            dot.style.background = 'rgba(255,255,255,0.3)';
+            dot.style.width = '12px';
+            dot.style.borderRadius = '50%';
+            dot.style.boxShadow = 'none';
+        }
+    });
 }
+
+function officeSliderNext() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlider();
+    resetSliderInterval();
+}
+
+function officeSliderPrev() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlider();
+    resetSliderInterval();
+}
+
+function officeSliderGoTo(index) {
+    currentSlide = index;
+    updateSlider();
+    resetSliderInterval();
+}
+
+function resetSliderInterval() {
+    clearInterval(sliderInterval);
+    sliderInterval = setInterval(officeSliderNext, slideSpeed);
+}
+
+// Автопрокрутка
+sliderInterval = setInterval(officeSliderNext, slideSpeed);
+
+// Пауза при наведении
+document.getElementById('officeSlider').addEventListener('mouseenter', () => {
+    clearInterval(sliderInterval);
+});
+
+document.getElementById('officeSlider').addEventListener('mouseleave', () => {
+    sliderInterval = setInterval(officeSliderNext, slideSpeed);
+});
 </script>
 </section>
 
