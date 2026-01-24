@@ -2970,33 +2970,34 @@ document.querySelectorAll('.info-card-hover-v2').forEach(card => {
     /* Общие отступы секций */
     section { padding: 80px 5% !important; }
     
-    /* Hero секция - ИСПРАВЛЕНО */
-    .hero-section { height: 100svh; }
+    /* Hero секция - ТОЛЬКО ЛОГОТИП */
+    .hero-section {
+        height: 70vh;
+    }
     
-    .layer-logo { 
-        width: 70%; 
-        top: 15%; 
+    /* Оставляем только логотип по центру */
+    .layer-logo {
+        width: 80%;
+        top: 50%;
         left: 50%;
-        transform: translate(-50%, 0) !important;
+        transform: translate(-50%, -50%) !important;
     }
     
-    .layer-slogan { 
-        width: 50%; 
-        top: 38%; 
-        right: 5%;
-        transform: translateY(0) !important;
+    /* Скрываем слоган и принтер */
+    .layer-slogan,
+    .layer-printer,
+    .paper-animation,
+    .particles-container {
+        display: none !important;
     }
     
-    .layer-printer { 
-        width: 95%; 
-        bottom: -25%;
-        left: 50%;
-        transform: translateX(-50%) !important;
+    /* Blueprint линии делаем тоньше и прозрачнее */
+    .blueprint-lines .line {
+        opacity: 0.2;
     }
     
-    .paper-animation { 
-        width: 35%;
-        bottom: 22%;
+    .scroll-indicator {
+        bottom: 15px;
     }
     
     header { top: 3%; left: 5%; right: 5%; }
@@ -3098,26 +3099,9 @@ document.querySelectorAll('.info-card-hover-v2').forEach(card => {
 
 /* ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ (до 480px) */
 @media (max-width: 480px) {
-    /* Hero - ИСПРАВЛЕНО */
-    .layer-logo { 
-        width: 75%; 
-        top: 12%;
-    }
-    
-    .layer-slogan { 
-        width: 60%; 
-        top: 36%;
-    }
-    
-    .layer-printer { 
-        width: 100%; 
-        bottom: -20%;
-    }
-    
-    .paper-animation {
-        width: 38%;
-        bottom: 24%;
-    }
+    /* Hero */
+    .hero-section { height: 60vh; }
+    .layer-logo { width: 85%; }
     
     /* Заголовки */
     h2 { font-size: 1.8rem !important; }
@@ -3138,7 +3122,7 @@ document.querySelectorAll('.info-card-hover-v2').forEach(card => {
     .scroll-to-top { width: 50px; height: 50px; font-size: 20px; }
 }
 
-/* ОТКЛЮЧАЕМ 3D TILT НА МОБИЛЬНЫХ (для производительности) */
+/* ОТКЛЮЧАЕМ 3D TILT НА МОБИЛЬНЫХ */
 @media (max-width: 768px) {
     .info-card-hover-v2 {
         transform-style: flat !important;
