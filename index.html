@@ -2897,5 +2897,157 @@ document.querySelectorAll('.stat-card-v2').forEach(card => {
     }
 </style>
 
+    <!-- CUSTOM CURSOR + TRAIL -->
+<div id="customCursor"></div>
+<div id="cursorTrail"></div>
+
+<style>
+/* ПРИЦЕЛ-КУРСОР */
+#customCursor {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    z-index: 10000;
+    mix-blend-mode: difference;
+}
+
+#customCursor::before,
+#customCursor::after {
+    content: '';
+    position: absolute;
+    background: var(--bright-red);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+/* Вертикальная линия прицела */
+#customCursor::before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+}
+
+/* Горизонтальная линия прицела */
+#customCursor::after {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 2px;
+}
+
+/* Центральная точка прицела */
+#customCursor {
+    border: 2px solid var(--bright-red);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6), inset 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+/* TRAIL контейнер */
+#cursorTrail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Частицы следа */
+.trail-particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--bright-red);
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    animation: fadeOut 0.6s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+}
+
+/* Скрываем стандартный курсор */
+body, a, button, input, textarea {
+    cursor: none !important;
+}
+</style>
+
+<script>
+// CUSTOM CURSOR + TRAIL LOGIC
+const customCursor = document.getElementById('customCursor');
+const cursorTrail = document.getElementById('cursorTrail');
+let mouseX = 0, mouseY = 0;
+let cursorX = 0, cursorY = 0;
+
+// Движение курсора с плавностью
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    // Создаём частицу следа
+    createTrailParticle(e.clientX, e.clientY);
+});
+
+// Плавное движение прицела
+function animateCursor() {
+    cursorX += (mouseX - cursorX) * 0.15;
+    cursorY += (mouseY - cursorY) * 0.15;
+    
+    customCursor.style.left = cursorX - 15 + 'px';
+    customCursor.style.top = cursorY - 15 + 'px';
+    
+    requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
+// Создание частиц следа
+let particleCount = 0;
+const maxParticles = 30; // Ограничение для производительности
+
+function createTrailParticle(x, y) {
+    if (particleCount > maxParticles) return;
+    
+    const particle = document.createElement('div');
+    particle.className = 'trail-particle';
+    particle.style.left = x + 'px';
+    particle.style.top = y + 'px';
+    
+    cursorTrail.appendChild(particle);
+    particleCount++;
+    
+    // Удаляем частицу после анимации
+    setTimeout(() => {
+        particle.remove();
+        particleCount--;
+    }, 600);
+}
+
+// Увеличение прицела при наведении на ссылки/кнопки
+document.querySelectorAll('a, button, .menu-icon, .brand-logo-scroll').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+        customCursor.style.transform = 'scale(1.5)';
+        customCursor.style.borderColor = '#FF3333';
+    });
+    
+    el.addEventListener('mouseleave', () => {
+        customCursor.style.transform = 'scale(1)';
+        customCursor.style.borderColor = 'var(--bright-red)';
+    });
+});
+</script>
+
 </body>
 </html>
