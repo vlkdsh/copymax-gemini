@@ -191,59 +191,38 @@
 }
 
 .menu-nav li {
-    margin: 30px 0;
+    margin: 20px 0; /* УМЕНЬШИЛ С 30px ДО 20px */
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-/* Stagger-анимация появления пунктов */
+/* Stagger-анимация появления пунктов - ДОБАВИЛ 7, 8, 9 */
 .fullscreen-menu.active .menu-nav li:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
 .fullscreen-menu.active .menu-nav li:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
 .fullscreen-menu.active .menu-nav li:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
 .fullscreen-menu.active .menu-nav li:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
 .fullscreen-menu.active .menu-nav li:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.5s; }
 .fullscreen-menu.active .menu-nav li:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 0.6s; }
+.fullscreen-menu.active .menu-nav li:nth-child(7) { opacity: 1; transform: translateY(0); transition-delay: 0.7s; }
+.fullscreen-menu.active .menu-nav li:nth-child(8) { opacity: 1; transform: translateY(0); transition-delay: 0.8s; }
+.fullscreen-menu.active .menu-nav li:nth-child(9) { opacity: 1; transform: translateY(0); transition-delay: 0.9s; }
 
 .menu-nav a {
     color: white;
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 2.2rem; /* УМЕНЬШИЛ С 3rem ДО 2.2rem */
     font-weight: 300;
-    letter-spacing: 3px;
+    letter-spacing: 2px; /* УМЕНЬШИЛ С 3px ДО 2px */
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     position: relative;
     font-family: 'Poppins', sans-serif;
     display: inline-block;
 }
 
-/* Красная линия под ссылкой */
-.menu-nav a::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%) scaleX(0);
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, var(--bright-red), transparent);
-    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
-}
-
-.menu-nav a:hover {
-    color: var(--bright-red);
-    transform: scale(1.1);
-    text-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
-}
-
-.menu-nav a:hover::after {
-    transform: translateX(-50%) scaleX(1);
-}
-
 /* Переключатель языков */
 .language-switcher {
-    margin-top: 60px;
+    margin-top: 40px; /* УМЕНЬШИЛ С 60px ДО 40px */
     display: flex;
     gap: 20px;
     opacity: 0;
@@ -256,9 +235,8 @@
 .fullscreen-menu.active .language-switcher {
     opacity: 1;
     transform: translateY(0);
-    transition-delay: 0.7s;
+    transition-delay: 1.0s; /* ИЗМЕНИЛ С 0.7s НА 1.0s */
 }
-
 .language-switcher button {
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.3);
